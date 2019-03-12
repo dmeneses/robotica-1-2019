@@ -14,6 +14,12 @@ git iniciar STUDENT_NAME
 git guardarCambios "Some commit message"
 ```
 
+There is more aliases that were added after computers got configured. To obtain those do a `git pull` before creating another branch. These git commands are added in the file: *./utils/git-setup.sh*, to update the aliases to the latest just do:
+
+```bash
+./git-setup.sh
+```
+
 ## Troubleshooting
 
 ### permission denied
