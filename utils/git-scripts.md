@@ -4,9 +4,9 @@ Git repository is already configured with RSA keys to push changes into the offi
 
 Also eclipse workspace is already configured to point this repository.
 
-Git project location: /home/roboticaest/robotica-1-2019/src
+Git repository location: /home/roboticaest/robotica-1-2019/src
 
-Git aliases created:
+Git aliases created that should be run inside the repository location:
 ```bash
 # Create a new branch and push it to the main repository
 git iniciar STUDENT_NAME
