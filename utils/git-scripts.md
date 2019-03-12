@@ -4,7 +4,7 @@ Git repository is already configured with RSA keys to push changes into the offi
 
 Also eclipse workspace is already configured to point this repository.
 
-Git project location: /home/roboticaest/robotica-1-2019
+Git project location: /home/roboticaest/robotica-1-2019/src
 
 Git aliases created:
 ```bash
