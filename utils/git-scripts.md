@@ -11,7 +11,7 @@ Git aliases created that should be run inside the repository location:
 # Create a new branch and push it to the main repository
 git iniciar STUDENT_NAME
 # Commit all the changes that are in the repo skipping what .gitignore has and pushes it to the repo
-git subirCambios "Some commit message"
+git guardarCambios "Some commit message"
 ```
 
 ## Troubleshooting
