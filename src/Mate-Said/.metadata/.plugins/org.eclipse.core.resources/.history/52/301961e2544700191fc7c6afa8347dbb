@@ -1,0 +1,22 @@
+package variables;
+
+public class prueba {
+
+	public static void main(String[] args) {
+		System.out.println("hello motherfuckers");
+		String decirsaludo;
+		decirsaludo= "hello motherfukers x2";
+		System.out.println("Decir saludo");
+        int x;
+        x=3+4-5/2*1;
+        System.out.println(x);
+        if (x>=0||x==-13){
+        System.out.println(decirsaludo);	
+        }
+        else{
+        System.out.println("El valor de x es:" + x);
+        }
+             
+	}
+
+}
