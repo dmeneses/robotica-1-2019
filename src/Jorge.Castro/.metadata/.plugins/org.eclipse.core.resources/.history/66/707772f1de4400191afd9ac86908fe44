@@ -1,0 +1,14 @@
+
+public class Calculador {
+
+	public static void main(String[] args) {
+		System.out.println("holi papu");
+		// TODO Auto-generated method stub
+String nombre= "Jorge";
+System.out.println(nombre);
+int lado=100;
+int area=lado*lado;
+System.out.println(area);
+	}
+
+}
