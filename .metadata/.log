@@ -1430,3 +1430,6 @@ org.lejos.ev3.ldt.util.LeJOSEV3Exception: EV3_HOME is not set. Please specify it
 
 !ENTRY org.eclipse.ui 4 4 2019-03-15 17:55:31.644
 !MESSAGE Conflicting handlers for org.eclipse.ui.edit.paste: {ActionHandler(org.eclipse.ui.texteditor.TextNavigationAction@117d5f8)} vs {ActionHandler(org.eclipse.ui.texteditor.TextOperationAction@1681855)}
+
+!ENTRY org.eclipse.ui 4 4 2019-03-15 17:59:31.012
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.print: {ActionHandler(org.eclipse.ui.texteditor.AbstractDecoratedTextEditor$12@19b76f7)} vs {ActionHandler(org.eclipse.ui.texteditor.TextOperationAction@f3363f)}
