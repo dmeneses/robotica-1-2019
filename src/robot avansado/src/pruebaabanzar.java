@@ -8,10 +8,16 @@ public class pruebaabanzar {
 		EV3LargeRegulatedMotor motorB = new  EV3LargeRegulatedMotor(MotorPort.B);
 		EV3LargeRegulatedMotor motorC = new  EV3LargeRegulatedMotor(MotorPort.C);
 		
-		motorB.setSpeed(600);
+		motorB.setSpeed(700);
 		motorB.forward();
 		
-		motorC.setSpeed(300);
+		motorC.setSpeed(600);
+		motorC.forward();
+		
+		motorB.setSpeed(700);
+		motorB.forward();
+		
+		motorC.setSpeed(700);
 		motorC.forward();
 		
 		motorB.setSpeed(600);
@@ -19,8 +25,7 @@ public class pruebaabanzar {
 		
 		motorC.setSpeed(300);
 		motorC.forward();
-		
-		Delay.msDelay(300000);
+		Delay.msDelay(3600);
 		
 	}
 
