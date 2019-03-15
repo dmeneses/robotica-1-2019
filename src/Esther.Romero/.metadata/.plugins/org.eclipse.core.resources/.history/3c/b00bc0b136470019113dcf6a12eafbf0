@@ -1,0 +1,26 @@
+import lejos.hardware.Button;
+import lejos.hardware.motor.UnregulatedMotor;
+import lejos.hardware.port.MotorPort;
+import lejos.utility.Delay;
+
+
+public class MoverCarro {
+
+	public static void main(String[] args) {
+		System.out.println("Presione un boton para empezar..");
+		Button.LEDPattern(2);
+		Button.waitForAnyPress();
+		UnregulatedMotor motorDerecho = new UnregulatedMotor(MotorPort.C);
+		UnregulatedMotor motorIzquierdo = new UnregulatedMotor(MotorPort.B);
+		
+		motorDerecho.setPower(50);
+		motorIzquierdo.setPower(50);
+		
+		Delay.msDelay(2000);
+		
+		motorDerecho.stop();
+		motorIzquierdo.stop();
+		
+	}
+
+}

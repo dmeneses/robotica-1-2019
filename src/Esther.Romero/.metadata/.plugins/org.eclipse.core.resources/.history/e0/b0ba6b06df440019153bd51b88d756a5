@@ -1,0 +1,16 @@
+
+public class Calculador {
+
+	public static void main(String[] args) {
+String nombre;
+nombre = "Esther";
+System.out.println(nombre);
+System.out.println("Bla Bla Bla");
+//calcular el area de un cuadrado de lado 100//
+int  lado = 100;
+int area = lado * lado;
+System.out.println("el area es" + area);
+
+	}
+
+}

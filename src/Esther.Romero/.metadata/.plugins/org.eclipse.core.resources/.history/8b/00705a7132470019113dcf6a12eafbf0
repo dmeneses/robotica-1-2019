@@ -1,0 +1,13 @@
+import lejos.hardware.Button;
+
+
+public class MoverCarro {
+
+	public static void main(String[] args) {
+		System.out.println("Presione un boton para empezar..");
+		
+		Button.LEDPattern(4);
+		Button.waitForAnyPress();
+	}
+
+}
