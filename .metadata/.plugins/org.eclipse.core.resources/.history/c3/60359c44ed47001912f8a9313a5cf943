@@ -1,0 +1,17 @@
+package afedo2;
+
+import lejos.hardware.Button;
+import lejos.hardware.motor.Motor;
+
+public class alfred
+{
+
+public static void main(String args[])
+{ 
+	System.out.println("Hola mundo¡");
+	Button.waitForAnyPress();
+	Motor.B.rotate(360);
+	Motor.C.rotate(360);
+} 
+}
+

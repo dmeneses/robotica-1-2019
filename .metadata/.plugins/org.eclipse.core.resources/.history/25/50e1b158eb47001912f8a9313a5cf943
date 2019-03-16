@@ -1,0 +1,11 @@
+package afedo2;
+
+public class alfred
+{
+
+public static void main(String args[])
+{ 
+	System.out.println("Hola mundo¡");
+} 
+}
+
