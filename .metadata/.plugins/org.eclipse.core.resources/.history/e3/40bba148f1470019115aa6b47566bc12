@@ -1,0 +1,22 @@
+import lejos.hardware.Button;
+import lejos.hardware.motor.Motor;
+
+
+public class Imagine1 
+{
+     public static void main(String args[])
+  {
+    	 int dis;
+	     dis=20;
+	 double grade;
+		 grade = dis * 36;   
+    	 
+    	 Motor.B.rotate(dis,true);
+    	 Motor.C.rotate(dis);
+    	 System.out.println("hola mundo");
+    	 Button.waitForAnyPress();
+    	    
+    	 
+   	 
+  }
+ }

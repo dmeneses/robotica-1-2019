@@ -1,0 +1,18 @@
+import lejos.hardware.Button;
+import lejos.hardware.motor.Motor;
+
+
+public class Imagine1 
+{
+     public static void main(String args[])
+  {
+    	 
+    	 
+    	 Motor.B.rotate(90);
+    	 Motor.C.rotate(360);
+    	 System.out.println("hola mundo");
+    	 Button.waitForAnyPress();
+    	 
+   	 
+  }
+ }
