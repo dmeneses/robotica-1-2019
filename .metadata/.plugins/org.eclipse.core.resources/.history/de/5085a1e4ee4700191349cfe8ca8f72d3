@@ -1,0 +1,14 @@
+import lejos.hardware.Button;
+import lejos.hardware.motor.Motor;
+
+
+public class caffi2 
+{
+public static void main(String args[])	
+{
+		System.out.println("Hola Universo!");
+		Motor.B.rotate(360);
+		Motor.C.rotate(360);
+		Motor.B.rotate(45);
+	    Button.waitForAnyPress();
+}}
