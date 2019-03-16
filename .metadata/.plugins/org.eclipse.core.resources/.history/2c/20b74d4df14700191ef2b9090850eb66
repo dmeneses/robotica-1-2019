@@ -1,0 +1,21 @@
+import lejos.hardware.Button;
+import lejos.hardware.motor.Motor;
+
+
+public class Primer
+{
+	
+	public static void main(String args[])
+	{ 
+		System.out.println("Hola Girl Gang <3");
+		int dis;
+		dis = 50;
+		double grados = dis*17.5;
+		
+		
+		Motor.B.rotate((int)grados, true);
+		Motor.C.rotate((int)grados);
+		
+		Button.waitForAnyPress();
+	}
+}
