@@ -1,0 +1,8 @@
+INDEX VERSION 1.127+/home/roboticaest/robotica-1-2019/src/Mate-Said/olimpi/.metadata/.plugins/org.eclipse.jdt.core
+192951165.index
+3599129996.index
+3447623317.index
+959706437.index
+2709613850.index
+3198399694.index
+2916443919.index
