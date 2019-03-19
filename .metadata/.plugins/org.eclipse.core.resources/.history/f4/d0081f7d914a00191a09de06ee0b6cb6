@@ -1,0 +1,19 @@
+package sensoresojos;
+
+import lejos.hardware.Button;
+import lejos.hardware.port.SensorPort;
+import lejos.hardware.sensor.EV3UltrasonicSensor;
+
+public class Sensoresojos {
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		EV3UltrasonicSensor ojos = new EV3UltrasonicSensor(SensorPort.S4);
+		float[]muestras=new float[ojos.sampleSize()];
+		ojos.fetchSample(muestras,0);
+		System.out.println("distancia"+muestras[0]);
+		Button.waitForAnyPress();
+	}
+
+}

@@ -6,11 +6,12 @@ public class caffi2
 {
 public static void main(String args[])	
 {
-		System.out.println("Hola Universo!");
-		int dis;
-		dis=50;
-		double grados=-1800;
-		Motor.B.rotate((int)720,true);
-		Motor.C.rotate((int) grados);
+		System.out.println("que salgan las variables!");
+		double dis = 30; 
+		double per;
+		per=2*Math.PI*3;		
+		double grados= 720*dis/per;
+		Motor.B.rotate((int)-grados,true);
+		Motor.C.rotate((int)- grados);
 	    Button.waitForAnyPress();
 }}
