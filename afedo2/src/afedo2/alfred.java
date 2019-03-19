@@ -10,10 +10,16 @@ public static void main(String args[])
 { 
 	System.out.println("Hola mundo¡");
 	Button.waitForAnyPress();
-	Motor.B.rotate(3000,true);
-	Motor.C.rotate(3000);
-	Motor.A.rotate(90);
-	Motor.A.rotate(90);
+	int distancia = -80;
+	//Una vuelta completa 360
+	double perimetro = 2*Math.PI*5;
+	//360 ------ perimetro
+	// ?  ------ distancia
+	double grados = 360*distancia/perimetro;
+	Motor.C.rotate((int)grados, true);
+	Motor.B.rotate((int)distancia);
+	Motor.B.rotate((int)grados);
+	Motor.C.rotate((int)perimetro);
 	Button.waitForAnyPress();
 } 
 }
