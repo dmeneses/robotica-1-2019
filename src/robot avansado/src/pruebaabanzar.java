@@ -1,3 +1,4 @@
+import lejos.hardware.Button;
 import lejos.hardware.port.MotorPort;
 import lejos.hardware.motor.EV3LargeRegulatedMotor;
 import lejos.utility.Delay;
@@ -8,24 +9,34 @@ public class pruebaabanzar {
 		EV3LargeRegulatedMotor motorB = new  EV3LargeRegulatedMotor(MotorPort.B);
 		EV3LargeRegulatedMotor motorC = new  EV3LargeRegulatedMotor(MotorPort.C);
 		
-		motorB.setSpeed(700);
+		/*motorB.setSpeed(200);
 		motorB.forward();
 		
-		motorC.setSpeed(600);
+		motorC.setSpeed(200);
 		motorC.forward();
 		
-		motorB.setSpeed(700);
-		motorB.forward();
+		Delay.msDelay(5000);
 		
-		motorC.setSpeed(700);
-		motorC.forward();
+		motorB.stop();
+		motorC.stop();
+		motorC.setSpeed(500);
+		motorB.setSpeed(500);*/
 		
-		motorB.setSpeed(600);
-		motorB.forward();
+		//Button.waitForAnyPress();
+		 
+		double distancia = 30;
+		int grados = (int)distancia*360/17;
+		motorB.rotate(grados,true);
+		motorC.rotate(grados);
 		
-		motorC.setSpeed(300);
-		motorC.forward();
-		Delay.msDelay(3600);
+		/*motorB.close();
+		motorC.close();*/
+		
+		
+		
+		
+		
+		
 		
 	}
 
