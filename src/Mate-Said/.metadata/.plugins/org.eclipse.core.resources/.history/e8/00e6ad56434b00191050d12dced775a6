@@ -41,23 +41,12 @@ public class moverse {
     motorD.rotate(D1);*/
 	//EV3TouchSensor TouchSensor = new EV3TouchSensor(SensorPort.S4);
     int C = 0;
-    int x = 30;
+    int x = 10;
     C = (360*x)/17;
 	motorI.rotate(C, true);
 	motorD.rotate(C);
-	motorI.rotate(370);
-	motorD.rotate(C, true);
-	motorI.rotate(C);
 	motorI.rotate(360);
-	motorI.rotate(C, true);
-	motorD.rotate(C);
-	motorI.rotate(370);
-	motorD.rotate(C, true);
-	motorI.rotate(C);
-    motorD.setSpeed(440);
-    motorD.forward();
-    motorI.setSpeed(340);
-    motorI.forward();
-    Delay.msDelay(10000);
-    }
+	}
+	
+
 }

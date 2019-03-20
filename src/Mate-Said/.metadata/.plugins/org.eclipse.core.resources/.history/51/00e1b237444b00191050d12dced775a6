@@ -48,16 +48,13 @@ public class moverse {
 	motorI.rotate(370);
 	motorD.rotate(C, true);
 	motorI.rotate(C);
-	motorI.rotate(360);
+	motorI.rotate(370);
 	motorI.rotate(C, true);
 	motorD.rotate(C);
-	motorI.rotate(370);
+	motorD.rotate(370);
 	motorD.rotate(C, true);
 	motorI.rotate(C);
-    motorD.setSpeed(440);
-    motorD.forward();
-    motorI.setSpeed(340);
-    motorI.forward();
-    Delay.msDelay(10000);
-    }
+	}
+	
+
 }
