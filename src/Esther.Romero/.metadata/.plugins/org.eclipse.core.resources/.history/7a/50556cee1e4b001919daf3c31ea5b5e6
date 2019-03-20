@@ -1,0 +1,30 @@
+import lejos.hardware.Button;
+import lejos.hardware.motor.EV3LargeRegulatedMotor;
+import lejos.hardware.port.MotorPort;
+
+
+public class Carrito {
+
+	public static void main(String[] args) {
+		EV3LargeRegulatedMotor motorDerecho = new EV3LargeRegulatedMotor(MotorPort.B);
+		EV3LargeRegulatedMotor motorIzquierdo = new EV3LargeRegulatedMotor(MotorPort.C);
+		
+		double distanciaAMoverme = 60;
+		// distanciaAMoverme = distanciaAMoverme;
+		int grados = 0;
+		double diametroRueda = 5.5;
+		double circunferencia = 2*Math.PI* diametroRueda;
+		double numeroDeRotaciones = distanciaAMoverme/circunferencia;
+		grados = (int)(numeroDeRotaciones*360);
+		
+		System.out.println("grados" + grados);
+		Button.waitForAnyPress();
+		
+		motorDerecho.setSpeed(500);
+		motorIzquierdo.setSpeed(500);
+		motorDerecho.rotate(grados, true);
+		motorIzquierdo.rotate(grados, true);
+
+	}
+
+}
