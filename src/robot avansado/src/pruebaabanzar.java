@@ -39,7 +39,7 @@ public class pruebaabanzar {
 		motorB.rotate(grados);
 		motorC.rotate(grados);*/
 		
-		/*sadouble distancia = 57;
+		double distancia = 57;
 		int grados = (int)distancia*360/17;
 		motorB.rotate(grados,true);
 		motorC.rotate(grados);
@@ -48,7 +48,7 @@ public class pruebaabanzar {
 		Button.waitForAnyPress();
 		
 		distancia = 0;
-	    grados = 400;
+	    grados = 410;
 		motorB.rotate(grados);
 		
 		Button.waitForAnyPress();
@@ -62,7 +62,7 @@ public class pruebaabanzar {
 		Button.waitForAnyPress();
 		
 		distancia = 0;
-	    grados = 400;
+	    grados = 410;
 		motorB.rotate(grados);
 		
 		Button.waitForAnyPress();
@@ -76,7 +76,7 @@ public class pruebaabanzar {
 		Button.waitForAnyPress();
 		
 		distancia = 0;
-	    grados = 400;
+	    grados = 410;
 		motorB.rotate(grados);
 		
 		Button.waitForAnyPress();
@@ -90,7 +90,7 @@ public class pruebaabanzar {
 		Button.waitForAnyPress();
 		
 		distancia = 0;
-	    grados = 400;
+	    grados = 410;
 		motorB.rotate(grados);
 		
 		Button.waitForAnyPress();
@@ -98,9 +98,9 @@ public class pruebaabanzar {
 	    distancia = 57;
 	    grados = (int)distancia*360/17;
 		motorB.rotate(grados,true);
-		motorC.rotate(grados);sa*/
+		motorC.rotate(grados);
 		
-		Button.waitForAnyPress();
+		/*Button.waitForAnyPress();
 		
 		double distancia = 59;
 		int grados = (int)distancia*360/17;
@@ -136,7 +136,7 @@ public class pruebaabanzar {
 		
 	    distancia = 17;
 	    grados = (int)distancia*360/17;
-		motorB.rotate(grados);
+		motorB.rotate(grados);*/
 	
 		
 		
