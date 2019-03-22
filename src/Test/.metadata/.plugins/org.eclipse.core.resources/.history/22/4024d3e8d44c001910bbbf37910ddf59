@@ -1,0 +1,39 @@
+package testcontrol;
+
+
+public class testforif {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	int condicion;
+	
+		condicion = 0;
+	
+		if(condicion > 10)
+		{
+			System.out.println("la variable es mayor");
+			
+		}
+		else
+		{
+			System.out.println("la variable es menor");
+		
+		}	
+		
+        for(int pikachu = 0; pikachu < 5 ;pikachu ++)
+        {
+        	 System.out.println("repeticion numero:" + pikachu);
+	
+        }
+        int y = 0;
+        while( y != 5);
+        {
+        System.out.println("repeticion numero:" + y);
+
+        
+		}
+        
+        
+	}
+}
+	
