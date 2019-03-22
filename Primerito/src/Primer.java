@@ -7,7 +7,10 @@ public class Primer
 	
 	public static void main(String args[])
 	{ 
+		while (true)
+		{
 		System.out.println("Hola Girl Gang <3");
+		
 		int dis;
 		dis = 24;
 		//2pi*r//360/17.5*dis//
@@ -19,5 +22,6 @@ public class Primer
 		Motor.C.rotate((int)grados);
 		
 		Button.waitForAnyPress();
+		}
 	}
 }

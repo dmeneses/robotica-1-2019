@@ -5,4 +5,7 @@
 <fullyQualifiedTypeName name="lejos.hardware.port.MotorPort"/>
 <fullyQualifiedTypeName name="lejos.utility.Delay"/>
 <fullyQualifiedTypeName name="lejos.hardware.Button"/>
+<fullyQualifiedTypeName name="lejos.hardware.sensor.EV3TouchSensor"/>
+<fullyQualifiedTypeName name="lejos.robotics.SampleProvider"/>
+<fullyQualifiedTypeName name="lejos.hardware.port.SensorPort"/>
 </qualifiedTypeNameHistroy>
