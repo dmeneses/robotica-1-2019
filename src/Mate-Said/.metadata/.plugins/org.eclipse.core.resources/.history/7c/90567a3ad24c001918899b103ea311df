@@ -1,0 +1,15 @@
+
+public class Postas {
+
+	public static void main(String[] args) {
+    String n;
+    n="motherfukers";
+    if(n=="1"){
+    System.out.println(n);	
+    }
+    else{
+    System.out.println(n+1);	
+    }
+	}
+
+}
