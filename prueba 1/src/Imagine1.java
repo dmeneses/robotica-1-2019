@@ -6,21 +6,28 @@ import lejos.hardware.sensor.EV3UltrasonicSensor;
 
 public class Imagine1 
 {
-     public static void main(String args[])
-  {
-    EV3UltrasonicSensor ojos;
+     public static void main(String args[]) {
+	
+     
+  
+    EV3UltrasonicSensor ojos ;
     ojos = new EV3UltrasonicSensor(SensorPort.S2);
     float[]muestras = new float[ojos.sampleSize()];
-    ojos.fetchSample(muestras, 0);
-    System.out.println("distancia--->" + muestras[0]);	
-    float[] distancia;
-    distancia = muestras;
-	Motor.B.rotate(distancia,true);
-	Motor.C.rotate(distancia);
+    
+    ojos.fetchSample(muestras, 0);	
+    System.out.println("distancia"+ muestras [0]);
+    double distancia = muestras [0];
+    double grade = distancia * 36;
+    Motor.B.rotate((int) distancia, true);
+    Motor.C.rotate((int)distancia, true);
+    Button.waitForAnyPress();
+   
+    
+	
     	 
-    	 Button.waitForAnyPress();
+    	 
     	    
     	 
-   	 
+      }
   }
- }
+
