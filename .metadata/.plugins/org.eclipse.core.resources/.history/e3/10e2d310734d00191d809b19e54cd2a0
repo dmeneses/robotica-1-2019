@@ -40,14 +40,13 @@ public class caffi2
 			double grados= 360*distancia/per;
 			Motor.B.rotate((int)grados,true);
 			Motor.C.rotate((int) grados);
-	      break;}
+	      }
 	       
 	      
 	       
 	       
 			//double distancia= if() [ojos.sampleSize()];
 			
-		}
 		System.out.println("ya se acabo :v");
 		Button.waitForAnyPress();
 	}

@@ -49,6 +49,6 @@ public class caffi2
 			
 		}
 		System.out.println("ya se acabo :v");
-		Button.waitForAnyPress();
+		Button.waitForAnyPress()
 	}
 }

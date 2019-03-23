@@ -34,21 +34,14 @@ public class caffi2
 	       double distancia = muestras[0] * 100;//en cm 
 	       System.out.println("distancia: " + muestras[0]);
 	       System.out.println("boton: " + muestrasBoton[0]);
-	       double pulsado=(muestrasBoton [0]);
-	       if(pulsado==1){double per;
+			//double distancia= if() [ojos.sampleSize()];
+			double per;
 			per=2*Math.PI*3;		
 			double grados= 360*distancia/per;
 			Motor.B.rotate((int)grados,true);
 			Motor.C.rotate((int) grados);
-	      break;}
-	       
 	      
-	       
-	       
-			//double distancia= if() [ojos.sampleSize()];
-			
 		}
-		System.out.println("ya se acabo :v");
-		Button.waitForAnyPress();
+		
 	}
 }

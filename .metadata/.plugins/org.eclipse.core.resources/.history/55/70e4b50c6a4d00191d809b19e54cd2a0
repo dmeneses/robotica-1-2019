@@ -9,9 +9,15 @@ public class caffi2
 {
 	public static void main(String args[])	
 	{
-		
+		/*
  		System.out.println("que salgan las variables!");
-	    
+		double dis = 30; 
+		double per;
+		per=2*Math.PI*3;		
+		double grados= 720*dis/per;
+		Motor.B.rotate((int)-grados,true);
+		Motor.C.rotate((int)- grados);
+	    */
 	    //final 
 //}
 //{ public staticvoid main(String()args);
@@ -34,21 +40,7 @@ public class caffi2
 	       double distancia = muestras[0] * 100;//en cm 
 	       System.out.println("distancia: " + muestras[0]);
 	       System.out.println("boton: " + muestrasBoton[0]);
-	       double pulsado=(muestrasBoton [0]);
-	       if(pulsado==1){double per;
-			per=2*Math.PI*3;		
-			double grados= 360*distancia/per;
-			Motor.B.rotate((int)grados,true);
-			Motor.C.rotate((int) grados);
-	      break;}
-	       
 	      
-	       
-	       
-			//double distancia= if() [ojos.sampleSize()];
-			
 		}
-		System.out.println("ya se acabo :v");
-		Button.waitForAnyPress();
 	}
 }
