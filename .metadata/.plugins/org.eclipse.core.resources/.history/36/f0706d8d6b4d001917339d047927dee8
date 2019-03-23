@@ -22,13 +22,11 @@ public class postas
 			System.out.println("Distancia "+distancia);
 			System.out.println("Boton "+muestrasBoton[0]);
 			
-			double x =distancia;
-			double rotar=360*(x/(2.25*Math.PI*2));
-			
+			double desplazamiento =distancia;
 			int presionado = (int)muestrasBoton[0];//presionado en 1
 			if(presionado == 1)
-			{Motor.B.rotate((int)rotar,true);
-			Motor.C.rotate((int)rotar);
+			{Motor.B.rotate((int)360,true);
+			Motor.C.rotate((int)360);
 			break;
 				
 			}
