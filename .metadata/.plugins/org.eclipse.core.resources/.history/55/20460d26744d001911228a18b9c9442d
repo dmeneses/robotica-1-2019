@@ -39,7 +39,7 @@ public class juancho70
 		    Motor.C.rotate((int)grados);
 		    }
 		    System.out.println("Hola mundo¡");
-		   
+		   Button.waitForAnyPress();
 		}
 		
 			

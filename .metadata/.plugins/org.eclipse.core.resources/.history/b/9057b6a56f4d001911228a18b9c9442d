@@ -1,6 +1,5 @@
 package pepito9415;
 
-import lejos.hardware.Button;
 import lejos.hardware.motor.Motor;
 import lejos.hardware.port.SensorPort;
 import lejos.hardware.sensor.EV3TouchSensor;
@@ -30,18 +29,13 @@ public class juancho70
 		    System.out.println("Distancia " + distancia);
 		    System.out.println("Boton "+muestrasBoton[0]);
 		    int presionado=(int)muestrasBoton[0];
-		    if(presionado==1){
-		    	double perimetro = 2*Math.PI*2.5;
-		    	//360 ------ perimetro
-		    	// ?  ------ distancia
-		    	double grados = 360*distancia/perimetro;	
-		    Motor.B.rotate((int)grados, true);
-		    Motor.C.rotate((int)grados);
-		    }
-		    System.out.println("Hola mundo¡");
-		   
+		    if(presionado==1)
+		    Motor.B.rotate((int)distancia, true);
+		    Motor.C.rotate((int)distancia);
+		    {}
+		    
+		    
 		}
-		
 			
 	}
 }
