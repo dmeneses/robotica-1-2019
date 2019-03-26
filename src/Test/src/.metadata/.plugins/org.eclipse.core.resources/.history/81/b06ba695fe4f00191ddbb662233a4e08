@@ -1,0 +1,58 @@
+package postas1;
+
+import lejos.hardware.motor.EV3LargeRegulatedMotor;
+import lejos.hardware.port.MotorPort;
+import lejos.hardware.port.SensorPort;
+import lejos.hardware.sensor.EV3TouchSensor;
+import lejos.robotics.SampleProvider;
+
+public class postas1 {
+
+	public static void main(String[] args) {
+	
+		EV3LargeRegulatedMotor motorB = new EV3LargeRegulatedMotor(MotorPort.B);
+		EV3LargeRegulatedMotor motorC = new EV3LargeRegulatedMotor(MotorPort.C);
+		EV3TouchSensor sensor = new EV3TouchSensor(SensorPort.S2);
+		SampleProvider sp = sensor.getTouchMode();
+		
+		
+		int giro = 320;
+		double distancia = 80;
+		int grados=(int)distancia*360/17;
+		motorB.rotate(grados,true);
+		motorC.rotate(grados);
+		
+		
+	
+		boolean botonActivado;
+		while(true){
+			float[]sample = new float [sp.sampleSize()];
+			sp.fetchSample(sample,0);
+			if (sample [0]==0){
+				botonActivado = false;
+			}else{
+				botonActivado = true;
+			}
+			System.out.println(botonActivado);
+			
+			if (botonActivado){
+				  giro = 320;
+				 distancia = 80;
+				 grados=(int)distancia*360/17;
+				motorB.rotate(grados,true);
+				motorC.rotate(grados);
+				}		
+				
+				
+		}
+				
+		
+				
+		
+	}
+}
+		
+	
+	
+
+		
