@@ -4,4 +4,5 @@
 <fullyQualifiedTypeName name="lejos.hardware.port.SensorPort"/>
 <fullyQualifiedTypeName name="lejos.hardware.sensor.EV3UltrasonicSensor"/>
 <fullyQualifiedTypeName name="lejos.hardware.motor.Motor"/>
+<fullyQualifiedTypeName name="lejos.hardware.sensor.EV3TouchSensor"/>
 </qualifiedTypeNameHistroy>
