@@ -22,6 +22,7 @@ public class pruebasensortoque {
 				botonActivado = true;
 			}
 			System.out.println(botonActivado);
+			
 		}
 		
 

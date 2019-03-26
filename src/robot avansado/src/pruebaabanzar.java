@@ -6,7 +6,7 @@ import lejos.utility.Delay;
 public class pruebaabanzar {
 
 	public static void main(String[] args) {
-		EV3LargeRegulatedMotor motorB = new  EV3LargeRegulatedMotor(MotorPort.B);
+		EV3LargeRegulatedMotor motorA = new  EV3LargeRegulatedMotor(MotorPort.A);
 		EV3LargeRegulatedMotor motorC = new  EV3LargeRegulatedMotor(MotorPort.C);
 		
 		/*motorB.setSpeed(800);
@@ -41,7 +41,7 @@ public class pruebaabanzar {
 		
 		double distancia = 57;
 		int grados = (int)distancia*360/17;
-		motorB.rotate(grados,true);
+		motorA.rotate(grados,true);
 		motorC.rotate(grados);
 		
 		
@@ -49,13 +49,13 @@ public class pruebaabanzar {
 		
 		distancia = 0;
 	    grados = 410;
-		motorB.rotate(grados);
+		motorA.rotate(grados);
 		
 		Button.waitForAnyPress();
 		
 		distancia = 57;
 		grados = (int)distancia*360/17;
-		motorB.rotate(grados,true);
+		motorA.rotate(grados,true);
 		motorC.rotate(grados);
 		
 		
@@ -63,13 +63,13 @@ public class pruebaabanzar {
 		
 		distancia = 0;
 	    grados = 410;
-		motorB.rotate(grados);
+		motorA.rotate(grados);
 		
 		Button.waitForAnyPress();
 		
 		distancia = 57;
 		grados = (int)distancia*360/17;
-		motorB.rotate(grados,true);
+		motorA.rotate(grados,true);
 		motorC.rotate(grados);
 		
 		
@@ -77,13 +77,13 @@ public class pruebaabanzar {
 		
 		distancia = 0;
 	    grados = 410;
-		motorB.rotate(grados);
+		motorA.rotate(grados);
 		
 		Button.waitForAnyPress();
 		
 		distancia = 57;
 		grados = (int)distancia*360/17;
-		motorB.rotate(grados,true);
+		motorA.rotate(grados,true);
 		motorC.rotate(grados);
 		
 		
@@ -91,13 +91,13 @@ public class pruebaabanzar {
 		
 		distancia = 0;
 	    grados = 410;
-		motorB.rotate(grados);
+		motorA.rotate(grados);
 		
 		Button.waitForAnyPress();
 		
 	    distancia = 57;
 	    grados = (int)distancia*360/17;
-		motorB.rotate(grados,true);
+		motorA.rotate(grados,true);
 		motorC.rotate(grados);
 		
 		/*Button.waitForAnyPress();
