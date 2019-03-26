@@ -37,12 +37,17 @@ public class Principal {
 				//2pi*r//360/17.5*dis//
 				double perimetro = 2*Math.PI*2.75; 
 				double grados = 360/perimetro*distancia;
-				
-				Motor.C.setAcceleration(8000/5/5);
-				Motor.B.setAcceleration(8000/5/5);
+				System.out.println ("Grados : " + grados);
+				//Motor.C.setAcceleration((int) (grados/5/5));
+				//Motor.B.setAcceleration((int) (grados/5/5));
+				Motor.C.setAcceleration(500);
+				Motor.B.setAcceleration(500);
+				Motor.C.setSpeed(720);
+				Motor.B.setSpeed(720);
 				Motor.B.rotate((int)grados, true);
 				Motor.C.rotate((int)grados);
 				
+				Button.waitForAnyPress();
 			
 		
 		}

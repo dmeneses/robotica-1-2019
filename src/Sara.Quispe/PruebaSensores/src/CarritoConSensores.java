@@ -65,11 +65,7 @@ public class CarritoConSensores {
 				 int gradosLadoCorto=(int)(rotacionLadoLargo* 360);
 				
 				
-				 
-				
-				
-				 
-				 }
+		}
 			
 			System.out.println("esperando para cerrar el programa");
 			Button.waitForAnyPress();
