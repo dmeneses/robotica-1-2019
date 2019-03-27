@@ -19,7 +19,14 @@ public class postas1 {
 		ojos = new EV3UltrasonicSensor(SensorPort.S4);
 		float[]muestras = new float [ojos.sampleSize()];
 		
-
+	int x = 320;     //grados//
+	int y = 30;      //distancia//
+		int giro = x ;
+		double distancia = y;
+		int grados=(int)distancia*360/17;
+		motorB.rotate(grados,true);
+		motorC.rotate(grados);
+		
 		
 	
 		boolean botonActivado;
@@ -33,14 +40,7 @@ public class postas1 {
 			}
 			System.out.println(botonActivado);
 			
-			int x = 320;     //grados//
-			int y = 30;      //distancia//
-				int giro = x ;
-				double distancia;
-				/*int grados=(int)distancia*360/17;
-				motorB.rotate(grados,true);
-				motorC.rotate(grados);*/
-				
+			while (true)
 				
 			{
 				ojos.fetchSample(muestras,0);
@@ -48,9 +48,9 @@ public class postas1 {
 				System.out.println ("Distancia:"+ distancia);
 			
 			if (botonActivado){
-				  
-				 //distancia = y;
-				 int grados=(int)distancia*360/17;
+				  giro = x;
+				 distancia = y;
+				 grados=(int)distancia*360/17;
 				motorB.rotate(grados,true);
 				motorC.rotate(grados);
 				}

@@ -36,7 +36,7 @@ public class postas1 {
 			int x = 320;     //grados//
 			int y = 30;      //distancia//
 				int giro = x ;
-				double distancia;
+				double distancia = y;
 				/*int grados=(int)distancia*360/17;
 				motorB.rotate(grados,true);
 				motorC.rotate(grados);*/
@@ -48,7 +48,7 @@ public class postas1 {
 				System.out.println ("Distancia:"+ distancia);
 			
 			if (botonActivado){
-				  
+				  giro = x;
 				 //distancia = y;
 				 int grados=(int)distancia*360/17;
 				motorB.rotate(grados,true);
