@@ -38,12 +38,10 @@ public class touch2 {
     			//Delay.msDelay(3600);
     		    //motorB.rotate(grados, true);
     			//motorC.rotate(grados);
-    			double distancia = 30;
+    			double distancia = 40;
     			int grados = (int)distancia * 360 / 17;
-    			motorB.rotate(grados, true);
-    			motorC.rotate(grados);
     			
-    			/*int giro_derecha = 420;
+    			int giro_derecha = 420;
     			int giro_izquierda = 420;
     			
     			int retro_derecha = -20;
@@ -71,7 +69,7 @@ public class touch2 {
     			motorC.rotate(grados);
     			
     			motorB.rotate(giro_derecha);
-    			motorC.rotate(retro_izquierda);*/
+    			motorC.rotate(retro_izquierda);
     			
     	   }
     	   System.out.println(botonActivado);
