@@ -15,6 +15,13 @@ public class Postasfury {
 	        eyes = new EV3UltrasonicSensor(SensorPort.S1); 
 	        SampleProvider sp = sensor.getTouchMode();
 	        boolean BotonActivo;
+	        float[] muestras = new float[eyes.sampleSize()];
+	        while(true){
+	        	eyes.fetchSample(muestras, 0);
+	        	double distancia = muestras[0] * 100;
+	        	DecimalFormat decimal = new DecimalFormat("0.00");
+	        	System.out.println("Distance: " + decimal.format(distancia));
+	        	Delay.msDelay(6000);
 	        while(true){
 	        	float[] sample = new float [sp.sampleSize()];
 	        	sp.fetchSample(sample, 0);
@@ -27,25 +34,19 @@ public class Postasfury {
 	        		BotonActivo = true;
 	        	}
 	        	System.out.println(BotonActivo); 
-	      
-        	if(BotonActivo==true){  
-        	float[] muestras = new float[eyes.sampleSize()];
-	     	eyes.fetchSample(muestras, 0);
-        	double distancia = muestras[0] * 100;
-	       	DecimalFormat decimal = new DecimalFormat("0.00");
-		    System.out.println("Distance: " + decimal.format(distancia));
-		   	Delay.msDelay(2000);
+	    
+	            if(BotonActivo==true){
 	            	int D = 0;
 	                double x = distancia;
-	            	D = (int)(((360*x)-3240)/17); 
+	            	D = (int)(((360*x)/17)-11); 
 	                motorI.rotate(D, true);
 	                motorD.rotate(D);
-		   }
+	             }
 	            else{
 	            System.out.println(BotonActivo);
     }
    }
   }
  }
-
+}
 

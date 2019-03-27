@@ -37,9 +37,9 @@ public class Postasfury {
 		   	Delay.msDelay(2000);
 	            	int D = 0;
 	                double x = distancia;
-	            	D = (int)(((360*x)-3240)/17); 
-	                motorI.rotate(D, true);
-	                motorD.rotate(D);
+	            	D = (int)((360*x)/17)-50; 
+	                motorI.setSpeed(motorI.getMaxSpeed());
+	                motorD.setSpeed(motorD.getMaxSpeed());;
 		   }
 	            else{
 	            System.out.println(BotonActivo);

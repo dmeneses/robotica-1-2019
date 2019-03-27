@@ -30,6 +30,7 @@ public class Postasfury {
 	      
         	if(BotonActivo==true){  
         	float[] muestras = new float[eyes.sampleSize()];
+		    while(true){
 	     	eyes.fetchSample(muestras, 0);
         	double distancia = muestras[0] * 100;
 	       	DecimalFormat decimal = new DecimalFormat("0.00");
@@ -37,9 +38,13 @@ public class Postasfury {
 		   	Delay.msDelay(2000);
 	            	int D = 0;
 	                double x = distancia;
-	            	D = (int)(((360*x)-3240)/17); 
+	            	D = (int)((360*x)/17)-15; 
 	                motorI.rotate(D, true);
 	                motorD.rotate(D);
+	                motorI.stop();
+	                motorD.stop();
+	                
+		    }
 		   }
 	            else{
 	            System.out.println(BotonActivo);
