@@ -20,6 +20,5 @@ INDEX VERSION 1.127+/home/roboticaest/robotica-1-2019/.metadata/.plugins/org.ecl
 3767089649.index
 694351519.index
 1453598739.index
-1983312705.index
 3693448964.index
 207581026.index
