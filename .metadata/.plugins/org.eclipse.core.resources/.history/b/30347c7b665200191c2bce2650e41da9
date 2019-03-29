@@ -37,7 +37,7 @@ public class caffi2
 	       double pulsado=(muestrasBoton [0]);
 	       if(pulsado==1){double per;
 			per=2*Math.PI*3;		
-			double grados= 360*(distancia + 5)/per;
+			double grados= 360*(distancia - 10)/per;
 			Motor.B.rotate((int)grados,true);
 			Motor.C.rotate((int) grados,true);
 			Motor.B.setAcceleration(1000);

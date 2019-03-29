@@ -10,7 +10,7 @@ public class caffi2
 	public static void main(String args[])	
 	{
 		
- 		System.out.println(":v");
+ 		System.out.println("que salgan las variables!");
 	    
 	    //final 
 //}
@@ -36,12 +36,10 @@ public class caffi2
 	       System.out.println("boton: " + muestrasBoton[0]);
 	       double pulsado=(muestrasBoton [0]);
 	       if(pulsado==1){double per;
-			per=2*Math.PI*3;		
-			double grados= 360*(distancia + 5)/per;
+			per=2*Math.PI*2.5;		
+			double grados= 360*distancia/per;
 			Motor.B.rotate((int)grados,true);
 			Motor.C.rotate((int) grados,true);
-			Motor.B.setAcceleration(1000);
-			Motor.C.setAcceleration(1000);
 	      break;}
 	       
 	      
