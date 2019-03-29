@@ -22,7 +22,7 @@ public class Principal {
 			float []muestras1 = new float[botoncito.sampleSize()];
 
 			int pulsado = 0;
-			
+			while (1==1){
 					while (pulsado == 0)
 					{
 						botoncito.fetchSample(muestras1,0);
@@ -36,19 +36,21 @@ public class Principal {
 				
 				//2pi*r//360/17.5*dis//
 				double perimetro = 2*Math.PI*2.75; 
-				double grados = 360/perimetro*distancia;
+				double grados = (360/perimetro*distancia)-6;
 				System.out.println ("Grados : " + grados);
 				//Motor.C.setAcceleration((int) (grados/5/5));
 				//Motor.B.setAcceleration((int) (grados/5/5));
 				Motor.C.setAcceleration(500);
 				Motor.B.setAcceleration(500);
-				Motor.C.setSpeed(720);
-				Motor.B.setSpeed(720);
+				//720
+				Motor.C.setSpeed(800);
+				Motor.B.setSpeed(800);
 				Motor.B.rotate((int)grados, true);
 				Motor.C.rotate((int)grados);
 				
 				Button.waitForAnyPress();
-			
+				pulsado = 0;
+					}
 		
 		}
 	}

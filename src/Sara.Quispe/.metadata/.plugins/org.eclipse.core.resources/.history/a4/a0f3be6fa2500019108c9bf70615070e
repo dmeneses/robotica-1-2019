@@ -1,0 +1,63 @@
+import lejos.hardware.Button;
+import lejos.hardware.Sound;
+import lejos.hardware.motor.EV3LargeRegulatedMotor;
+import lejos.hardware.port.MotorPort;
+import lejos.hardware.port.SensorPort;
+import lejos.hardware.sensor.EV3TouchSensor;
+import lejos.hardware.sensor.EV3UltrasonicSensor;
+import lejos.robotics.SampleProvider;
+
+
+public class Challenge1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		EV3UltrasonicSensor ojitos = new EV3UltrasonicSensor(SensorPort.S2);
+		EV3LargeRegulatedMotor motorC=new EV3LargeRegulatedMotor(MotorPort.C);
+		EV3LargeRegulatedMotor motorB=new EV3LargeRegulatedMotor(MotorPort.B);
+		EV3TouchSensor sensorTouch; 
+		sensorTouch=new EV3TouchSensor(SensorPort.S1);
+		
+		System.out.println("presionar el SensorTouch");
+		
+		Sound.beepSequenceUp();
+		SampleProvider muestrasCapturadasOjitos;
+		muestrasCapturadasOjitos = ojitos.getDistanceMode();
+		
+		float distanciaAlOtroCarrito = 0;
+		while (distanciaAlOtroCarrito != Float.POSITIVE_INFINITY){
+			float [] datosOjitos=new float[muestrasCapturadasOjitos.sampleSize()];
+			muestrasCapturadasOjitos.fetchSample(datosOjitos,0);
+			System.out.println("dato enviado por sensor ="+ distanciaAlOtroCarrito);
+			
+			double distanciaCM = distanciaAlOtroCarrito*100;
+			
+			int grados=0;
+			double diametroRueda=5.5;
+			double circunferencia=Math.PI* diametroRueda;
+			double numeroDeRotaciones=distanciaCM/circunferencia;
+			grados=(int)(numeroDeRotaciones* 360);
+			
+		
+			int velocidad=100;
+			motorC.setSpeed(velocidad);
+			motorC.rotate(grados,true);
+			motorB.setSpeed(velocidad);
+			motorB.rotate(grados);
+			
+			
+			
+			motorC.stop();
+			motorB.stop();
+			
+			
+			ojitos.close();
+			motorC.close();
+			motorB.close();
+			Sound.beepSequenceUp();
+			
+
+	}
+
+}

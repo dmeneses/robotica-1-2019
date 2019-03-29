@@ -46,9 +46,7 @@ public class CarritoConSensores {
 		System.out.println("deje de esperar");
 			Button.waitForAnyPress();
 	
-			//el carrito se mueva describiendo un rectangulo de lados
-			//120 cm * 60cm
-			
+			 
 			if(sensorTouchDetectoToque==true){
 			 
 				 
