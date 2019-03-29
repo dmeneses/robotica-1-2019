@@ -34,17 +34,19 @@ public class Postasfury {
         	double distancia = muestras[0] * 100;
 	       	DecimalFormat decimal = new DecimalFormat("0.00");
 		    System.out.println("Distance: " + decimal.format(distancia));
-		   	Delay.msDelay(2000);
+		   	Delay.msDelay(1000);
 	            	int D = 0;
 	                double x = distancia;
-	            	D = (int)(((360*x)-3240)/17); 
+	            	D = (int)(((360*x)-4300)/17); 
 	                motorI.rotate(D, true);
 	                motorD.rotate(D);
 		   }
 	            else{
 	            System.out.println(BotonActivo);
     }
-   }
+   
+        	System.out.println("hola soy fury");
+	}
   }
  }
 
