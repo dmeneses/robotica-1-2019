@@ -51,14 +51,14 @@ public class postas1{
 			{
 				ojos.fetchSample(muestras,0);
 				distancia = muestras [0] * 100 ;
-				distancia = distancia - 3;
-				//		x=x-3;
+				distancia = x;
+						x=x-3;
 						
-				System.out.println ("Distancia:"+ distancia);
+				System.out.println ("Distancia:"+ x);
 			
 			if (botonActivado){
 				  
-				 int grados=((int)(distancia*360/17));
+				 int grados=((int)(x*360/17));
 				motorB.rotate(grados,true);
 				motorC.rotate(grados);
 				}
