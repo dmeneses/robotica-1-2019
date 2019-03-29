@@ -28,10 +28,10 @@ public class postas
 			int presionado = (int)muestrasBoton[0];//presionado en 1
 			if(presionado == 1)
 			{
-                Motor.C.setSpeed(380)	;		
-				Motor.B.setSpeed(380);	
-			//Motor.B.setAcceleration(1000/2/2);
-			//Motor.C.setAcceleration(1000/2/2);
+                //Motor.C.setSpeed(500)	;		
+				//Motor.B.setSpeed(500);	
+			Motor.B.setAcceleration(700/2/1);
+			Motor.C.setAcceleration(700/2/1);
 			Motor.B.rotate((int)rotar,true);
 			Motor.C.rotate((int)rotar);
 			
