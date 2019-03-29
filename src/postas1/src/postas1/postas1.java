@@ -15,6 +15,7 @@ public class postas1  {
 		EV3LargeRegulatedMotor motorA = new  EV3LargeRegulatedMotor(MotorPort.A);
 	    EV3LargeRegulatedMotor motorC = new  EV3LargeRegulatedMotor(MotorPort.C);
 		EV3UltrasonicSensor ojos ;
+		ojos= new EV3UltrasonicSensor (SensorPort.S4);
 		
 		SampleProvider sp = sensor .getTouchMode();
 		boolean botonActivado;
@@ -24,25 +25,36 @@ public class postas1  {
 			if (sample[0] == 0){
 				botonActivado = false;
 				
+			
+				
+				
 			}
 			else{ 
 				
 				botonActivado = true;
-				double distancia = 57;
+				float [] muestras= new float[ojos.sampleSize()];
+				
+				
+					ojos.fetchSample(muestras, 0 );
+					double distancia = muestras[0]*100;//en cm
+					
+					System.out.println("distancia:" + distancia);
+				
+				//double distancia = 5;
 				int grados = (int)distancia*360/17;
 				motorA.rotate(grados,true);
 				motorC.rotate(grados);
 				
 			}
 			System.out.println(botonActivado);
-			ojos= new EV3UltrasonicSensor (SensorPort.S4);
-			float [] muestras= new float[ojos.sampleSize()];
-			while(true)
-			{
-				ojos.fetchSample(muestras, 0 );
-				double distancia = muestras[0]*100;//en cm
+			
+			//*float [] muestras= new float[ojos.sampleSize()];
+			
+			//{
+				//ojos.fetchSample(muestras, 0 );
+				//double distancia = muestras[0]*100;//en cm
 				
-				System.out.println("distancia:" + distancia);
+				//System.out.println("distancia:" + distancia); 
 			}
 			
 			
@@ -51,7 +63,6 @@ public class postas1  {
 
 	}
 
-}
 
 
 
