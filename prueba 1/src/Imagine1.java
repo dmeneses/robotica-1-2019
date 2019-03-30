@@ -26,26 +26,19 @@ public class Imagine1
 	    System.out.println( "Pulsador" +muestrasPulsador[0] );
 	    ojos.fetchSample(muestras, 0);	
 	    
-	    double distancia = muestras[0]*100;
-	    
-	    
-
-	    //avanzar en centimetros
-	    
-	    //perimetro 2 X Math.PI X Radio
-	    //double perimetro = 2 * 3.1416 * 3;
-	    //regla tres 360 ----- perimetro
-	    //			 ?   ----- distancia
+	    double distancia = muestras[0]*100;	    	   
+	  
 	    System.out.println("Distancia" +  muestras[0] );
-	    //?
-	    double grados = distancia * 18.80; 
-	    Motor.B.setSpeed(350);
-	    Motor.C.setSpeed(350);
+	    
+	    double grados = distancia * 20.70; 
+	    Motor.B.setSpeed(750);
+	    Motor.C.setSpeed(750);
+	    Motor.B.setAcceleration(850);
+	    Motor.C.setAcceleration(850);
 	    if(muestrasPulsador[0] == 1)
 	    {	
 	      Motor.B.rotate((int)grados, true);
 	      Motor.C.rotate((int)grados);
-	      
 	    }	    
        }
       }  
