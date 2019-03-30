@@ -1,0 +1,13 @@
+
+public class Conejo {
+	int edad;
+	int tamaño;
+	String genero;
+	String nombre;
+	
+	public void saltar()
+	{
+		System.out.println( nombre + "esta saltando");
+	}
+
+}
