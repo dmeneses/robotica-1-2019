@@ -1,0 +1,26 @@
+
+public class Principal {
+
+	public static void main(String[] args) 
+	{
+		//creacion de objeto perro (nuevo tipo)
+		
+		//int edad;
+		//boolean encendido;
+		//double perimetro;
+		//*EV3UltrasonicSensor ojos;
+		//ojos = new EV3UltrasonicSensor(SensorPort.S1;)
+		
+		Perro perro1;
+		perro1 = new Perro();
+		perro1.nombre = "Sam";
+		perro1.edad = 21;
+		perro1.color = "amarillo";
+		perro1.raza = "Buscador";
+		
+		perro1.comer();
+		
+		
+	}
+
+}
