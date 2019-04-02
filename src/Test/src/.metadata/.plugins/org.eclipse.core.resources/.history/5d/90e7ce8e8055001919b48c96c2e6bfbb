@@ -37,8 +37,8 @@ public class postas1{
 			}
 			System.out.println(botonActivado);
 			
-			motorB.setAcceleration(1500); 
-			motorC.setAcceleration(1500); 
+		/*	motorB.setAcceleration(1000); 
+			motorC.setAcceleration(1000); */
 			
 		
 		
@@ -58,7 +58,7 @@ public class postas1{
 			
 			if (botonActivado){
 				  
-				 int grados=((int)(((distancia*360)-3300)/17));
+				 int grados=((int)(((distancia*360)-1800)/17));
 				motorB.rotate(grados,true);
 				motorC.rotate(grados);
 				

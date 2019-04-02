@@ -58,7 +58,8 @@ public class postas1{
 			
 			if (botonActivado){
 				  
-				 int grados=((int)(((distancia*360)-3300)/17));
+				 int grados=((int)(((distancia*360)-32
+						 00)/17));
 				motorB.rotate(grados,true);
 				motorC.rotate(grados);
 				
