@@ -1,0 +1,21 @@
+
+public class ForTest {
+
+	public static void main(String[] args) {
+		// mostrar la tabla de multiplicar para un numero cualquiera del 1 al 9
+		// si el numero es uno deberia mostrar 1*1=1 1*2=2
+		int numero = 1;
+		if (numero >= 1 && numero <=9){
+			//generar tabla de multiplicar
+			if(numero==1){
+				System.out.println("1*1=1");
+				System.out.println("1*2=2");
+			}
+		}
+		else{
+			System.out.println("losiento no podemos multiplicar la tabla del numero "+ numero);
+		}
+
+	}
+
+}

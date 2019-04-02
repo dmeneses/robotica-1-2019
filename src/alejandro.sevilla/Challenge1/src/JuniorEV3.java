@@ -50,6 +50,7 @@ public class JuniorEV3 {
 		if (sensorTouchDetectoToque == true){
 			
 			
+
 			Sound.beepSequence();
 			//sensor preparate para sacar fotos
 			SampleProvider muestrasCapturadasOjitos = ojitos.getDistanceMode();
@@ -58,13 +59,9 @@ public class JuniorEV3 {
 			//captura mientras la distancia al obstaculo sea 0
 			
 			while(distanciaAlObstaculo == Float.POSITIVE_INFINITY){
-				//float[] datosOjitos = new float [muestrasCapturadasOjitos.sampleSize()];
-				//muestrasCapturadasOjitos.fetchSample(datosOjitos, 0);
-				//distanciaAlObstaculo = datosOjitos[0];
-				//System.out.println("dato enviado por el sensor ="+ distanciaAlObstaculo);	
 				if(distanciaAlObstaculo == Float.POSITIVE_INFINITY){
 					
-					double distanciaInfinty = 35;
+					double distanciaInfinty = 25;
 					int gradosI = 0;
 					double diametroRueda = 5.5;
 					double circunferencia = Math.PI*diametroRueda;
@@ -89,7 +86,7 @@ public class JuniorEV3 {
 			
 			double circunferencia = Math.PI*diametroRueda;
 			double numeroDeRotaciones = distanciaCM /circunferencia;
-			grados = (int)(numeroDeRotaciones*340);
+			grados = (int)(numeroDeRotaciones*350);
 
 			Sound.beepSequenceUp();
 		
