@@ -23,19 +23,25 @@ public class postas
 			System.out.println("Boton "+muestrasBoton[0]);
 			
 			double x =distancia;
-			double rotar=360*(x/(2.5*Math.PI*2));
+			double rotar=360*(x/(2.45*Math.PI*2));
 			
 			int presionado = (int)muestrasBoton[0];//presionado en 1
 			if(presionado == 1)
-			{Motor.B.rotate((int)rotar,true);
+			{
+				Motor.B.setSpeed(720);		
+				Motor.C.setSpeed(720); 	
+			Motor.B.setAcceleration(600/1/1);
+			Motor.C.setAcceleration(600/1/1);
+			
+			Motor.B.rotate((int)rotar,true);
 			Motor.C.rotate((int)rotar);
-			break;
+			
+			
 				
 			}
 			
 		}	
-		System.out.println("Salio del while");
-		Button.waitForAnyPress();
+		
 		
 	}
 }

@@ -1,7 +1,7 @@
 package primer;
 
 
-import lejos.hardware.motor.Motor;
+//import lejos.hardware.motor.Motor;
 
 
 public class primer {
