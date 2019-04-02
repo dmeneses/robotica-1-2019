@@ -35,19 +35,17 @@ public class juancho70
 		    	//360 ------ perimetro
 		    	// ?  ------ distancia
 		    	double grados = 360*distancia/perimetro;
-		    	Motor.B.setSpeed((int)900);
-		    	Motor.C.setSpeed((int)900);
-		    	Motor.B.setAcceleration(900);
-		    	Motor.C.setAcceleration(900);
+		    	
+		    	Motor.B.setAcceleration(800);
+		    	Motor.C.setAcceleration(800);
 		    
-		   
-              
-              System.out.println("Hola mundo¡");
+		    
 		    }
+		    System.out.println("Hola mundo¡");
+		   
 		}
+		
+			
 	}
 }
-              
-
-		   
 
