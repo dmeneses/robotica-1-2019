@@ -40,11 +40,13 @@ public class Principal {
 				System.out.println ("Grados : " + grados);
 				//Motor.C.setAcceleration((int) (grados/5/5));
 				//Motor.B.setAcceleration((int) (grados/5/5));
-				Motor.C.setAcceleration(500);
-				Motor.B.setAcceleration(500);
-				//720
-				Motor.C.setSpeed(800);
+				
 				Motor.B.setSpeed(800);
+				Motor.C.setSpeed(800);
+				Motor.B.setAcceleration(500);
+				Motor.C.setAcceleration(500);
+				//720
+				
 				Motor.B.rotate((int)grados, true);
 				Motor.C.rotate((int)grados);
 				
