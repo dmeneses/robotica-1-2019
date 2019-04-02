@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;aceleracion.java&apos; to &apos;rapido.rapido.java&apos;&#x0A;- Original project: &apos;ultron_V.2&apos;&#x0A;- Destination element: &apos;rapido.rapido.java&apos;&#x0A;- Original element: &apos;aceleracion.java&apos;" description="Copy compilation unit" destination="=rapido/src&lt;rapido{rapido.java" element1="/src&lt;{aceleracion.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1554234525263" units="1" version="1.0"/>
+</session>
