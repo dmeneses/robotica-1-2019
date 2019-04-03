@@ -3,7 +3,10 @@ package variables;
 public class prueba {
 
 	public static void main(String[] args) {
-		System.out.println("hello motherfuckers");
+		for(int i=0;i<=15;i=i+5){
+			System.out.println("Hola mundo X4");
+		}
+		/*System.out.println("hello motherfuckers");
 		String decirsaludo;
 		decirsaludo= "hello motherfukers x2";
 		System.out.println("Decir saludo");
@@ -27,7 +30,7 @@ public class prueba {
         }
         else if(var==false){
         System.out.println("la variable es nula");	
-        }
+        }*/
 	}
    
 }
