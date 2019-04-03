@@ -6,6 +6,7 @@ if (condicion) {
 } else {
     // si la condicion NO SE CUMPLE el codigo aqui se ejecuta
 }
+```
 
 ## Tipos de condiciones
 - Numeros:
