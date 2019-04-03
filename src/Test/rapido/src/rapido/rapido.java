@@ -14,7 +14,7 @@ public class rapido {
 
 	EV3LargeRegulatedMotor motorB = new EV3LargeRegulatedMotor(MotorPort.B);
 	EV3LargeRegulatedMotor motorC = new EV3LargeRegulatedMotor(MotorPort.C);
-		  EV3TouchSensor sensor = new EV3TouchSensor(SensorPort.S4);
+	EV3TouchSensor sensor = new EV3TouchSensor(SensorPort.S4);
 		  
 		  motorB.setAcceleration(850);
 			motorC.setAcceleration(850);
@@ -35,11 +35,11 @@ public class rapido {
 	  		   botonActivado = true;
 	  	   }
 	  	   if (botonActivado == true){
+	  		 motorB.setSpeed(2000);
+	  		 motorC.setSpeed(2000);
 	  			//double distancia = 60;
 	  			//int grados = (int)distancia * 360 / 17;
-	  			motorB.setSpeed(2000);
 	  			//motorB.forward();
-	  			motorC.setSpeed(2000);
 	  			//motorC.forward();
 	  			//Delay.msDelay(3600);
 	  		    //motorB.rotate(grados, true);
@@ -52,8 +52,8 @@ public class rapido {
 	    		int grados = (int)centimetros * 360 / 17;
 	    		motorB.rotate(grados, true);
 	    		motorC.rotate(grados);
-	    		motorB.setAcceleration(300);
-	    		motorC.setAcceleration(300);
+	    		motorB.setAcceleration(1000);
+	    		motorC.setAcceleration(1000);
 	  	    
 	    		
 	    	 

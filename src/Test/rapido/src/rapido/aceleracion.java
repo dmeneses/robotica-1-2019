@@ -56,7 +56,7 @@ public class aceleracion {
       	    
         		
         	 
-        	 System.out.println("Distancia: " + distancia);
+        	 System.out.println("avanze: " + distancia);
         	 
         	 
          }
