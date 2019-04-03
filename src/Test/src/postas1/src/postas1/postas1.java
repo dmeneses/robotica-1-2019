@@ -42,9 +42,8 @@ public class postas1{
 			
 		
 		
-			int x = 320;     //grados//
-			int y = 30;      //distancia//
-				int giro = x ;
+		      
+		
 				double distancia;
 				
 				
@@ -52,31 +51,34 @@ public class postas1{
 				ojos.fetchSample(muestras,0);
 				distancia = muestras [0] * 100 ;
 				
-				//		x=x-3;
+		
 						
 				System.out.println ("Distancia:"+ distancia);
 			
-			if (botonActivado){
-				  
-				 int grados=((int)(((distancia*360)-3300)/17));
-				motorB.rotate(grados,true);
-				motorC.rotate(grados);
-				
-		
-		/*boolean velocidad = motorB.getMaxSpeed(); 
-		System.out.println ("velocidad="+velocidad  );
-		
-		 int calculo*/
+
+	if (botonActivado)
+		for (int i=5;i<=15;i++){
+			
+		motorB.setSpeed(500);
+		motorB.forward();
+if (0<=distancia){
+	motorB.stop();
+	motorC.stop();
+}
+		motorC.setSpeed(500);
+		motorC.forward();
 		
 
-				
-		
+		}
+			
+			
+			
 			}
 			}
 	
 		}
 	}
-}
+
 		
 	
 
