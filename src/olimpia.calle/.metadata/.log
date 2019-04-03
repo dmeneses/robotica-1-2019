@@ -1,0 +1,31 @@
+!SESSION 2019-04-03 15:21:35.305 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.7.0_75
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -data /home/roboticaest/robotica-1-2019/src/olimpia.calle -product org.eclipse.epp.package.java.product
+
+!ENTRY org.lejos.ev3.ldt 4 0 2019-04-03 15:22:18.099
+!MESSAGE EV3_HOME is not set. Please specify it in the plug-in's preferences
+!STACK 0
+org.lejos.ev3.ldt.util.LeJOSEV3Exception: EV3_HOME is not set. Please specify it in the plug-in's preferences
+	at org.lejos.ev3.ldt.util.LeJOSEV3Util.getEV3Home(LeJOSEV3Util.java:219)
+	at org.lejos.ev3.ldt.util.LeJOSEV3Util.updateStarters(LeJOSEV3Util.java:335)
+	at org.lejos.ev3.ldt.util.LeJOSEV3Util.getCachedExternalStarter(LeJOSEV3Util.java:354)
+	at org.lejos.ev3.ldt.actions.StartEV3SDCardAction.startEV3MapCommand(StartEV3SDCardAction.java:41)
+	at org.lejos.ev3.ldt.actions.StartEV3SDCardAction.access$0(StartEV3SDCardAction.java:33)
+	at org.lejos.ev3.ldt.actions.StartEV3SDCardAction$1.run(StartEV3SDCardAction.java:26)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.lejos.ev3.ldt 4 0 2019-04-03 15:22:22.745
+!MESSAGE EV3_HOME is not set. Please specify it in the plug-in's preferences
+!STACK 0
+org.lejos.ev3.ldt.util.LeJOSEV3Exception: EV3_HOME is not set. Please specify it in the plug-in's preferences
+	at org.lejos.ev3.ldt.util.LeJOSEV3Util.getEV3Home(LeJOSEV3Util.java:219)
+	at org.lejos.ev3.ldt.util.LeJOSEV3Util.updateStarters(LeJOSEV3Util.java:335)
+	at org.lejos.ev3.ldt.util.LeJOSEV3Util.getCachedExternalStarter(LeJOSEV3Util.java:354)
+	at org.lejos.ev3.ldt.actions.StartEV3ControlAction.startEV3Control(StartEV3ControlAction.java:41)
+	at org.lejos.ev3.ldt.actions.StartEV3ControlAction.access$0(StartEV3ControlAction.java:33)
+	at org.lejos.ev3.ldt.actions.StartEV3ControlAction$1.run(StartEV3ControlAction.java:26)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)

@@ -45,8 +45,8 @@ public class Postasfury {
 	            	S = D ;
 	            	motorI.setSpeed(motorI.getMaxSpeed());
 	            	motorD.setSpeed(motorD.getMaxSpeed());
-	            	motorI.rotate(D, true);
-	                motorD.rotate(D);
+	            	/*motorI.rotate(D, true);
+	                motorD.rotate(D);*/
 	            	}
 	            else{
 	            System.out.println(BotonActivo);
