@@ -9,8 +9,8 @@
 <fullyQualifiedTypeName name="lejos.robotics.SampleProvider"/>
 <fullyQualifiedTypeName name="lejos.hardware.port.SensorPort"/>
 <fullyQualifiedTypeName name="lejos.hardware.sensor.EV3UltrasonicSensor"/>
-<fullyQualifiedTypeName name="lejos.hardware.Button"/>
 <fullyQualifiedTypeName name="lejos.hardware.Sound"/>
 <fullyQualifiedTypeName name="lejos.robotics.RangeFinder"/>
 <fullyQualifiedTypeName name="lejos.hardware.sensor.EV3GyroSensor"/>
+<fullyQualifiedTypeName name="lejos.hardware.Button"/>
 </qualifiedTypeNameHistroy>

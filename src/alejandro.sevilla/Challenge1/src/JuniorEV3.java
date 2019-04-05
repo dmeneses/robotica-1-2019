@@ -18,14 +18,14 @@ public class JuniorEV3 {
 		EV3LargeRegulatedMotor motorI = new EV3LargeRegulatedMotor(MotorPort.B);
 		EV3TouchSensor sensorTouch  = new EV3TouchSensor(SensorPort.S1);
 		EV3UltrasonicSensor ojitos = new EV3UltrasonicSensor(SensorPort.S4);
-		//capturar lo que el sensor detecto
+		//capturar lo que el sensor detecto  
 		SampleProvider muestrasCapturadasTouch = sensorTouch.getTouchMode();
 		boolean sensorTouchDetectoToque = false;
 		// mientras el sensor no detecte toque 
 		//esperamos a que ocurra algo
 		//o que cambia a true
 		while (sensorTouchDetectoToque == false ){
-			System.out.println("esperando a que pase algo");
+			System.out.println("listo para empezar");
 			
 			//creamos una contenedora para recibir los datos del sensor
 			float[] datosDelSensor = new float[muestrasCapturadasTouch.sampleSize()];
@@ -36,7 +36,7 @@ public class JuniorEV3 {
 			//preguntar si el dato enviado porel sensor
 			//preguntar  si el valor preguntamos si la condicional se cumple o no
 			if (datosDelSensor[0] == 0){
-				System.out.println("o equivale a que no hubo toque");
+				
 			}
 			//preguntar si el valor es diferente a 0
 			if (datosDelSensor[0]!= 0){
@@ -86,9 +86,10 @@ public class JuniorEV3 {
 			
 			double circunferencia = Math.PI*diametroRueda;
 			double numeroDeRotaciones = distanciaCM /circunferencia;
-			grados = (int)(numeroDeRotaciones*350);
+			grados = (int)(numeroDeRotaciones*345);
 
 			Sound.beepSequenceUp();
+			
 		
 			
 			motorD.setSpeed(300);

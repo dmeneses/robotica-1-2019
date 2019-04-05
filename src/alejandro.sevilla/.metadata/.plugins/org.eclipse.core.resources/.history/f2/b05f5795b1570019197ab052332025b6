@@ -1,0 +1,73 @@
+import lejos.hardware.Button;
+import lejos.hardware.motor.EV3LargeRegulatedMotor;
+import lejos.hardware.port.MotorPort;
+//import lejos.hardware.port.SensorPort;
+//import lejos.hardware.sensor.EV3TouchSensor;
+//import lejos.robotics.SampleProvider;
+
+
+public class CarritoDibujadorAle {
+
+	public static void main(String[] args) {
+		
+		int numeroDeTramos = 2;
+		double brazoRotate = -60;
+		double distanciaLapizArriba = 20;
+		double distanciaLapizAbajo = 30;
+		
+		
+		EV3LargeRegulatedMotor motorD = new EV3LargeRegulatedMotor(MotorPort.C);
+		EV3LargeRegulatedMotor motorI = new EV3LargeRegulatedMotor(MotorPort.B);
+		EV3LargeRegulatedMotor brazo = new EV3LargeRegulatedMotor(MotorPort.D);
+		
+		System.out.println("toca un boton para empezar");
+		Button.waitForAnyPress();
+		
+		brazo.rotate(60);
+		brazo.setSpeed(800);
+		
+		Button.waitForAnyPress();
+		
+		brazo.rotate(-60);
+		brazo.setSpeed(800);
+		
+		while (brazoRotate == -60){
+			
+			int grados = 0;
+			double diametroRueda = 5.5; 
+			double circunferencia = Math.PI*diametroRueda;
+			double numeroDeRotaciones = distanciaLapizArriba /circunferencia;
+			grados = (int)(numeroDeRotaciones*360);
+			
+			System.out.println(numeroDeRotaciones);
+			Button.waitForAnyPress();
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		motorD.close();
+		motorI.close();
+		System.out.println("toca un boton para empezar");
+		Button.waitForAnyPress();
+		
+		
+		
+		}
+		
+	
+
+	}
+
+

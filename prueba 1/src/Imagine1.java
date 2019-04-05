@@ -31,10 +31,10 @@ public class Imagine1
 	    System.out.println("Distancia" +  muestras[0] );
 	    
 	    double grados = distancia * 20.70; 
-	    Motor.B.setSpeed(750);
-	    Motor.C.setSpeed(750);
-	    Motor.B.setAcceleration(850);
-	    Motor.C.setAcceleration(850);
+	    Motor.B.setSpeed(900);
+	    Motor.C.setSpeed(900);
+	    Motor.B.setAcceleration(500);
+	    Motor.C.setAcceleration(500);
 	    if(muestrasPulsador[0] == 1)
 	    {	
 	      Motor.B.rotate((int)grados, true);
