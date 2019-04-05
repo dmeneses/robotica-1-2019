@@ -1,0 +1,14 @@
+package afedo3;
+
+import javax.swing.JPanel;
+
+public class Gato extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public Gato() {
+
+	}
+
+}
