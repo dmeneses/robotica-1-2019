@@ -1,0 +1,15 @@
+package dia05;
+
+public class principal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+      Auto carro = new Auto("rojo", "nissan", 1, 80, true);
+      Auto peta = new Auto("blanco", "volkswagen", 5, 20, false);
+     
+      
+      carro.arrancarAuto();
+      peta.arrancarAuto();
+	}
+
+}

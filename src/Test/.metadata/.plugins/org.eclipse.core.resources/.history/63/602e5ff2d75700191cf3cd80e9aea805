@@ -1,0 +1,23 @@
+package dia05;
+
+class Auto {
+     int NROventanas;
+     String color;
+     String marca;
+     double velocidad;
+     boolean estaencendido;
+     
+     
+     public Auto(String uncolor, String unamarca, int unNRO, double unavelocidad,  boolean siestaencendido ){
+     color = uncolor;
+     marca = unamarca;
+     NROventanas = unNRO;
+     velocidad = unavelocidad;
+     estaencendido = siestaencendido;
+     }
+     public void arrancarAuto(){
+estaencendido = true;
+
+System.out.println("bebecita_brrr");
+     }
+}
