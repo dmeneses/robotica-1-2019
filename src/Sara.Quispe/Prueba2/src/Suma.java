@@ -1,3 +1,5 @@
+import lejos.hardware.Button;
+
 
 public class Suma {
 
