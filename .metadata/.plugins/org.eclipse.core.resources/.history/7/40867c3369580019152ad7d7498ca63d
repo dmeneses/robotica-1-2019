@@ -1,0 +1,47 @@
+import lejos.hardware.sensor.EV3UltrasonicSensor;
+import lejos.hardware.sensor.EVE3TouchSensor;
+import lejos.hardware.sensor.EVE3UltrasonicSensor;
+
+
+
+
+public class Robot {
+	{
+	//propiedades
+	double radio;
+	double eje;//6.5
+	EV3UltrasonicSensor ojos;
+	float[]muetrasOjos;
+	float[] muestrasBoton;
+	EVE3TouchSensor Boton;
+	//metodos
+	public void avanzarCentimentros (int distancia)
+	{
+		double perimetro= radio*Math
+	}
+}}
+{public in detectarDistancia ()
+	{
+	ojos.fetchSample(muestrasOjos,0);
+	return (int)muestrasOjos[0]*100;
+	}
+	public int detectarPulsador()
+	{
+		boton.fetchSample(muestraBoton, 0);
+		return (int)muestrasBoton)
+		
+	}
+	public void girarGrados (int grados)
+	{
+		double perimetrog0 eje*Math.PI;
+		//regla de 3
+		double giro= grados*Perimetrog/360;
+		double perimetro= radio*Math.PI*2;
+		//regla de tres
+		double gradito= giro*360/perimetro;
+		//mover motores
+		MOtor.B.rotate((int)gradito, true);
+		Motor.C.rotate((int)-gradito);
+		
+	}
+}
