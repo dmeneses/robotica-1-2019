@@ -1,0 +1,26 @@
+
+public class Inicio 
+{
+	public static void main(String[] args) 
+	{
+		Robot Robot1;
+		Robot1= new Robot(2.5, 12.5);
+		Robot1.avanzarCentimetros(587);
+		Robot1.avanzarCentimetros(260);
+		Robot1.avanzarCentimetros(40);
+		Robot1.avanzarCentimetros(120);
+		Robot1.avanzarCentimetros(-320);
+		
+		//repetir hasta detectar pulsador 1
+		while (true)
+		{
+			
+			if(Robot1.detectarPulsador()==1){
+				int x= Robot1.detectardistancia();
+					
+			}
+		}
+		
+		
+	}
+}
