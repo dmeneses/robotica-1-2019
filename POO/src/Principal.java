@@ -10,9 +10,13 @@ public class Principal {
 		//double perimetro;
 		//*EV3UltrasonicSensor ojos;
 		//ojos = new EV3UltrasonicSensor(SensorPort.S1;)
+		int edad;
+		edad = 15;
 		
-		Perro perro1;
+		
+		Perro perro1;		
 		perro1 = new Perro();
+				
 		perro1.nombre = "Sam";
 		perro1.edad = 21;
 		perro1.color = "amarillo";
@@ -27,8 +31,7 @@ public class Principal {
 		
 		perro1.comer();
 		perro2.hacerTrucos('m');
-		
-		
+		perro2.comer();
 	}
 
 }

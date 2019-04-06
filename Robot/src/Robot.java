@@ -1,19 +1,30 @@
 import lejos.hardware.motor.Motor;
+import lejos.hardware.port.SensorPort;
 import lejos.hardware.sensor.EV3TouchSensor;
 import lejos.hardware.sensor.EV3UltrasonicSensor;
 
 
 public class Robot
 {
-	//propiedades
-	
+	//propiedades	
 	double radio;
 	double eje;
 	EV3UltrasonicSensor ojos;
 	float[] muestrasojos;
 	float[] muestrasboton;
 	EV3TouchSensor boton;
-	
+	int t=1;
+	//constructor
+	public Robot (double rad, double ej)
+	{
+		radio = rad;
+		eje = ej;
+		ojos = new EV3UltrasonicSensor (SensorPort.S4);
+		boton = new EV3TouchSensor (SensorPort.S1);
+		muestrasojos = new float [ojos.sampleSize()];
+		muestrasboton = new float [boton.sampleSize()];
+		
+	}
 	
 	//metodos
 	public void avanzarcm(int distancia)
@@ -49,6 +60,7 @@ public class Robot
 		//regla de tres para obtener dist del arco a moverse //grad normal//
 		
 		double giro = grados*perimetrog/360; //cuantos grados normal va a girar
+	
 		//perimetro de la rueda
 		double perimetro=radio*Math.PI*2; //para vanzar cm
 		//regla de tres para obtener grados robot
@@ -58,5 +70,15 @@ public class Robot
 		Motor.C.rotate((int)-gradito);
 	}
 	
+	public void dibujarTriangulo(int lado)
+	{
+		while (t<=3)
+		{
+		avanzarcm (lado);
+		girargrados(120);
+		t=t+1;
+		
+		}
+	}
 
 }
