@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;afedo3.Motor&apos; to &apos;Inicio&apos;&#x0A;- Original project: &apos;afedo3&apos;&#x0A;- Original element: &apos;afedo3.Motor&apos;&#x0A;- Renamed element: &apos;afedo3.Inicio&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Motor&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;afedo3{Motor.java[Motor" matchStrategy="1" name="Inicio" qualified="false" references="true" similarDeclarations="false" stamp="1554558442178" textual="false" version="1.0"/>
+</session>

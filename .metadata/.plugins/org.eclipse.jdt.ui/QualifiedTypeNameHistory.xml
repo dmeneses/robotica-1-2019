@@ -5,4 +5,5 @@
 <fullyQualifiedTypeName name="lejos.hardware.sensor.EV3TouchSensor"/>
 <fullyQualifiedTypeName name="lejos.hardware.Button"/>
 <fullyQualifiedTypeName name="lejos.hardware.motor.Motor"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
 </qualifiedTypeNameHistroy>

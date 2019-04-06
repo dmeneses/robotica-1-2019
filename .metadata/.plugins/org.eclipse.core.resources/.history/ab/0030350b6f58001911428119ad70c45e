@@ -1,0 +1,18 @@
+package afedo3;
+
+public class Pato 
+{
+	//propiedades
+	double radio;
+	double eje;
+	EV3UltrasonicSensor  ojos;
+	float[] muestrasOjos;
+	float[] muestrasBoton;
+	EV3TouchSensor boton ;
+	//metodos
+	
+	
+}
+	
+
+
