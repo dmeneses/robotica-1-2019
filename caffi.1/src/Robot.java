@@ -10,7 +10,7 @@ public class Robot
 {	
 	//propiedades
 	double radio;
-	double eje;//6.5
+	double eje;
 	EV3UltrasonicSensor ojos;
 	float[]muestrasOjos;
 	float[] muestrasBoton;
@@ -71,5 +71,16 @@ public int detectarDistancia ()
 		Motor.B.setAcceleration(200);
 		Motor.C.setSpeed(500);
 		Motor.C.setAcceleration(200);
+	}
+	
+	public void dibujarTriangulo(int lado)
+	{ 
+		  avanzarCentimentros(lado);
+		  girarGrados(120);
+		 avanzarCentimentros(lado);
+		  girarGrados(120);
+		  avanzarCentimentros(lado);
+		  girarGrados(120); 
+		  
 	}
 }

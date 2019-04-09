@@ -20,7 +20,7 @@ public class caffi2
 	    //2. detectar distancia usando sensor ultrasonico
 	    //3. avanzar distancia apropiada para presionar el
 	    //   pulsador del robot siguiente
-		/*EV3UltrasonicSensor ojos;
+		EV3UltrasonicSensor ojos;
 		ojos = new EV3UltrasonicSensor (SensorPort.S3);
 		float[] muestras = new float[ojos.sampleSize()];
 		
@@ -51,6 +51,6 @@ public class caffi2
 			
 		}
 		System.out.println("ya se acabo :v");
-		Button.waitForAnyPress();*/
+		Button.waitForAnyPress();
 	}
 }
