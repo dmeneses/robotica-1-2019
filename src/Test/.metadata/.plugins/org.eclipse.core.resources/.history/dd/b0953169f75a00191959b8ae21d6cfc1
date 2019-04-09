@@ -1,0 +1,18 @@
+package dia05;
+
+
+
+public class Robo 
+{
+
+	int estatura;
+	String color;
+	Auto b;
+
+   public Robo (Auto bmovil)
+  {
+	b = bmovil ;
+  }
+ 
+   
+}
