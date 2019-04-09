@@ -73,7 +73,7 @@ public int detectarDistancia ()
 		Motor.C.setAcceleration(200);
 	}
 	
-	/*public void dibujarTriangulo(int lado)
+	public void dibujarTriangulo(int lado)
 	{ 
 		  avanzarCentimentros(lado);
 		  girarGrados(120);
@@ -82,9 +82,5 @@ public int detectarDistancia ()
 		  avanzarCentimentros(lado);
 		  girarGrados(120); 
 		  
-	}*/
-	int[]angurojo
-	 angurojo= new int [3]
-	int[]detector
-			{
+	}
 }
