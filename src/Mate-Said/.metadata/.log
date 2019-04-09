@@ -766,3 +766,35 @@ Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.pa
 
 !ENTRY org.eclipse.core.resources 2 10035 2019-04-03 14:14:19.411
 !MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2019-04-09 15:08:28.948 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.7.0_75
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-04-09 15:09:56.871
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.lejos.ev3.ldt 4 0 2019-04-09 15:17:53.088
+!MESSAGE unanble to initialize system context
+!STACK 0
+org.lejos.ev3.ldt.util.LeJOSEV3Exception: unanble to initialize system context
+	at org.lejos.ev3.ldt.util.ClassLoaderToolStarter.initializeSystemContext(ClassLoaderToolStarter.java:61)
+	at org.lejos.ev3.ldt.util.ClassLoaderToolStarter.<init>(ClassLoaderToolStarter.java:89)
+	at org.lejos.ev3.ldt.util.LeJOSEV3Util.updateStarters(LeJOSEV3Util.java:346)
+	at org.lejos.ev3.ldt.util.LeJOSEV3Util.getCachedExternalStarter(LeJOSEV3Util.java:354)
+	at org.lejos.ev3.ldt.actions.StartEV3ControlAction.startEV3Control(StartEV3ControlAction.java:41)
+	at org.lejos.ev3.ldt.actions.StartEV3ControlAction.access$0(StartEV3ControlAction.java:33)
+	at org.lejos.ev3.ldt.actions.StartEV3ControlAction$1.run(StartEV3ControlAction.java:26)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.ClassNotFoundException: lejos.pc.comm.SystemContext
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at org.lejos.ev3.ldt.util.ClassLoaderToolStarter.initializeSystemContext(ClassLoaderToolStarter.java:40)
+	... 7 more
