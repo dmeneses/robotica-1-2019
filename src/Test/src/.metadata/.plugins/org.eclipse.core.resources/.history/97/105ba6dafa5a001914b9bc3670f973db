@@ -1,0 +1,23 @@
+
+public class Robot {
+	Auto miAuto;
+	double velocidad;
+	String marca;
+	boolean encendido;
+
+	public Robot (String unamarca,double vel,boolean on,String auto)
+	
+	{
+		miAuto = auto;
+		marca = unamarca;
+		encendido = on;
+		velocidad= vel;
+		
+		
+		
+		
+	}
+
+	}
+
+

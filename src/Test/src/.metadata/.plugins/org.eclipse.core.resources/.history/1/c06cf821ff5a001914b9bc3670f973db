@@ -1,0 +1,43 @@
+
+public class Robot {
+	Auto carrito;
+	double velocidad;  
+	String[]listaSensores;
+	String marca;
+	boolean encendido;
+	String arancar ;
+	public Robot (String unamarca,String avanzar,double vel,boolean on,Auto auto,String[]lista)
+	{  
+		listaSensores=lista;
+		arancar = avanzar;
+		carrito = auto;
+		marca = unamarca;
+		encendido = on;
+		velocidad= vel;	
+	}
+
+	public void arrancarAuto ()
+	{
+    encendido= true;
+		carrito.arancarAuto();
+	
+	}
+	String lista;
+	public void listaSensores()
+	{ 
+		lista = "SENSOR TOUCH";
+		for (int lista= 0 ; lista <= 1;lista =lista++)
+		System.out.println(listaSensores[0]);
+	
+	
+		
+	}
+	
+		
+		
+		
+	}
+	
+	
+
+

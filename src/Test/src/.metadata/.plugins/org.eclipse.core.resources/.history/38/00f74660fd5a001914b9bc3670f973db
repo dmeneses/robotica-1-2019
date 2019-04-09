@@ -1,0 +1,25 @@
+
+public class Robot {
+	Auto carrito;
+	double velocidad;
+	String marca;
+	boolean encendido;
+	String arancar ;
+	public Robot (String unamarca,String avanzar,double vel,boolean on,Auto auto)
+	{ 
+		arancar = avanzar;
+		carrito = auto;
+		marca = unamarca;
+		encendido = on;
+		velocidad= vel;	
+	}
+
+	public void arrancarAuto ()
+	{
+	encendido= true;
+		carrito.arancarAuto();
+	}
+	
+	}
+
+
