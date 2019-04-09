@@ -8,4 +8,11 @@
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="CarritoDibujar"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="ProyectoLineas"/>
+<booleanAttribute key="org.lejos.ev3.ldt.ConnectToName" value="false"/>
+<stringAttribute key="org.lejos.ev3.ldt.ConnectionName" value=""/>
+<booleanAttribute key="org.lejos.ev3.ldt.connectionUseDefaults" value="true"/>
+<booleanAttribute key="org.lejos.ev3.ldt.debug.runAfterUpload" value="true"/>
+<booleanAttribute key="org.lejos.ev3.ldt.debug.useDefaults" value="true"/>
+<booleanAttribute key="org.lejos.ev3.ldt.run.runAfterUpload" value="true"/>
+<booleanAttribute key="org.lejos.ev3.ldt.run.useDefaults" value="false"/>
 </launchConfiguration>
