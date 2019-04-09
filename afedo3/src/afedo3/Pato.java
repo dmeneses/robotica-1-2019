@@ -63,4 +63,19 @@ public class Pato
 		 Motor.C.rotate((int)-grados);
 		   
 	   }
-}
+	   
+	   public void dibujarTriangulo(int lado)
+	   {
+		   avanzarCentimetros(lado);
+		   girarGrados(270);
+		   avanzarCentimetros(lado);
+		   girarGrados(270);
+		   avanzarCentimetros(lado);
+		   girarGrados(273);
+		   
+		   
+		  
+	   }
+	
+	}
+
