@@ -33,6 +33,8 @@ public class Robot40
 //regla de tres
 		double avan= distancia *360/perimetro;
 		//mover motores 
+		Motor.B.setAcceleration(320);
+		Motor.C.setAcceleration(320);
 		Motor.B. rotate((int) avan, true);
 		Motor.C.rotate((int)avan);
 	}
@@ -40,14 +42,14 @@ public class Robot40
 	public int detectardistancia()
 	{
 		ojos.fetchSample (muestrasOjos, 0);
-		System.out.println(muestrasOjos);
+		System.out.println(muestrasOjos[0]);
 		return (int) muestrasOjos [0] *100;
 	}
 	
 	public int detectarPulsador()
 	{
 		boton.fetchSample (muestrasBoton,0);
-		System.out.println(muestrasBoton);
+		System.out.println(muestrasBoton[0]);
 		return (int) muestrasBoton [0];	
 	}
 	
@@ -63,5 +65,18 @@ public class Robot40
 		Motor.B.rotate((int)gradito, true);
 		Motor.C.rotate((int)-gradito );
 					
-	}			
-}
+	}
+	public void dibujarTriangulo(int lado)
+	{
+		
+		if(detectarPulsador()==1)	
+		{				
+			int i=1;			
+			while (i<=3){ 
+				avanzarCentimetros(lado);
+				girarGrados(115);
+				
+			i=i+1;
+			}
+	}
+}}
