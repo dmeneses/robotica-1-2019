@@ -1,0 +1,30 @@
+import lejos.hardware.motor.EV3LargeRegulatedMotor; 
+import lejos.hardware.port.MotorPort;
+import lejos.hardware.port.SensorPort;
+import  lejos.hardware.sensor.EV3ColorSensor; 
+import lejos.utility.Delay;
+
+public class Principal {		
+	
+	public static void main (String [] args){
+			EV3LargeRegulatedMotor motorA = new EV3LargeRegulatedMotor(MotorPort.B);
+			EV3LargeRegulatedMotor motorB = new EV3LargeRegulatedMotor(MotorPort.C);
+			
+			motorA.setSpeed(500);
+			motorA.forward();
+			
+			motorB.setSpeed(500);
+			motorB.forward();
+			
+			Delay.msDelay(3000);
+			 
+	
+    int grados; 
+ 
+     double distancia;
+     distancia = 10;
+     grados =( int ) (distancia * 24);
+     motorB.rotate(grados,true);
+     motorA.rotate(-grados);
+}
+}
