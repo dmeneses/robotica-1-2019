@@ -1,0 +1,20 @@
+package practicas;
+
+import lejos.hardware.port.SensorPort;
+import lejos.hardware.sensor.EV3ColorSensor;
+
+public class borrador {
+	
+	public static void main(String[] args) 
+	{
+	   EV3ColorSensor ojitos = new EV3ColorSensor(SensorPort.S4);
+	   float[] muestrasC = new float[ojitos.sampleSize()];
+	   while(true)
+	   {
+		   ojitos.fetchSample(muestrasC, 0);
+	       System.out.println("NUmero" + muestrasC[0]);
+	   }   
+     
+	}
+
+ }

@@ -2,6 +2,7 @@ package rapido;
 import lejos.hardware.motor.EV3LargeRegulatedMotor;
 import lejos.hardware.port.MotorPort;
 import lejos.hardware.port.SensorPort;
+import lejos.hardware.sensor.EV3ColorSensor;
 import lejos.hardware.sensor.EV3TouchSensor;
 import lejos.hardware.sensor.EV3UltrasonicSensor;
 import lejos.robotics.SampleProvider;
@@ -11,7 +12,7 @@ public class aceleracion {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		EV3LargeRegulatedMotor motorB = new EV3LargeRegulatedMotor(MotorPort.B);
+		/*EV3LargeRegulatedMotor motorB = new EV3LargeRegulatedMotor(MotorPort.B);
 		EV3LargeRegulatedMotor motorC = new EV3LargeRegulatedMotor(MotorPort.C);
 		  EV3TouchSensor sensor = new EV3TouchSensor(SensorPort.S4);
 		  
@@ -56,11 +57,17 @@ public class aceleracion {
       	    
         		
         	 
-        	 System.out.println("avanze: " + distancia);
-        	 
-        	 
+        	 System.out.println("avanze: " + distancia);*/
+		EV3ColorSensor ojitos = new EV3ColorSensor(SensorPort.S4);
+		SampleProvider sp = ojitos.getColorIDMode();
+		   float[] muestrasC = new float[ojitos.sampleSize()];
+		   while(true)
+		   {
+			   sp.fetchSample(muestrasC, 0);
+		       System.out.println("NUmero" + muestrasC[0]);
+		   } 
          }
-	}
+	
 
 
 
@@ -71,6 +78,6 @@ public class aceleracion {
 
 
 
-	}
+	
 
 
