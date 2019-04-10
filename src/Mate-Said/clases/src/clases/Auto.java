@@ -13,9 +13,9 @@ public class Auto {
   
 	}
 
-	public void arrancar(){
+	public String arrancar(){
 		
-		System.out.println(marca);
+	      return marca;
 		
 	}
 	
@@ -25,13 +25,10 @@ public class Auto {
 		
 	}
 	
-    public void velocidad(){
+    public int velocidad(){
 		
-		System.out.println(velocidad);
-	
-		
+		return velocidad;
 		
     }
 	
-
 }
