@@ -19,6 +19,11 @@ public class DibujarCuadrado {
 		System.out.println("Presione un boton para iniciar");
 		Button.waitForAnyPress();
 		
+		int num =1;
+		while (num<=6){
+			System.out.println(num);
+			num++;
+		
 		
 		motorA.rotate(-110,true);
 		
@@ -30,7 +35,7 @@ public class DibujarCuadrado {
 		double numeroDeRotaciones=distanciaMover/circunferencia;
 		grados=(int)(numeroDeRotaciones* 360);
 		
-		int velocidad=300; 
+		int velocidad=100; 
 		motorB.setSpeed(velocidad);
 		motorB.rotate(grados,true);
 		motorD.setSpeed(velocidad);
@@ -38,17 +43,6 @@ public class DibujarCuadrado {
 		
 		motorA.rotate(110,true);
 		
-		
-		
-		int num =1;
-		while (num<=2){
-			System.out.println(num);
-			num++;
-	 
-		 
-		//motorA.rotate(110,true);
-		
-	    
 		int grados1;
 		double diametroRueda1=5.5;
 		double circunferencia1=Math.PI* diametroRueda1;

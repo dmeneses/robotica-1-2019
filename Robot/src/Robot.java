@@ -1,7 +1,7 @@
 import lejos.hardware.motor.Motor;
 import lejos.hardware.port.SensorPort;
 import lejos.hardware.sensor.EV3ColorSensor;
-import lejos.hardware.sensor.EV3TouchSensor;
+//import lejos.hardware.sensor.EV3TouchSensor;
 import lejos.hardware.sensor.EV3UltrasonicSensor;
 
 
@@ -12,20 +12,22 @@ public class Robot
 	double eje;
 	EV3UltrasonicSensor ojos;
 	float[] muestrasojos;
-	float[] muestrasboton;
-	EV3TouchSensor boton;
-	int t=1;
+	//float[] muestrasboton;
+	//EV3TouchSensor boton;
+	//int t=1;
 	EV3ColorSensor color;
 	float[] muestrascolor;
+	
+	
 	//constructor
 	public Robot (double rad, double ej)
 	{
 		radio = rad;
 		eje = ej;
 		ojos = new EV3UltrasonicSensor (SensorPort.S4);
-		boton = new EV3TouchSensor (SensorPort.S1);
+		//boton = new EV3TouchSensor (SensorPort.S1);
 		muestrasojos = new float [ojos.sampleSize()];
-		muestrasboton = new float [boton.sampleSize()];
+		//muestrasboton = new float [boton.sampleSize()];
 		color = new EV3ColorSensor (SensorPort.S2);
 		muestrascolor = new float [color.sampleSize()];
 	}
@@ -49,13 +51,13 @@ public class Robot
 		
 	}
 	
-	public int detectarpulsador()
-	{
-		boton.fetchSample(muestrasboton, 0);
+	//public int detectarpulsador()
+	//{
+		//boton.fetchSample(muestrasboton, 0);
+		//
+		//return (int)muestrasboton[0];
 		
-		return (int)muestrasboton[0];
-		
-	}
+	//}
 	
 	public void girargrados(int grados)
 	{
@@ -74,14 +76,19 @@ public class Robot
 		Motor.C.rotate((int)-gradito);
 	}
 	
-	public void dibujarTriangulo(int lado)
+	public void dibujarTriangulo(int lado,int g1, int g2, int g3)
 	{
-		while (t<=3)
-		{
+		//while (t<=3){	t=t+1;	
+		
+			
+			girargrados(g1);
 			avanzarcm (lado);
-			girargrados(120);
-			t=t+1;		
-		}
+			girargrados(g2);
+			avanzarcm (lado);
+			girargrados(g3);
+			
+		
+	
 	}
 	public int detectarColor()
 	{

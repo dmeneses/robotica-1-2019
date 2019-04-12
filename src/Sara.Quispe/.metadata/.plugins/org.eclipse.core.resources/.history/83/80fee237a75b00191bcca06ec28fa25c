@@ -1,0 +1,13 @@
+
+public class PruebaCarrito {
+
+	public static void main(String[] args) {
+ 
+		Carrito carritoSara=new Carrito();
+		while(true){
+			carritoSara.detectarColor();
+		}
+		
+	}
+
+}

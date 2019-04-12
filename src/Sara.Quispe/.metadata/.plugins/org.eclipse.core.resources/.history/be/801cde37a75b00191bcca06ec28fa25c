@@ -1,0 +1,15 @@
+import lejos.hardware.port.SensorPort;
+import lejos.hardware.sensor.*;
+import lejos.robotics.SampleProvider;
+
+public class Carrito {
+	EV3ColorSensor sensorColor=new EV3ColorSensor(SensorPort.S1);
+
+	public void detectarColor(){
+		SampleProvider muestrasCapturadasColor= sensorColor.getColorIDMode();
+		float[]datosDelSensor=new float [muestrasCapturadasColor.sampleSize()];
+		muestrasCapturadasColor.fetchSample(datosDelSensor,0);
+		float color=datosDelSensor[0];
+		System.out.println("color="+ color);
+	}
+}
