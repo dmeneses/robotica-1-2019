@@ -1,0 +1,20 @@
+
+public class GirodeEje {
+
+	
+	
+	
+	
+	 public void circunferencia(int unnumero)
+	   {		 
+	double giroengrados;
+    int grados;
+  
+    
+    //giroengrados = unnumero;
+          grados =( int) (10*840/ 360);
+	   
+     
+}
+	}
+

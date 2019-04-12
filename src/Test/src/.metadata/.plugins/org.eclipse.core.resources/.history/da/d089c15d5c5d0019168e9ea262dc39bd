@@ -1,0 +1,29 @@
+
+public class GirodeEje {
+
+	int grados; 
+	boolean estaensendido;
+	String velocidad;
+	int circunferencia;
+	public void GiroDeEje (int numero,String vel,boolean listo)
+	{
+	grados=numero;	
+    velocidad = vel;
+	} 
+	public void ensendido()
+	{
+		 estaensendido = true; 
+		 System.out.println(90);
+} 
+	
+	public void girar(){
+		 
+	circunferencia=(int) (grados*360/17);
+	
+	 
+	 
+	
+	 
+	
+}
+}

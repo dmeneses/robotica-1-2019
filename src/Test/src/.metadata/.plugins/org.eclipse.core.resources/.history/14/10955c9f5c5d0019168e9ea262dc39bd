@@ -1,0 +1,24 @@
+
+public class GirodeEje {
+
+	int grados; 
+	int circunferencia;
+	
+	public void GiroDeEje (int numero,String vel,boolean listo)
+	{
+	grados=numero;	
+	
+	
+	public void girar()
+	{
+		 
+	circunferencia=(int) (numero)*(360/17);
+	
+	}
+	
+	 
+	
+	 
+	
+}
+}

@@ -5,11 +5,12 @@ import  lejos.hardware.sensor.EV3ColorSensor;
 import lejos.utility.Delay;
 
 public class Principal {	
+	int numero;
 	
-	public static void main (String [] args){
+	public static void main (String [] args,int unnumero){
 			EV3LargeRegulatedMotor motorA = new EV3LargeRegulatedMotor(MotorPort.B);
 			EV3LargeRegulatedMotor motorB = new EV3LargeRegulatedMotor(MotorPort.C);
-		    GirodeEje goku = new GirodeEje(90);
-			GirodeEje vegeta = new GirodeEje(90);
+		    GirodeEje goku = new GirodeEje(90,100);
+			
 	}
 	}
