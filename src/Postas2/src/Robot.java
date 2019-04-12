@@ -26,9 +26,21 @@ public class Robot {
     
     public void girarRobot(int grados)
     {
-    	
+    	grados = grados*(800/360);
     	motorA.rotate(grados , true);
 		motorC.rotate(-grados);
+    }
+    
+    public void seguirRuta(int[]grados,float distancia){
+    	
+    	girarRobot(grados[0]);
+    	avanzar(distancia);
+    	girarRobot(grados[1]);
+    	avanzar(distancia);
+    	girarRobot(grados[2]);
+    	avanzar(distancia);
+    	
+    	
     }
                                   
 }
