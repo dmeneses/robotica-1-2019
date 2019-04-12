@@ -12,7 +12,10 @@ public class aceleracion {
 		// TODO Auto-generated method stub
 		EV3LargeRegulatedMotor motorB = new EV3LargeRegulatedMotor(MotorPort.B);
 		EV3LargeRegulatedMotor motorC = new EV3LargeRegulatedMotor(MotorPort.C);
-		  EV3TouchSensor sensor = new EV3TouchSensor(SensorPort.S4);
+		int grados = 90;
+		double radio = 3.65;
+		double eje = 16;
+		 /* EV3TouchSensor sensor = new EV3TouchSensor(SensorPort.S4);
 		  
 		  motorB.setAcceleration(350);
   			motorC.setAcceleration(350);
@@ -36,7 +39,7 @@ public class aceleracion {
       			//double distancia = 60;
       			//int grados = (int)distancia * 360 / 17;
       			motorB.setSpeed(350);
-      			//motorB.forward();
+      			motorB.forward();
       			motorC.setSpeed(350);
       			//motorC.forward();
       			//Delay.msDelay(3600);
@@ -55,21 +58,26 @@ public class aceleracion {
       	    
         		
         	 
-        	 System.out.println("Distancia: " + distancia);
-        	 
+        	 System.out.println("Distancia: " + distancia);*/
+		double perimetrog = eje * Math.PI;
+    	double giro = grados * perimetrog / 360;
+    	double perimetro = radio * Math.PI * 2;
+    	double gradito = giro * 360 / perimetro;
+    	
+    	motorB.rotate((int)gradito, true);
+    	motorC.rotate((int)-gradito);
         	 
          }
-	}
+	//}
 
 
 
 
-	}
+	//}
 
 
 
 
-
-	}
+}
 
 

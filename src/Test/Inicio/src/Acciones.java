@@ -1,18 +1,22 @@
 import lejos.hardware.motor.Motor;
+import lejos.hardware.port.SensorPort;
 import lejos.hardware.sensor.EV3ColorSensor;
 import lejos.hardware.sensor.EV3UltrasonicSensor;
+import lejos.robotics.SampleProvider;
 
 
 public class Acciones 
 {
-	double radio = 3;
+	double radio = 3.65;
 	double eje = 16;
-	EV3UltrasonicSensor vision = new EV3UltrasonicSensor(m)
-    EV3ColorSensor ojito;
-    float[] muestrasV;
-    float[] muestrasC;
+	EV3UltrasonicSensor vision = new EV3UltrasonicSensor(SensorPort.S1);
+    EV3ColorSensor ojito = new EV3ColorSensor(SensorPort.S4);
+    
+    
     int distancia;
     int color;
+    SampleProvider gabriel = ojito.getColorIDMode();
+    
     public void girar(int grados)
     {
     	double perimetrog = eje * Math.PI;
@@ -36,16 +40,22 @@ public class Acciones
     
     public int detectarDistancia()
     {
+    	float[] muestrasV = new float [vision.sampleSize()];
     	vision.fetchSample(muestrasV, 0);
     	distancia = (int)muestrasV[0] * 100;
+    	System.out.println("distancia" + muestrasV);
     	return distancia;
     }
     
     public int detectarColor()
     {
-    	ojito.fetchSample(muestrasC, 0);
-    	color = (int)muestrasC[0] + 0;
-    	return color;
+    	  float[] muestrasC = new float [gabriel.sampleSize()];
+    	  ojito.fetchSample(muestrasC, 0);
+    	  color = (int)muestrasC[0];
+    	  System.out.println("numero" + muestrasC);
+    	  return color;
+    	  
+    	 
     	
     }
     

@@ -4,12 +4,33 @@ public class Robot
 	Acciones acb = new Acciones();
 	
 	String colorA;
+	public String avisarColor()
+	 {
+		boolean colorNoConocido = true;
+		String colorA = "";
+		while(colorNoConocido){
+		int numero = acb.detectarColor();
+		
+			System.out.println(numero);
+			
+			 
+			 if(acb.detectarColor() == 0)
+			 {
+				 colorA = "Rojo";
+				 colorNoConocido = false;
+			 }	
+			
+		}
+		
+		 return colorA;
+	 }
+	
 	public void avanzarRojo()
 	{
 		
 		int color = acb.detectarColor();
 		
-		if(color == 1)
+		if(color == 0)
 		{
 			
 			acb.girar(34);
@@ -17,19 +38,12 @@ public class Robot
 			acb.girar(-50);
 			acb.avanzar(30);
 			acb.girar(40);
-			acb.avanzar(acb.detectarDistancia());
+			int g = acb.detectarDistancia();
+			acb.avanzar(g);
 			
 			
 		}
 	}
-	 public String avisarColor()
-	 {
-		 String colorA = null;
-		 if(acb.detectarColor() == 1)
-		 {
-			 colorA = "Rojo";
-		 }
-		 return colorA;
-	 }
+	 
 
 }
