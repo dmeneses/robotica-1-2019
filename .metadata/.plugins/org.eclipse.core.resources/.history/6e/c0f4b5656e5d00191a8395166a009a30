@@ -1,0 +1,32 @@
+import lejos.hardware.Button;
+import lejos.hardware.port.SensorPort;
+import lejos.hardware.sensor.EV3ColorSensor;
+import lejos.hardware.sensor.EV3TouchSensor;
+import lejos.hardware.sensor.EV3UltrasonicSensor;
+
+public class Colors 
+{ 
+	EV3ColorSensor color;
+	float[]muestrasColor;
+	
+	}
+	{
+		public int detectarColor()
+		color= new EV3ColorSensor(SensorPort.S4);
+			color.fetchSample(muestrasColor, 0);
+			return (int)muestrasColor[0];
+	}
+	int[]angurojo=new int [3];
+	  
+	int[]detector;
+	
+	{
+		int[]anguverde= new int [3];
+		 
+		int[]detector;
+		
+		{
+			int[]anguazul= new int [3];
+			int[]detector;
+		}
+}

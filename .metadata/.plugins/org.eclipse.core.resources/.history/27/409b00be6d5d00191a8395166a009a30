@@ -1,6 +1,5 @@
 import lejos.hardware.motor.Motor;
 import lejos.hardware.port.SensorPort;
-import lejos.hardware.sensor.EV3ColorSensor;
 import lejos.hardware.sensor.EV3TouchSensor;
 import lejos.hardware.sensor.EV3UltrasonicSensor;
 
@@ -14,10 +13,8 @@ public class Robot
 	double eje;
 	EV3UltrasonicSensor ojos;
 	float[]muestrasOjos;
-	//float[] muestrasBoton;
-	float[]muestrasColor;
-	//EV3TouchSensor boton;
-	EV3ColorSensor color;
+	float[] muestrasBoton;
+	EV3TouchSensor boton;
 	//metodos
 	//constructor
 	public Robot(double rad, double ej)
@@ -25,11 +22,9 @@ public class Robot
 		radio= rad;
 		eje=ej;
 		ojos=new EV3UltrasonicSensor(SensorPort.S3);
-		//boton= new EV3TouchSensor(SensorPort.S4);
-		color= new EV3ColorSensor(SensorPort.S4);
+		boton= new EV3TouchSensor(SensorPort.S4);
 		muestrasOjos = new float[ojos.sampleSize()];
-		//muestrasBoton = new float [boton.sampleSize()];
-		muestrasColor = new float [color.sampleSize()];
+		muestrasBoton = new float [boton.sampleSize()];
 	}
 	public void avanzarCentimentros (int distancia)
 	{
@@ -53,12 +48,6 @@ public int detectarDistancia ()
 		boton.fetchSample(muestrasBoton, 0);
 		return (int)muestrasBoton[0];
 		
-	}
-	
-	public int detectarColor()
-	{	
-			color.fetchSample(muestrasColor, 0);
-			return (int)muestrasColor[0];
 	}
 	
 	public void girarGrados (int grados)
@@ -93,22 +82,9 @@ public int detectarDistancia ()
 		  avanzarCentimentros(lado);
 		  girarGrados(120); 
 		  
-	}
-	int[]angurojo=new int [3];
-	  
-	int[]detector;
-	
-	{
-		int[]anguverde= new int [3];
-		 
-		int[]detector;
-		
-		{
-			int[]anguazul= new int [3];
-			int[]detector;*/
-		
-	
-	
-	
-			
-
+	}*/
+	int[]angurojo
+	 angurojo= new int [3]
+	int[]detector
+			{
+}
