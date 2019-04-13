@@ -6,8 +6,8 @@ public class Inicio {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-      Pato pato1;
-      pato1 = new Pato(2.5, 12.5);
+      //Pato pato1;
+      //pato1 = new Pato(2.5, 12.5);
       //pato1.avanzarCentimetros(20);
       //pato1.avanzarCentimetros(30);  
       //pato1.avanzarCentimetros(20);
@@ -24,7 +24,9 @@ public class Inicio {
 			pato1.avanzarCentimetros(x);
     	  }
       }*/
-      pato1.dibujarTriangulo(50);
+      //pato1.dibujarTriangulo(50);
+	  Array ar = new Array();
+	  ar.jugar();
       Button.waitForAnyPress();
 	}
 
