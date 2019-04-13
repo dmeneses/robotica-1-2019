@@ -1,4 +1,4 @@
-import lejos.hardware.Button;
+
 
 
 public class inicio 
@@ -6,8 +6,8 @@ public class inicio
 	public static void main(String[] args)
 	{
 		// TODO Auto-generate method stub
-		Robot robot1;
-		robot1= new Robot(3, 12.3);
+		//Robot robot1;
+		//robot1= new Robot(3, 12.3);
 	  
 		   //robot1.avanzarCentimentros
 		   //robot1.avanzarCentimentros(45)
@@ -28,8 +28,11 @@ public class inicio
 			
 		   }
 		   */
-		robot1.dibujarTriangulo(60);
-		Button.waitForAnyPress();
+		//robot1.dibujarTriangulo(60);
+	
+		Colors col = new Colors();
+		col.iniciarCompetencia();
+		
 
 }
 }

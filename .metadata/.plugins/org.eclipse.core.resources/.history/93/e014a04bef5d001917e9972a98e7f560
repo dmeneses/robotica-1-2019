@@ -1,0 +1,52 @@
+
+/*import lejos.hardware.port.SensorPort;
+import lejos.hardware.sensor.EV3ColorSensor;
+import lejos.hardware.sensor.EV3TouchSensor;
+import lejos.hardware.sensor.EV3UltrasonicSensor;*/
+
+public class Colors 
+{		
+	Robot robot1;
+	int[]angurojo;
+	int[]anguverde;
+	int[]anguazul;
+	int[]anguamarillo;
+	int distancia;
+	
+	public Colors()
+	{	
+		robot1= new Robot(3, 12.3);
+		distancia = 20;
+		angurojo=new int [3];
+		anguverde=new int [3];
+		anguazul=new int [3];
+		anguamarillo=new int [3];
+		angurojo[0] = 120;
+		angurojo[1] = 120;
+		angurojo[2] = -120;
+		anguverde[0]=120;
+		anguverde[1]=120;
+		anguverde[2]=-120;
+		anguazul[0]=35;
+		anguazul[0]=35;
+		anguazul[0]=35;
+		anguamarillo[0]=43;
+		anguamarillo[0]=43;
+		anguamarillo[0]=43;
+		
+	}
+	
+	public void iniciarCompetencia()
+	{
+		  if (robot1.detectarColor()==1)
+		   {
+			  robot1.girarGrados(anguverde[0]);
+			  robot1.avanzarCentimentros(distancia);
+			  robot1.girarGrados(anguverde[1]);
+			  robot1.avanzarCentimentros(distancia);
+			  robot1.girarGrados(anguverde[2]);
+			 
+		   }			
+		
+	}
+}
