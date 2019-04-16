@@ -1,0 +1,10 @@
+
+public class Robot {
+
+	String nombre;
+	
+	public Robot (String miNombre)
+	{
+		nombre = miNombre;
+	}
+}

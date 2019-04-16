@@ -28,9 +28,6 @@ public class Postasfury {
 	        	}
 	        	System.out.println(BotonActivo); 
 	        	
-	        	motorI.setAcceleration(10000);
-                motorD.setAcceleration(10000);
-	        	
         	if(BotonActivo==true){  
         	float[] muestras = new float[eyes.sampleSize()];
 	     	eyes.fetchSample(muestras, 0);
@@ -43,15 +40,17 @@ public class Postasfury {
 	                double x = distancia;
 	                D = (int)(((360*x)-3200)/17);
 	            	S = D ;
+	        	    //motorI.setAcceleration(10000);
+                    motorD.setAcceleration(10000);
 	            	motorI.setSpeed(motorI.getMaxSpeed());
 	            	motorD.setSpeed(motorD.getMaxSpeed());
-	            	/*motorI.rotate(D, true);
-	                motorD.rotate(D);*/
+	            	motorI.rotate(D, true);
+	                motorD.rotate(D);
 	            	}
 	            else{
 	            System.out.println(BotonActivo);
     }
-	}
+   }
   }
  }
 
