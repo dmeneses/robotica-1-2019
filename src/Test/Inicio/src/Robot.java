@@ -1,3 +1,5 @@
+import lejos.utility.Delay;
+
 
 public class Robot 
 {	
@@ -8,13 +10,15 @@ public class Robot
 	 {
 		boolean colorNoConocido = true;
 		String colorA = "";
-		while(colorNoConocido){
-		int numero = acb.detectarColor();
+		
+		while(colorNoConocido)
+		{
+		    int numero = acb.detectarColor();
 		
 			System.out.println(numero);
 			
 			 
-			 if(acb.detectarColor() == 0)
+		    if(acb.detectarColor() == 0)
 			 {
 				 colorA = "Rojo";
 				 colorNoConocido = false;
@@ -28,21 +32,25 @@ public class Robot
 	public void avanzarRojo()
 	{
 		
-		int color = acb.detectarColor();
+		//int color = "rojo"; //acb.detectarColor();
 		
-		if(color == 0)
-		{
+		//if(color == 0)
+		//{
 			
-			acb.girar(34);
+			acb.girar(30);
 			acb.avanzar(30);
-			acb.girar(-50);
+			acb.girar(-60);
 			acb.avanzar(30);
-			acb.girar(40);
-			int g = acb.detectarDistancia();
-			acb.avanzar(g);
+			acb.girar(30);
+			int pollo = acb.detectarDistancia();
+			System.out.println("distancia" + pollo);
+			Delay.msDelay(3000);
+			acb.avanzar(pollo);
 			
 			
-		}
+			
+			
+		//}
 	}
 	 
 

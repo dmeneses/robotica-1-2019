@@ -1,4 +1,5 @@
 import lejos.hardware.motor.EV3LargeRegulatedMotor;
+import lejos.hardware.motor.Motor;
 import lejos.hardware.port.MotorPort;
 import lejos.hardware.port.SensorPort;
 import lejos.hardware.sensor.EV3TouchSensor;
@@ -12,10 +13,10 @@ public class aceleracion {
 		// TODO Auto-generated method stub
 		EV3LargeRegulatedMotor motorB = new EV3LargeRegulatedMotor(MotorPort.B);
 		EV3LargeRegulatedMotor motorC = new EV3LargeRegulatedMotor(MotorPort.C);
-		int grados = 90;
-		double radio = 3.65;
-		double eje = 16;
-		 /* EV3TouchSensor sensor = new EV3TouchSensor(SensorPort.S4);
+		
+		
+		
+		 EV3TouchSensor sensor = new EV3TouchSensor(SensorPort.S4);
 		  
 		  motorB.setAcceleration(350);
   			motorC.setAcceleration(350);
@@ -58,22 +59,13 @@ public class aceleracion {
       	    
         		
         	 
-        	 System.out.println("Distancia: " + distancia);*/
-		double perimetrog = eje * Math.PI;
-    	double giro = grados * perimetrog / 360;
-    	double perimetro = radio * Math.PI * 2;
-    	double gradito = giro * 360 / perimetro;
-    	
-    	motorB.rotate((int)gradito, true);
-    	motorC.rotate((int)-gradito);
-        	 
+        	 System.out.println("Distancia: " + distancia);
+		
          }
-	//}
+	
 
 
-
-
-	//}
+	}
 
 
 
@@ -81,3 +73,4 @@ public class aceleracion {
 }
 
 
+}

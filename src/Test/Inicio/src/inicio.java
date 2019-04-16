@@ -10,10 +10,8 @@ public class inicio {
 			{
 				ultron3.avanzarRojo();
 			}
-			
-			
 		
-
+	
 	}
 
 }

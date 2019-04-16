@@ -7,13 +7,14 @@ import lejos.robotics.SampleProvider;
 
 public class Acciones 
 {
-	double radio = 3.65;
-	double eje = 16;
+	double radio = 3;
+	double eje = 13.3;
 	EV3UltrasonicSensor vision = new EV3UltrasonicSensor(SensorPort.S1);
     EV3ColorSensor ojito = new EV3ColorSensor(SensorPort.S4);
     
     
     int distancia;
+    
     int color;
     SampleProvider gabriel = ojito.getColorIDMode();
     
@@ -44,6 +45,10 @@ public class Acciones
     	vision.fetchSample(muestrasV, 0);
     	distancia = (int)muestrasV[0] * 100;
     	System.out.println("distancia" + muestrasV);
+    	System.out.println("distancia" + muestrasV);
+    	System.out.println("distancia" + muestrasV);
+    	System.out.println("distancia" + muestrasV);
+    	
     	return distancia;
     }
     
@@ -58,6 +63,15 @@ public class Acciones
     	 
     	
     }
+  
+    
+    
+    
+    
+    
+    
+    
+    
     
     
 
