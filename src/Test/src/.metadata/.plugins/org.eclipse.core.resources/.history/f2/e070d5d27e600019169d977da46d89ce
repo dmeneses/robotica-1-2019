@@ -21,7 +21,6 @@ public class Robot {
 		 nombre= unnombre;
 		
 		 distancia= unadistancia;
-	 }
 		 
 	public void avanzar()
 	{
