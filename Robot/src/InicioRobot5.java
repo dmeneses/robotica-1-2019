@@ -6,8 +6,8 @@ public class InicioRobot5
 {
 	public static void main(String[] args) 
 	{
-/*		Robot40 Robot1;
-		Robot1= new Robot40(2.55, 12.3);
+		//Robot40 Robot1;
+		//Robot1= new Robot40(2.55, 12.3);/*		
 		
 		//Robot1.avanzarCentimetros(587);
 		//Robot1.avanzarCentimetros(260);
@@ -15,17 +15,18 @@ public class InicioRobot5
 		//Robot1.avanzarCentimetros(120);
 		//Robot1.avanzarCentimetros(-320);)
 		
-		//repetir hasta detectar pulsador 1
+		//repetir hasta detectar pulsador 1*/
 	
-		while(true){
-			Robot1.dibujarTriangulo(10);
-			}
-				}
-			
-	*/
 		Colecciones col = new Colecciones();
-		col.empezar();
+		while(true)
+		{
+			col.empezar();
+		}
 	}
-		
 }
+			
+	
+	
+		
+
 

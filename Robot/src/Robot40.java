@@ -17,14 +17,15 @@ public class Robot40
 	EV3ColorSensor colores;
 	//constructor
 	public Robot40 (double rad ,double ej )
-	{radio=rad;
-	eje	=ej;
-	ojos =new EV3UltrasonicSensor(SensorPort.S4);
-	boton= new EV3TouchSensor(SensorPort.S2);
-	colores=new EV3ColorSensor(SensorPort.S3);
-	muestrasOjos= new float[ojos.sampleSize()];
-	muestrasBoton= new float [boton.sampleSize()];
-	muestrascolor=new float[colores.sampleSize()];
+	{
+		radio=rad;
+		eje	=ej;
+		ojos =new EV3UltrasonicSensor(SensorPort.S4);
+		boton= new EV3TouchSensor(SensorPort.S2);
+		colores=new EV3ColorSensor(SensorPort.S3);
+		muestrasOjos= new float[ojos.sampleSize()];
+		muestrasBoton= new float [boton.sampleSize()];
+		muestrascolor=new float[colores.sampleSize()];
 
 	}
 	
@@ -33,12 +34,15 @@ public class Robot40
 	//metodos
 	public void avanzarCentimetros (int distancia)
 	{		
+		System.out.println("distancia " + distancia);
 		double perimetro = radio* Math.PI*2;
 //regla de tres
 		double avan= distancia *360/perimetro;
 		//mover motores 
-		Motor.B.setAcceleration(320);
-		Motor.C.setAcceleration(320);
+		
+		Motor.C.setAcceleration(650);
+		
+		Motor.C.setAcceleration(650);
 		Motor.B. rotate((int) avan, true);
 		Motor.C.rotate((int)avan);
 	}
@@ -46,14 +50,14 @@ public class Robot40
 	public int detectardistancia()
 	{
 		ojos.fetchSample (muestrasOjos, 0);
-		System.out.println(muestrasOjos[0]);
-		return (int) muestrasOjos [0] *100;
+		//System.out.println(muestrasOjos[0]);
+		return (int)(muestrasOjos[0]*100);
 	}
 	
 	public int detectarPulsador()
 	{
 		boton.fetchSample (muestrasBoton,0);
-		System.out.println(muestrasBoton[0]);
+		//System.out.println(muestrasBoton[0]);
 		return (int) muestrasBoton [0];	
 	}
 	
@@ -66,6 +70,7 @@ public class Robot40
 		double perimetro = radio  * Math.PI *2;
 		//rule of three
 		double gradito=giro*360/perimetro;
+		
 		Motor.B.rotate((int)gradito, true);
 		Motor.C.rotate((int)-gradito );
 					
@@ -87,7 +92,7 @@ public class Robot40
 	
 	public int detectarcolor(){
 		colores.fetchSample(muestrascolor, 0);
-		System.out.println(muestrascolor[0]);
+		//System.out.println(muestrascolor[0]);
 		return (int)muestrascolor[0];
 		}
 	
