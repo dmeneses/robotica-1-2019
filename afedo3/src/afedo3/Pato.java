@@ -23,7 +23,7 @@ public class Pato
 	{
 		radio = rad;
 		eje =ej;
-		color = new EV3ColorSensor(SensorPort.S1);
+		color = new EV3ColorSensor (SensorPort.S1);
 		ojos = new EV3UltrasonicSensor(SensorPort.S4);
 		//boton = new EV3TouchSensor(SensorPort.S1);
 		muestrasOjos = new float [ojos.sampleSize()];
@@ -53,20 +53,21 @@ public class Pato
 		   boton.fetchSample(muestrasBoton, 0);
 		   return (int)muestrasBoton[0];
 	   }*/
-	   public void girarGrados(int grados)
+	   public void girarGrados(int girarGrados  )
+	   
 	   {
 		   double perimetroG= eje*Math.PI;
 		   //regla de tres para obtener
 		   //distancia del arco a moverse
-		   double giro= grados*perimetroG/360;
+		   double giro=   girarGrados*perimetroG/360;
 		   //perimetro de la rueda 
 		   double perimetro= radio*Math.PI*2;
 		   //regla de tres para obtener grados
 		   
 		double grado= giro*360/perimetro;
 		   //mover motores 
-		 Motor.B.rotate((int)grados, true);
-		 Motor.C.rotate((int)-grados);
+		 Motor.B.rotate((int) girarGrados, true);
+		 Motor.C.rotate((int)- girarGrados);
 		 
 	   }
 	   
@@ -91,5 +92,10 @@ public class Pato
 		
 	}
 	
+	
+ 
+		
 	}
+	
+	
 

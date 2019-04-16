@@ -11,19 +11,32 @@ public class Array
 {
 	int distanciafija;
 	int[] angulosRojo;
+	int[] angulosAmarillo;
+	int[] angulosAzul;
+	int[] angulosVerde;
 	Pato robot;
 	
 	public Array()
 	{
 		distanciafija = 50;
 		robot = new Pato(2.5, 12.5);
-		angulosRojo = new int[4];
+		angulosRojo = new int[3];
 		angulosRojo[0]=270;
-		angulosRojo[1]=270;
-		angulosRojo[2]=273;
-		angulosRojo[3]=246;
+		angulosRojo[1]=272;
+		angulosRojo[2]=250;
+		angulosAmarillo = new int[3];
+		angulosAmarillo[0]=200;
+		angulosAmarillo[1]=-370;
+		angulosAmarillo[2]=170;
+		angulosAzul = new int[3];
+		angulosAzul[0]=370;
+		angulosAzul[1]=371;
+		angulosAzul[2]=730;
+		angulosVerde = new int[3];
+		angulosVerde[0]=270;
+		angulosVerde[1]=270;
+		angulosVerde[2]=273;
 	}
-	
 	public void jugar()
 	{
 		//recuperar el color del robot (pato)
@@ -32,14 +45,49 @@ public class Array
 		{
 			robot.girarGrados(angulosRojo[0]);
 			robot.avanzarCentimetros(distanciafija);
-			robot.girarGrados(angulosRojo[2]);
+			robot.girarGrados(angulosRojo[1]);
 			robot.avanzarCentimetros(distanciafija);
-            robot.girarGrados(angulosRojo[3]);
+            robot.girarGrados(angulosRojo[2]);
             int distancia = robot.detectarDistancia();
-            robot.avanzarCentimetros(distancia);              
+            robot.avanzarCentimetros(distancia); 
 		}
-	}
+		if(color == 3)//se detecto amarillo
+		{
+			robot.avanzarCentimetros(distanciafija);
+			robot.girarGrados(angulosAmarillo[0]);
+			robot.avanzarCentimetros(distanciafija);
+			robot.girarGrados(angulosAmarillo[1]);
+			robot.avanzarCentimetros(distanciafija);
+			robot.girarGrados(angulosAmarillo[2]);
+            int distancia = robot.detectarDistancia();
+            robot.avanzarCentimetros(distancia);
+		}
+		if(color == 2)//se detecto Azul
+		{
+			robot.avanzarCentimetros(distanciafija);
+			robot.girarGrados(angulosAzul[0]);
+			robot.avanzarCentimetros(distanciafija);
+			robot.girarGrados(angulosAzul[1]);
+			robot.avanzarCentimetros(distanciafija);
+			robot.girarGrados(angulosAzul[2]);
+            int distancia = robot.detectarDistancia();
+            robot.avanzarCentimetros(distancia);
+        }	
+		if(color == 1)//se detecto Verde
+		{
+			robot.girarGrados(angulosVerde[0]);
+			robot.avanzarCentimetros(distanciafija);
+			robot.girarGrados(angulosVerde[1]);
+			robot.avanzarCentimetros(distanciafija);
+            robot.girarGrados(angulosVerde[2]);
+            int distancia = robot.detectarDistancia();
+            robot.avanzarCentimetros(distancia); 
+		}
+	}	
+}
+
+	
 	
 	
 
-}
+
