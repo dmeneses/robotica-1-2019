@@ -5,6 +5,6 @@ public class Sensor {
 	public static void main(String[] args) {
 		Robot Fury = new Robot ("Fury");
 		String nombredelrobot = Fury.nombre;
-		System.out.println(Fury.nombre);
+		
 }
 }
