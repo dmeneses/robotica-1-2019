@@ -1,3 +1,4 @@
+import lejos.hardware.Button;
 import lejos.hardware.motor.Motor;
 import lejos.hardware.port.SensorPort;
 import lejos.hardware.sensor.EV3ColorSensor;
@@ -41,13 +42,14 @@ public class Robot
 		//mover motores
 		Motor.B.rotate((int)cm,true);
 		Motor.C.rotate((int)cm);
+		
 	}
 
 	public int detectardistancia()
 	{
 		ojos.fetchSample(muestrasojos, 0);
 		
-		return (int)muestrasojos[0]*100;
+		return (int)(muestrasojos[0]*100);
 		
 	}
 	
@@ -93,8 +95,14 @@ public class Robot
 	public int detectarColor()
 	{
 	color.fetchSample(muestrascolor, 0);
+	
+	int colorcito = (int)muestrascolor[0]; 
 		
+		System.out.println ("color : " + colorcito);
+		Button.waitForAnyPress();
 		return (int)muestrascolor[0];
+		
+		
 	}
 
 }

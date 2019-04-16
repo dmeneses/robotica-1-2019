@@ -1,3 +1,5 @@
+import lejos.hardware.motor.Motor;
+
 
 public class Postas 
 {
@@ -12,16 +14,16 @@ public class Postas
 	public Postas()
 	{
 		distanciatramo = 30;
-		robot = new Robot(2.75,12); //11.35
+		robot = new Robot(2.75,11.85); //11.35
 		rojo = new int[3];
 		amarillo = new int[3];
 		verde = new int[3];
 		azul = new int[3];
 		
 		
-		rojo[0]=300;
-		rojo[1]=300;
-		rojo[2]=300;
+		rojo[0]=90;
+		rojo[1]=180;
+		rojo[2]=90;
 		
 		amarillo[0]=300;
 		amarillo[1]=300;
@@ -30,7 +32,7 @@ public class Postas
 		verde[0]=300;
 		verde[1]=300;
 		verde[2]=300;
-		
+		 
 		azul[0]=300;
 		azul[1]=300;
 		azul[2]=300;
@@ -72,8 +74,13 @@ public class Postas
 			post3 = azul[2];
 		}
 		robot.dibujarTriangulo(distanciatramo, post1, post2, post3);
+		Motor.B.setSpeed(800);
+		Motor.C.setSpeed(800);
+		Motor.B.setAcceleration(500);
+		Motor.C.setAcceleration(500);
+	
 		int x= robot.detectardistancia();
-		robot.avanzarcm(x);
+		robot.avanzarcm(x-8);
 		
 		
 	}

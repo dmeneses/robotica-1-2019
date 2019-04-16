@@ -1,3 +1,5 @@
+import lejos.hardware.Button;
+
 
 public class Main 
 {
@@ -8,19 +10,15 @@ public class Main
 		postas = new Postas();
 		
 		postas.iniciar();
+//Robot robot1;
+//robot1 = new Robot(2.75,11.7);
+
+		
+	//robot1.girargrados(90);
 	
 
 	}
-
 }
-
-
-
-//while(true)
-//{
-	//robot1.girargrados(90);
-	//Button.waitForAnyPress();
-//}
 
 //	while (true)
 	//{//si pulsador det avanzar dist detectada
