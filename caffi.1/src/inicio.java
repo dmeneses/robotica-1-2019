@@ -31,7 +31,10 @@ public class inicio
 		//robot1.dibujarTriangulo(60);
 	
 		Colors col = new Colors();
-		col.iniciarCompetencia();
+		while (true)
+		   {
+				col.iniciarCompetencia();
+		   }
 		
 
 }

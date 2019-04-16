@@ -42,8 +42,8 @@ public class Robot
 	public int detectarDistancia ()
 	{
 	
-	ojos.fetchSample(muestrasOjos,0);
-	return (int)muestrasOjos[0]*100;//cm
+		ojos.fetchSample(muestrasOjos,0);
+		return (int)(muestrasOjos[0]*100);//cm
 	
 	}
 
@@ -78,10 +78,10 @@ public class Robot
 	}
 	public void acelerar(int aceleracion)
 	{
-		Motor.B.setSpeed(500);
-		Motor.B.setAcceleration(200);
-		Motor.C.setSpeed(500);
-		Motor.C.setAcceleration(200);
+		Motor.B.setSpeed(100);
+		Motor.B.setAcceleration(50);
+		Motor.C.setSpeed(100);
+		Motor.C.setAcceleration(50);
 	}
 	
 	public void dibujarTriangulo(int lado)

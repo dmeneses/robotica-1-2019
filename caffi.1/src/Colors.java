@@ -1,3 +1,5 @@
+import lejos.hardware.motor.Motor;
+
 
 /*import lejos.hardware.port.SensorPort;
 import lejos.hardware.sensor.EV3ColorSensor;
@@ -15,31 +17,39 @@ public class Colors
 	int detectarDistancia;
 	
 	
+	
 	public Colors()
 	{	
 		robot1= new Robot(3, 12.3);
-		distancia = 20;
+		distancia =45 ;
 		angurojo=new int [3];
 		anguverde=new int [3];
 		anguazul=new int [3];
 		anguamarillo=new int [3];
-		angurojo[0] = 190;
-		angurojo[1] = 190;
-		angurojo[2] = -190;
+		angurojo[0] = 120;
+		angurojo[1] = -120;
+		angurojo[2] = 90;
 		anguverde[0]=120;
 		anguverde[1]=120;
 		anguverde[2]=-120;
 		anguazul[0]=35;
 		anguazul[1]=35;
-		anguazul[2]=35;
+		anguazul[2]=-35;
 		anguamarillo[0]=43;
 		anguamarillo[1]=43;
 		anguamarillo[2]=43;
-		
+	}
+	public void acelerar(int aceleracion)
+	{
+		Motor.B.setSpeed(aceleracion);
+		//Motor.B.setAcceleration(aceleracion);
+		Motor.C.setSpeed(aceleracion);
+		//Motor.C.setAcceleration(aceleracion);
 	}
 	
 	public void iniciarCompetencia()
 	{
+		boolean entro = false;
 		  if (robot1.detectarColor()==1)
 		  {
 			  robot1.girarGrados(anguverde[0]);
@@ -47,7 +57,7 @@ public class Colors
 			  robot1.girarGrados(anguverde[1]);
 			  robot1.avanzarCentimentros(distancia);
 			  robot1.girarGrados(anguverde[2]);
-			 
+			 entro = true;
 		  }			
 		  
 
@@ -58,7 +68,7 @@ public class Colors
 				  robot1.girarGrados(angurojo[1]);
 				  robot1.avanzarCentimentros(distancia);
 				  robot1.girarGrados(angurojo[2]);
-				 
+					 entro = true;
 			  }
 		  
 			  if (robot1.detectarColor()==2)
@@ -68,7 +78,7 @@ public class Colors
 			  robot1.girarGrados(anguazul[1]);
 			  robot1.avanzarCentimentros(distancia);
 			  robot1.girarGrados(anguazul[2]);
-			 
+				 entro = true;
 		  }
 		  
 			  if (robot1.detectarColor()==3)
@@ -78,11 +88,17 @@ public class Colors
 				  robot1.girarGrados(anguamarillo[1]);
 				  robot1.avanzarCentimentros(distancia);
 				  robot1.girarGrados(anguamarillo[2]);
-				 }
+				  entro = true;
+			 }
 			  
-			  
+			  if(entro)
+			  {
+        			acelerar(500);
 				  int x=robot1.detectarDistancia();
-				  robot1.avanzarCentimentros(x);
+				  robot1.avanzarCentimentros(x-8);
+				  entro = false;
+				  acelerar(300);
+			  }
 			  
 	}
 }
