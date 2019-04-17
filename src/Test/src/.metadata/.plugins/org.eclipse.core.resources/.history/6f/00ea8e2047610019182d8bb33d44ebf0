@@ -1,0 +1,61 @@
+import lejos.hardware.motor.EV3LargeRegulatedMotor;
+import lejos.hardware.port.MotorPort;
+import lejos.hardware.sensor.EV3ColorSensor;
+import lejos.hardware.sensor.EV3UltrasonicSensor;
+
+public class Robot {
+
+	String nombre;
+	
+	 double distancia;
+	 int grados;
+	 
+	 EV3LargeRegulatedMotor motorB;
+	 EV3LargeRegulatedMotor motorC;
+	 EV3ColorSensor colores;
+	 EV3UltrasonicSensor ojos;
+	 
+	 GirodeEje ge;
+	 public  Robot (String unnombre,int unadistancia){
+		 
+	  motorB = new EV3LargeRegulatedMotor(MotorPort.B);
+	  motorC = new EV3LargeRegulatedMotor(MotorPort.C);
+		 nombre= unnombre;
+		
+		 distancia= unadistancia;
+		 ge = new GirodeEje(10);
+	 }
+		 
+	public void avanzar()
+	{
+		motorB.setSpeed(500);
+		motorC.setSpeed(500);
+		
+		distancia = distancia-4;
+		grados=(int)distancia*360/17;
+		motorB.rotate(grados,true);
+		motorC.rotate(grados);
+		
+		
+				
+	}
+	
+	public void girar(int numero)
+	{
+		 int grados = ge.girar(numero);
+		 
+		 motorB.rotate(grados,true);
+			motorC.rotate(-grados);
+			
+		 
+		
+		
+		
+	}
+		 
+	 }
+
+	
+
+
+
