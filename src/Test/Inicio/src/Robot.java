@@ -23,6 +23,24 @@ public class Robot
 				 colorA = "Rojo";
 				 colorNoConocido = false;
 			 }	
+		    
+		    if(acb.detectarColor() == 1)
+			 {
+				 colorA = "Verde";
+				 colorNoConocido = false;
+			 }	
+		    if(acb.detectarColor() == 2)
+			 {
+				 colorA = "Azul";
+				 colorNoConocido = false;
+			 }	
+		    if(acb.detectarColor() == 3)
+			 {
+				 colorA = "Amarillo";
+				 colorNoConocido = false;
+			 }	
+			
+			
 			
 		}
 		
@@ -30,27 +48,96 @@ public class Robot
 	 }
 	
 	public void avanzarRojo()
-	{
-		
-		//int color = "rojo"; //acb.detectarColor();
-		
-		//if(color == 0)
-		//{
-			
-			acb.girar(30);
+	{	
+			acb.girar(840);
 			acb.avanzar(30);
-			acb.girar(-60);
+			acb.girar(-180);
 			acb.avanzar(30);
-			acb.girar(30);
-			int pollo = acb.detectarDistancia();
-			System.out.println("distancia" + pollo);
-			Delay.msDelay(3000);
-			acb.avanzar(pollo);
-			
-			
-			
-			
-		//}
+			acb.girar(90);
+			Delay.msDelay(1000);
+			boolean dis = true;
+			while (dis)
+			{
+				System.out.println("Distancia" + acb.detectarDistancia());
+				
+				if(acb.detectarDistancia() > 0)
+				{
+					int pollo = (int)acb.detectarDistancia();
+					acb.avanzar(pollo);
+					dis = false;
+				}
+			}			
+		
+	}
+	
+	
+	public void avanzarAzul()
+	{			
+			acb.girar(50);
+			acb.avanzar(30);
+			acb.girar(-100);
+			acb.avanzar(30);
+			acb.girar(50);
+			Delay.msDelay(1000);
+			boolean dis = true;
+			while (dis)
+			{
+				System.out.println("Distancia" + acb.detectarDistancia());
+				
+				if(acb.detectarDistancia() > 0)
+				{
+					int pollo = (int)acb.detectarDistancia();
+					acb.avanzar(pollo);
+					dis = false;
+				}
+			}			
+		
+	}
+	
+	public void avanzarAmarillo()
+	{		
+			acb.girar(20);
+			acb.avanzar(20);
+			acb.girar(-40);
+			acb.avanzar(15);
+			acb.girar(20);
+			Delay.msDelay(1000);
+			boolean dis = true;
+			while (dis)
+			{
+				System.out.println("Distancia" + acb.detectarDistancia());
+				
+				if(acb.detectarDistancia() > 0)
+				{
+					int pollo = (int)acb.detectarDistancia();
+					acb.avanzar(pollo);
+					dis = false;
+				}
+			}
+				
+	}
+	
+	public void avanzarVerde()
+	{		
+			acb.girar(35);
+			acb.avanzar(15);
+			acb.girar(-70);
+			acb.avanzar(15);
+			acb.girar(35);
+			Delay.msDelay(1000);
+			boolean dis = true;
+			while (dis)
+			{
+				System.out.println("Distancia" + acb.detectarDistancia());
+				
+				if(acb.detectarDistancia() > 0)
+				{
+					int pollo = (int)acb.detectarDistancia();
+					acb.avanzar(pollo);
+					dis = false;
+				}
+			}			
+		
 	}
 	 
 
