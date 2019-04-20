@@ -41,6 +41,12 @@ public class Pato
 		 Motor.B.rotate((int)grados, true);
 		 Motor.C.rotate((int)grados);
 	}
+	
+	public void acelerar(int aceleracion)
+	{
+		Motor.B.setSpeed(aceleracion);
+		Motor.C.setSpeed(aceleracion);
+	}
 
 	   public int detectarDistancia()
 	   {
@@ -91,11 +97,14 @@ public class Pato
 		    return (int)muestrasColor[0];
 		
 	}
+
+		
+	}
 	
 	
  
 		
-	}
+	
 	
 	
 

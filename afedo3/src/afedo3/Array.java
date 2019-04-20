@@ -22,8 +22,8 @@ public class Array
 		robot = new Pato(2.5, 12.5);
 		angulosRojo = new int[3];
 		angulosRojo[0]=270;
-		angulosRojo[1]=272;
-		angulosRojo[2]=250;
+		angulosRojo[1]=255;
+		angulosRojo[2]=260;
 		angulosAmarillo = new int[3];
 		angulosAmarillo[0]=200;
 		angulosAmarillo[1]=-370;
@@ -49,6 +49,7 @@ public class Array
 			robot.avanzarCentimetros(distanciafija);
             robot.girarGrados(angulosRojo[2]);
             int distancia = robot.detectarDistancia();
+            robot.acelerar(600);
             robot.avanzarCentimetros(distancia); 
 		}
 		if(color == 3)//se detecto amarillo
@@ -60,6 +61,7 @@ public class Array
 			robot.avanzarCentimetros(distanciafija);
 			robot.girarGrados(angulosAmarillo[2]);
             int distancia = robot.detectarDistancia();
+            robot.acelerar(600);
             robot.avanzarCentimetros(distancia);
 		}
 		if(color == 2)//se detecto Azul
@@ -71,6 +73,7 @@ public class Array
 			robot.avanzarCentimetros(distanciafija);
 			robot.girarGrados(angulosAzul[2]);
             int distancia = robot.detectarDistancia();
+            robot.acelerar(600);
             robot.avanzarCentimetros(distancia);
         }	
 		if(color == 1)//se detecto Verde
@@ -81,6 +84,7 @@ public class Array
 			robot.avanzarCentimetros(distanciafija);
             robot.girarGrados(angulosVerde[2]);
             int distancia = robot.detectarDistancia();
+            robot.acelerar(600);
             robot.avanzarCentimetros(distancia); 
 		}
 	}	

@@ -27,7 +27,8 @@ public class Inicio {
       //pato1.dibujarTriangulo(50);
 	  Array ar = new Array();
 	  ar.jugar();
-      Button.waitForAnyPress();
+		Button.waitForAnyPress();
+		
 	}
 
 }
