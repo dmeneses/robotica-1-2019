@@ -48,6 +48,7 @@ public class PruebaCarrito {
 		for(int piso=0;piso<3;piso=piso+1){
 			int grado =grados[piso];
 			carritoSara.girar(grado);
+			
 			carritoSara.avanzar(distanciaAvance);
 		
 		}

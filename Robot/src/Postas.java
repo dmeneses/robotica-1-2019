@@ -14,7 +14,7 @@ public class Postas
 	public Postas()
 	{
 		distanciatramo = 30;
-		robot = new Robot(2.75,11.85); //11.35
+		robot = new Robot(2.75,11.95); //11.35
 		rojo = new int[3];
 		amarillo = new int[3];
 		verde = new int[3];
@@ -42,6 +42,7 @@ public class Postas
 	
 	public void iniciar()
 	{
+		
 		robot.detectarColor();
 		int color = robot.detectarColor();
 		
@@ -74,13 +75,20 @@ public class Postas
 			post3 = azul[2];
 		}
 		robot.dibujarTriangulo(distanciatramo, post1, post2, post3);
+		//int velocidad1= Motor.B.getSpeed();
+		//int ace1 = Motor.B.getAcceleration();
+		
 		Motor.B.setSpeed(800);
 		Motor.C.setSpeed(800);
 		Motor.B.setAcceleration(500);
 		Motor.C.setAcceleration(500);
-	
+		
 		int x= robot.detectardistancia();
 		robot.avanzarcm(x-8);
+		//Motor.B.setSpeed(velocidad1);
+		//Motor.C.setSpeed(velocidad1);
+		//Motor.B.setAcceleration(ace1);
+		//Motor.C.setAcceleration(ace1);
 		
 		
 	}

@@ -14,9 +14,9 @@ public class CarroUltrasonico {
 		//declarar una variable ojitos
 		//del tipo de dato UltraSonicSensor
 		
-	EV3UltrasonicSensor ojitos = new EV3UltrasonicSensor(SensorPort.S1);
-	EV3LargeRegulatedMotor motorC=new EV3LargeRegulatedMotor(MotorPort.C);
+	EV3UltrasonicSensor ojitos = new EV3UltrasonicSensor(SensorPort.S2);
 	EV3LargeRegulatedMotor motorB=new EV3LargeRegulatedMotor(MotorPort.B);
+	EV3LargeRegulatedMotor motorD=new EV3LargeRegulatedMotor(MotorPort.D);
 	 
 	
 	System.out.println("esperando a que se presione cualquier boton");
@@ -31,7 +31,7 @@ public class CarroUltrasonico {
 		muestrasCapturadasOjitos.fetchSample(datosOjitos,0);
 		System.out.println("dato enviado por sensor ="+ distanciaAlObstaculo);
 		
-		//distanciaAlObstaculo=Float.POSITIVE_INFINITY
+		distanciaAlObstaculo=Float.POSITIVE_INFINITY;
 	
 		double distanciaCM = distanciaAlObstaculo*100;
 		
@@ -42,16 +42,16 @@ public class CarroUltrasonico {
 		grados=(int)(numeroDeRotaciones* 360);
 		
 	
-		int velocidad=500;
-		motorC.setSpeed(velocidad);
-		motorC.rotate(grados,true);
+		int velocidad=200;
 		motorB.setSpeed(velocidad);
-		motorB.rotate(grados);
+		motorB.rotate(grados,true);
+		motorD.setSpeed(velocidad);
+		motorD.rotate(grados);
 		
 	}
 	ojitos.close();
-	motorC.close();
 	motorB.close();
+	motorD.close();
 	Sound.beepSequenceUp();
 	Button.waitForAnyPress();
 	

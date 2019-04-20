@@ -94,13 +94,25 @@ public class Robot
 	}
 	public int detectarColor()
 	{
-	color.fetchSample(muestrascolor, 0);
-	
-	int colorcito = (int)muestrascolor[0]; 
+		color.fetchSample(muestrascolor, 0);
+		
+		int colorcito = (int)muestrascolor[0]; 
+		
+		
+		while (colorcito == -1)
+		{
+			
+			color.fetchSample(muestrascolor, 0);
+			
+			colorcito = (int)muestrascolor[0]; 
 		
 		System.out.println ("color : " + colorcito);
-		Button.waitForAnyPress();
+		}
+		
 		return (int)muestrascolor[0];
+		
+		
+	
 		
 		
 	}
