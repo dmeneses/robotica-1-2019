@@ -20,7 +20,7 @@ public class Colors
 	
 	public Colors()
 	{	
-		robot1= new Robot(3.05, 12.3);
+		robot1= new Robot(3, 12.1);
 		distancia =45 ;
 		angurojo=new int [3];
 		anguverde=new int [3];
@@ -102,7 +102,7 @@ public class Colors
         		  int velocidadOriginal = velocidad();
         		  acelerar(500);
 				  int x=robot1.detectarDistancia();
-				  robot1.avanzarCentimentros(x-3);
+				  robot1.avanzarCentimentros(x-5);
 				  entro = false;
 				  acelerar(velocidadOriginal);
 			  }

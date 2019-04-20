@@ -102,7 +102,7 @@ public class Colors
         		  int velocidadOriginal = velocidad();
         		  acelerar(500);
 				  int x=robot1.detectarDistancia();
-				  robot1.avanzarCentimentros(x-3);
+				  robot1.avanzarCentimentros(x-5);
 				  entro = false;
 				  acelerar(velocidadOriginal);
 			  }

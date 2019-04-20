@@ -20,13 +20,13 @@ public class Colors
 	
 	public Colors()
 	{	
-		robot1= new Robot(3.05, 12.3);
+		robot1= new Robot(3, 12.3);
 		distancia =45 ;
 		angurojo=new int [3];
 		anguverde=new int [3];
 		anguazul=new int [3];
 		anguamarillo=new int [3];
-		angurojo[0] = 120;
+		angurojo[0] = 360;
 		angurojo[1] = -120;
 		angurojo[2] = 90;
 		anguverde[0]=120;
@@ -69,12 +69,12 @@ public class Colors
 
 			  if (robot1.detectarColor()==0)
 			  {
-				 robot1.girarGrados(angurojo[0]);
-				 robot1.avanzarCentimentros(distancia);
+				  //robot1.girarGrados(angurojo[0]);
+				// robot1.avanzarCentimentros(distancia);
 				  robot1.girarGrados(angurojo[1]);
-				  robot1.avanzarCentimentros(distancia);
-				  robot1.girarGrados(angurojo[2]);
-					 entro = true;//
+				  //robot1.avanzarCentimentros(distancia);
+				  //robot1.girarGrados(angurojo[2]);
+					 //entro = true;//
 			  }
 		  
 			  if (robot1.detectarColor()==2)
@@ -102,7 +102,7 @@ public class Colors
         		  int velocidadOriginal = velocidad();
         		  acelerar(500);
 				  int x=robot1.detectarDistancia();
-				  robot1.avanzarCentimentros(x-3);
+				  robot1.avanzarCentimentros(x-5);
 				  entro = false;
 				  acelerar(velocidadOriginal);
 			  }
