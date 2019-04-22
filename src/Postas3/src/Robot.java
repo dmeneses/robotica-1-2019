@@ -17,9 +17,12 @@ public class Robot {
 	public Robot(Ruta r){
 	 color = new EV3ColorSensor(SensorPort.S1);
 	 motorA = new  EV3LargeRegulatedMotor(MotorPort.A);
-     motorC = new  EV3LargeRegulatedMotor(MotorPort.C);
+     motorC = new  EV3LargeRegulatedMotor(MotorPort.C);     
      ojos = new EV3UltrasonicSensor (SensorPort.S4);
      recorrido = r;
+     
+     motorA.setSpeed(motorA.getMaxSpeed());
+     motorC.setSpeed(motorC.getMaxSpeed());
 	}
     public void avanzar (double distancia){
      
@@ -28,9 +31,29 @@ public class Robot {
 		motorC.rotate(grados);
 	}
     
+    public void avanzarconojos ()
+    {
+    	float [] muestras= new float[ojos.sampleSize()];
+		
+		
+		ojos.fetchSample(muestras, 0 );
+		double distancia = muestras[0]*100;//en cm
+
+		
+		
+		System.out.println("distancia:" + distancia);
+	
+  
+	//double distancia = 5;
+	int grados = (int)distancia*360/17;
+	motorA.rotate(grados,true);
+	motorC.rotate(grados);
+    	
+    }
+    
     public void girarRobot(int grados)
     {
-    	grados = grados*(800/360);
+    	grados = grados*(800);
     	motorA.rotate(grados , true);
 		motorC.rotate(-grados);
     }

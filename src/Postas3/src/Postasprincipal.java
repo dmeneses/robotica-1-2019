@@ -4,11 +4,11 @@
 public class Postasprincipal {
 
 	public static void main(String[] args) {
-		int[] rojo = {90,90,90};
-		int[] amarillo = {90, 90,90 };
-		int[] verde = {90, 90, 90 };
-		int[] azul = {90, 90, 90 };
-	Ruta ruta = new Ruta(rojo,amarillo,verde,azul,57);
+		int[] rojo = {-60,180,-60};
+		int[] amarillo = {360,-180,180 };
+		int[] verde = {360,360,360 };
+		int[] azul = {-180,360,180};
+	Ruta ruta = new Ruta(rojo,amarillo,verde,azul,64);
 		
       Robot bender = new Robot(ruta);
       String color = bender.reconoceColor();
@@ -30,6 +30,8 @@ public class Postasprincipal {
     {
     	bender.seguirRuta(ruta.devolverlistaAzul(),ruta.devolverdistancia() );
     }
+    
+    bender.avanzarconojos();
     
   	//bender.seguirRuta(ruta.devolverlistaRojo(),ruta.devolverdistancia() );
   	//bender.seguirRuta(ruta.devolverlistaVerde(),ruta.devolverdistancia() );
