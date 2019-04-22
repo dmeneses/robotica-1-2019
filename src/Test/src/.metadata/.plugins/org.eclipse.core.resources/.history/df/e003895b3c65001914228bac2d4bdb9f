@@ -25,7 +25,7 @@ public class Robot {
 	  motorC = new EV3LargeRegulatedMotor(MotorPort.C);
 	 colores = new EV3ColorSensor(SensorPort.S2);
 	 
-	 int[] rojo = {90, -90, 90};
+	 int[] rojo = {90, -70, 60};
 	 int[] verde = {180, -90, 90};
 	 int[] azul = {270, -70, 180};
 	 int[] amarillo = {360, -180, 100};
@@ -44,7 +44,7 @@ public class Robot {
 		motorB.setSpeed(500);
 		motorC.setSpeed(500);
 		
-		distancia = distancia-5;
+		distancia = distancia-4;
 		Avanzar=(int)distancia*360/17;
 		motorB.rotate(Avanzar,true);
 		motorC.rotate(Avanzar);
@@ -107,26 +107,17 @@ public class Robot {
 		avanzar();
 		girar(giros[1]);
 		avanzar();
-		girar(giros[2]);		
-	    }
-		public void avanzarUltrasonico()
-		{
-		float [] muestras = new float [ojos.sampleSize()];
-			
-			ojos.fetchSample(muestras,0);
-			double distancia = muestras[0]*100;
-			System.out.println("distancia : "+ distancia);
+		girar(giros[2]);
+		avanzar();
+		girar(giros[3]);
+		avanzar();
+		//avanzarUltrasonico();
 		
-	//	int grados= (int)distancia	
-			
-		}
-		
-	
-	    }
+	}
 	
 	
 		 
-	    
+	 }
 
 	
 

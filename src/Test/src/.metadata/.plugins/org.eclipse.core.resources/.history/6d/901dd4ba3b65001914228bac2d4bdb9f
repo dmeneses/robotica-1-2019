@@ -14,22 +14,9 @@ public class Colores {
 	}
 	public int[] elegirRuta(String color)		
 	{
-		int[] giros = {};
-	
+		int[] giros;
 		if (color == "rojo"){
 			giros = colorrojo;
-		}
-		int[] giros1;
-		if (color == "verde"){
-			giros = colorverde;
-		}
-		int[] giros2;
-		if (color == "azul"){
-			giros1 = colorazul;
-		}
-		int[] giros3;
-		if (color == "amarillo"){
-			giros = coloramarillo;
 		}
 		
 		return giros;

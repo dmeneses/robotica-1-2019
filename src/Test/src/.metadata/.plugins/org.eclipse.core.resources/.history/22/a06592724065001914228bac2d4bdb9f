@@ -44,7 +44,7 @@ public class Robot {
 		motorB.setSpeed(500);
 		motorC.setSpeed(500);
 		
-		distancia = distancia-5;
+		distancia = distancia-4;
 		Avanzar=(int)distancia*360/17;
 		motorB.rotate(Avanzar,true);
 		motorC.rotate(Avanzar);
@@ -107,26 +107,17 @@ public class Robot {
 		avanzar();
 		girar(giros[1]);
 		avanzar();
-		girar(giros[2]);		
-	    }
-		public void avanzarUltrasonico()
-		{
-		float [] muestras = new float [ojos.sampleSize()];
-			
-			ojos.fetchSample(muestras,0);
-			double distancia = muestras[0]*100;
-			System.out.println("distancia : "+ distancia);
+		girar(giros[2]);
+		avanzar();
+		girar(giros[3]);
+		avanzar();
+		//avanzarUltrasonico();
 		
-	//	int grados= (int)distancia	
-			
-		}
-		
-	
-	    }
+	}
 	
 	
 		 
-	    
+	 }
 
 	
 

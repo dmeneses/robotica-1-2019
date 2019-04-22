@@ -16,7 +16,7 @@ public class Principal {
 			killer.girar(90);
 			String color = killer.reconocerColor();
 			
-		    killer.avanzarRuta(color);
+		    //killer.avanzarRuta(color);
 			
 	}
 }

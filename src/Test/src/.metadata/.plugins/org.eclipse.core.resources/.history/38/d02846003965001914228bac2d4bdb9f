@@ -10,27 +10,19 @@ public class Robot {
 	String nombre;
 	
 	 double distancia;
-	 int Avanzar;
+	 int grados;
 	 
 	 EV3LargeRegulatedMotor motorB;
 	 EV3LargeRegulatedMotor motorC;
 	 EV3ColorSensor colores;
 	 EV3UltrasonicSensor ojos;
-	 Colores color;
 	 
 	 GirodeEje ge;
 	 public  Robot (String unnombre,int unadistancia){
 		 
 	  motorB = new EV3LargeRegulatedMotor(MotorPort.B);
 	  motorC = new EV3LargeRegulatedMotor(MotorPort.C);
-	 colores = new EV3ColorSensor(SensorPort.S2);
-	 
-	 int[] rojo = {90, -90, 90};
-	 int[] verde = {180, -90, 90};
-	 int[] azul = {270, -70, 180};
-	 int[] amarillo = {360, -180, 100};
-	 
-	 color = new Colores(rojo,verde,azul,amarillo);
+	 colores = new EV3ColorSensor(SensorPort.S2);	 
 	  
 	  nombre= unnombre;
 		 
@@ -44,10 +36,10 @@ public class Robot {
 		motorB.setSpeed(500);
 		motorC.setSpeed(500);
 		
-		distancia = distancia-5;
-		Avanzar=(int)distancia*360/17;
-		motorB.rotate(Avanzar,true);
-		motorC.rotate(Avanzar);
+		distancia = distancia-4;
+		grados=(int)distancia*360/17;
+		motorB.rotate(grados,true);
+		motorC.rotate(grados);
 		
 		
 				
@@ -99,34 +91,10 @@ public class Robot {
 		return colorActivado;
 		
 	}
-
-	public void avanzarRuta(String colorRuta) {
-		// TODO Auto-generated method stub
-		int[] giros = color.elegirRuta(colorRuta);//{60, -90, 40}
-		girar(giros[0]);
-		avanzar();
-		girar(giros[1]);
-		avanzar();
-		girar(giros[2]);		
-	    }
-		public void avanzarUltrasonico()
-		{
-		float [] muestras = new float [ojos.sampleSize()];
-			
-			ojos.fetchSample(muestras,0);
-			double distancia = muestras[0]*100;
-			System.out.println("distancia : "+ distancia);
-		
-	//	int grados= (int)distancia	
-			
-		}
-		
-	
-	    }
 	
 	
 		 
-	    
+	 }
 
 	
 
