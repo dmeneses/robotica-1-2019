@@ -53,7 +53,7 @@ public class Robot {
     
     public void girarRobot(int grados)
     {
-    	grados = grados*(800);
+    	grados = grados*(800/360);
     	motorA.rotate(grados , true);
 		motorC.rotate(-grados);
     }
