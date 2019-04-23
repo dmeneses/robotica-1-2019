@@ -14,7 +14,8 @@ public class Postas
 	public Postas()
 	{
 		distanciatramo = 30;
-		robot = new Robot(2.75,11.95); //11.35
+		robot = new Robot(2.75,13.6); //11.35
+		
 		rojo = new int[3];
 		amarillo = new int[3];
 		verde = new int[3];
@@ -33,9 +34,9 @@ public class Postas
 		verde[1]=300;
 		verde[2]=300;
 		 
-		azul[0]=300;
-		azul[1]=300;
-		azul[2]=300;
+		azul[0]=-50;
+		azul[1]=120;
+		azul[2]=-70;
 	}
 	
 	//metodos
@@ -56,19 +57,19 @@ public class Postas
 			post2 = rojo[1];
 			post3 = rojo[2];
 		}
-		if (color == 3)
+		else if (color == 3)
 		{
 			post1 = amarillo[0];
 			post2 = amarillo[1];
 			post3 = amarillo[2];
 		}
-		if (color == 1)
+		else if (color == 1)
 		{
 			post1 = verde[0];
 			post2 = verde[1];
 			post3 = verde[2];
 		}
-		if (color == 2)
+		else if (color == 2)
 		{
 			post1 = azul[0];
 			post2 = azul[1];

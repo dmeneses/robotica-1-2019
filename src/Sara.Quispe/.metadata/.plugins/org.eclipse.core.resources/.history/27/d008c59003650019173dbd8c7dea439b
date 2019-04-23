@@ -1,0 +1,55 @@
+public class PruebaCarro {
+
+	public static void main(String[] args) {
+		float colorRojo = 0.0f;
+		float colorAzul = 2.0f;
+		float colorVerde = 1.0f;
+		int[] gradosRojo = { 20, -90, 70 };
+		int[] gradosAzul = { 70, -100, 30 };
+		int[] gradosVerde = { -50, 120, -70 };
+		double distanciaFijaRecorrido = 30;// centimetros
+
+		Carro carritoSara = new Carro();
+		boolean detecteColor = false;
+		float colorDetectado = 0;
+		while (detecteColor == false) {
+		colorDetectado = carritoSara.detectarColor();
+		}
+		if(colorDetectado==colorRojo)
+			for(int piso=0;piso<3;piso=piso+1){
+			int grado1 =gradosRojo[piso]
+			carritoSara.girar(grado1);
+			carritoSara.avanzar(distanciaFijaRecorrido);
+		}
+		
+			else if(colorDetectado==colorAzul){
+			for(int piso=0;piso<3;piso=piso+1){
+				int grado2 =gradosRojo[piso];
+				carritoSara.girar(grado2);
+				carritoSara.avanzar(distanciaFijaRecorrido);
+			}
+			}
+			
+			else if(colorDetectado==colorVerde){
+			for(int piso=0;piso<3;piso=piso+1){
+				int grado3=gradosRojo[piso];
+				carritoSara.girar(grado3);
+				carritoSara.avanzar(distanciaFijaRecorrido);
+			}
+			}
+			
+		}
+			 
+			
+			/*boolean detecteSiguiente = false;
+			double distanciaDetectada = 0;
+			while (detecteSiguiente == false)
+				distanciaDetectada = carritoSara.detectarObstaculo();
+				detecteSiguiente = true;
+			carritoSara.detectarObstaculo();*/
+			}               
+		 
+		 
+	}
+
+

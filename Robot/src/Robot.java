@@ -4,6 +4,7 @@ import lejos.hardware.port.SensorPort;
 import lejos.hardware.sensor.EV3ColorSensor;
 //import lejos.hardware.sensor.EV3TouchSensor;
 import lejos.hardware.sensor.EV3UltrasonicSensor;
+import lejos.robotics.Color;
 
 
 public class Robot
@@ -31,6 +32,7 @@ public class Robot
 		//muestrasboton = new float [boton.sampleSize()];
 		color = new EV3ColorSensor (SensorPort.S2);
 		muestrascolor = new float [color.sampleSize()];
+		color.setFloodlight(Color.WHITE);
 	}
 	
 	//metodos
@@ -97,16 +99,15 @@ public class Robot
 		color.fetchSample(muestrascolor, 0);
 		
 		int colorcito = (int)muestrascolor[0]; 
-		
-		
-		while (colorcito == -1)
+				
+		while (colorcito == -1 || colorcito == 7)
 		{
 			
 			color.fetchSample(muestrascolor, 0);
 			
 			colorcito = (int)muestrascolor[0]; 
 		
-		System.out.println ("color : " + colorcito);
+			System.out.println ("color : " + colorcito);
 		}
 		
 		return (int)muestrascolor[0];
