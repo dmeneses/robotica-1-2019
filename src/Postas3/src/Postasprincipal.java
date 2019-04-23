@@ -1,14 +1,14 @@
-
+                     
 
 
 public class Postasprincipal {
 
 	public static void main(String[] args) {
-		int[] rojo = {-60,180,-60};
-		int[] amarillo = {360,-180,180 };
-		int[] verde = {360,360,360 };
-		int[] azul = {-180,360,180};
-	Ruta ruta = new Ruta(rojo,amarillo,verde,azul,64);
+		int[] rojo = {70,-100,30};
+		int[] amarillo = {50,-120,70};
+		int[] verde = {50,-120,70 };
+		int[] azul = {70,-100,30};
+	Ruta ruta = new Ruta(rojo,amarillo,verde,azul,30);
 		
       Robot bender = new Robot(ruta);
       String color = bender.reconoceColor();

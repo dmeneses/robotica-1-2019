@@ -21,8 +21,8 @@ public class Robot {
      ojos = new EV3UltrasonicSensor (SensorPort.S4);
      recorrido = r;
      
-     motorA.setSpeed(motorA.getMaxSpeed());
-     motorC.setSpeed(motorC.getMaxSpeed());
+     //motorA.setSpeed(motorA.getMaxSpeed());
+     //motorC.setSpeed(motorC.getMaxSpeed());
 	}
     public void avanzar (double distancia){
      
@@ -43,7 +43,8 @@ public class Robot {
 		
 		System.out.println("distancia:" + distancia);
 	
-  
+        motorA.setAcceleration(8000);
+        motorC.setAcceleration(8000);
 	//double distancia = 5;
 	int grados = (int)distancia*360/17;
 	motorA.rotate(grados,true);
@@ -53,7 +54,7 @@ public class Robot {
     
     public void girarRobot(int grados)
     {
-    	grados = grados*(800/360);
+    	grados = grados*(810/360);
     	motorA.rotate(grados , true);
 		motorC.rotate(-grados);
     }
@@ -65,7 +66,7 @@ public class Robot {
     	girarRobot(grados[1]);
     	avanzar(distancia);
     	girarRobot(grados[2]);
-    	avanzar(distancia);    	
+    	//avanzar(distancia);    	
     	
     }
     
