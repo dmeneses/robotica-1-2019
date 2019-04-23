@@ -49,11 +49,11 @@ public class Robot
 	
 	public void avanzarRojo()
 	{	
-			acb.girar(840);
+			acb.girar(-70);
 			acb.avanzar(30);
-			acb.girar(-180);
+			acb.girar(100);
 			acb.avanzar(30);
-			acb.girar(90);
+			acb.girar(-30);
 			Delay.msDelay(1000);
 			boolean dis = true;
 			while (dis)
@@ -78,7 +78,7 @@ public class Robot
 			acb.girar(-100);
 			acb.avanzar(30);
 			acb.girar(50);
-			Delay.msDelay(1000);
+			Delay.msDelay(0);
 			boolean dis = true;
 			while (dis)
 			{
@@ -97,9 +97,9 @@ public class Robot
 	public void avanzarAmarillo()
 	{		
 			acb.girar(20);
-			acb.avanzar(20);
+			acb.avanzar(30);
 			acb.girar(-40);
-			acb.avanzar(15);
+			acb.avanzar(30);
 			acb.girar(20);
 			Delay.msDelay(1000);
 			boolean dis = true;
@@ -119,11 +119,11 @@ public class Robot
 	
 	public void avanzarVerde()
 	{		
-			acb.girar(35);
-			acb.avanzar(15);
+			acb.girar(-50);
+			acb.avanzar(30);
+			acb.girar(120);
+			acb.avanzar(30);
 			acb.girar(-70);
-			acb.avanzar(15);
-			acb.girar(35);
 			Delay.msDelay(1000);
 			boolean dis = true;
 			while (dis)
@@ -133,7 +133,7 @@ public class Robot
 				if(acb.detectarDistancia() > 0)
 				{
 					int pollo = (int)acb.detectarDistancia();
-					acb.avanzar(pollo);
+					acb.kungFuPanda(pollo);
 					dis = false;
 				}
 			}			

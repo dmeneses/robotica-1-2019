@@ -28,7 +28,10 @@ public class Acciones
     	
     	Motor.B.rotate((int)gradito, true);
     	Motor.C.rotate((int)-gradito);
-    	
+    	/*Motor.B.setAcceleration(500);
+    	Motor.C.setAcceleration(500);
+    	Motor.B.setSpeed(Motor.B.getMaxSpeed());
+    	Motor.C.setSpeed(Motor.C.getMaxSpeed());*/
     }
     
     public void avanzar(int distancia)
@@ -38,6 +41,11 @@ public class Acciones
     	
     	Motor.B.rotate((int)grados, true);
     	Motor.C.rotate((int)grados);
+    	/*Motor.B.setAcceleration(900);
+    	Motor.C.setAcceleration(900);*/
+    	Motor.B.setSpeed(550);
+    	Motor.C.setSpeed(550);
+    	
     }
     
     public double detectarDistancia()
@@ -59,6 +67,20 @@ public class Acciones
     	 
     	
     }
+    
+    public void kungFuPanda(int distancia)
+    {
+    	double perimetro = gabo * Math.PI * 2;
+    	double grados = distancia * 360 / perimetro;
+    	
+    	Motor.B.rotate((int)grados, true);
+    	Motor.C.rotate((int)grados);
+    	Motor.B.setAcceleration(750);
+    	Motor.C.setAcceleration(750);
+    	Motor.B.setSpeed(950);
+    	Motor.C.setSpeed(950);
+    	
+    } 
   
     
     
