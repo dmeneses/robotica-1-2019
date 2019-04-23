@@ -20,24 +20,24 @@ public class Colors
 	
 	public Colors()
 	{	
-		robot1= new Robot(3.05, 12.3);
-		distancia =45 ;
+		robot1= new Robot(3, 12.310);
+		distancia =30;
 		angurojo=new int [3];
 		anguverde=new int [3];
 		anguazul=new int [3];
 		anguamarillo=new int [3];
-		angurojo[0] = 120;
-		angurojo[1] = -120;
-		angurojo[2] = 90;
-		anguverde[0]=120;
-		anguverde[1]=120;
-		anguverde[2]=-120;
+		angurojo[0] = 70;
+		angurojo[1] = -100;
+		angurojo[2] = 30;
+		anguverde[0]=20;
+		anguverde[1]=-90;
+		anguverde[2]=70;
 		anguazul[0]=35;
 		anguazul[1]=35;
 		anguazul[2]=-35;
-		anguamarillo[0]=43;
-		anguamarillo[1]=43;
-		anguamarillo[2]=43;
+		anguamarillo[0]=-50;
+		anguamarillo[1]=120;
+		anguamarillo[2]=-70;
 	}
 	
 	public int velocidad()
@@ -56,8 +56,9 @@ public class Colors
 	public void iniciarCompetencia()
 	{
 		boolean entro = false;
-		  if (robot1.detectarColor()==1)
+		if (robot1.detectarColor()==1)
 		  {
+			System.out.println("verde");
 			  robot1.girarGrados(anguverde[0]);
 			  robot1.avanzarCentimentros(distancia);
 			  robot1.girarGrados(anguverde[1]);
@@ -69,6 +70,7 @@ public class Colors
 
 			  if (robot1.detectarColor()==0)
 			  {
+				  System.out.println("rojo");
 				 robot1.girarGrados(angurojo[0]);
 				 robot1.avanzarCentimentros(distancia);
 				  robot1.girarGrados(angurojo[1]);
@@ -79,6 +81,7 @@ public class Colors
 		  
 			  if (robot1.detectarColor()==2)
 			  {
+				  System.out.println("azul");
 			  robot1.girarGrados(anguazul[0]);
 			  robot1.avanzarCentimentros(distancia);
 			  robot1.girarGrados(anguazul[1]);
@@ -89,6 +92,7 @@ public class Colors
 		  
 			  if (robot1.detectarColor()==3)
 			  {
+				  System.out.println("amarillo");
 				  robot1.girarGrados(anguamarillo[0]);
 				  robot1.avanzarCentimentros(distancia);
 				  robot1.girarGrados(anguamarillo[1]);
@@ -102,7 +106,7 @@ public class Colors
         		  int velocidadOriginal = velocidad();
         		  acelerar(500);
 				  int x=robot1.detectarDistancia();
-				  robot1.avanzarCentimentros(x-3);
+				  robot1.avanzarCentimentros(x-5);
 				  entro = false;
 				  acelerar(velocidadOriginal);
 			  }

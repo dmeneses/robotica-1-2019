@@ -72,8 +72,8 @@ public class Robot
 		//regla de tres para obtener grados
 		double gradito= giro*360/perimetro;
 		//mover motores
-		Motor.B.rotate((int)gradito, true);
-		Motor.C.rotate((int)-gradito);
+		Motor.B.rotate((int)-gradito, true);
+		Motor.C.rotate((int)gradito);
 		
 	}
 	public void acelerar(int aceleracion)
