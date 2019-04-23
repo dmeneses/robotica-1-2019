@@ -56,61 +56,132 @@ public class Robot {
 	{
 		        System.out.println(Color);
 		        if(Color == "Rojo"){
-		        int G = 90;
-	            double x = 0;
-	            x = (int)((G*G)/2);
-	            int G1 = 270;
-	            double x1 = 0;
-	            x1 = (int)((G1*G1)/2);
-	            int G2 = 200;
-	            double x2 = 0;
-	            x2 = (int)((G2*G2)/2);
+		        int D = 0;
+		        double S = 30;
+	            D = (int)((360*S)/17);
+		        int G = 20;
+	            int PG=(int)(2*Math.PI*12);
+	   	        int R = 0;
+	   	        R = (int)(((G/2)*360)/PG);
+	   	        int G1 = -92;
+	   	        int PG1=(int)(2*Math.PI*12);
+	   	        int R1 = 0;
+	   	        R1 = (int)(((G1/2)*360)/PG1);
+	   	        int G2 = 72;
+	   	        int PG2=(int)(2*Math.PI*12);
+	   	        int R2 = 0;
+	   	        R2 = (int)(((G2/2)*360)/PG2);
 	            motorI.setSpeed(motorI.getMaxSpeed());
-        	    motorD.setSpeed(motorD.getMaxSpeed());
-        	    motorI.rotate(-G, true);
-                motorD.rotate(G);
-                motorI.rotate(720, true);
-                motorD.rotate(720);
-                motorI.rotate(G1, true);
-                motorD.rotate(-G1);   
-                motorI.rotate(720, true);
-                motorD.rotate(720);
-                motorI.rotate(-G2, true);
-                motorD.rotate(G2);   
-                Delay.msDelay(9);
-    	       }	      
+	    	    motorD.setSpeed(motorD.getMaxSpeed());
+	    	    motorI.rotate(R, true);
+	            motorD.rotate(-R);
+	            motorI.rotate(D, true);
+	            motorD.rotate(D);
+	            motorI.rotate(R1, true);
+	            motorD.rotate(-R1);
+	            motorI.rotate(D, true);
+	            motorD.rotate(D);
+	            motorI.rotate(R2, true);
+	            motorD.rotate(-R2);
+	           }	      
 	           }
 	public void rutaV(String Color)
 	           {
 		       System.out.println(Color);
 		       if(Color == "Verde"){
-    	       motorI.setSpeed(motorI.getMaxSpeed());
-    	       motorD.setSpeed(motorD.getMaxSpeed());
-    	       motorI.rotate(360, true);
-               motorD.rotate(360);
-               Delay.msDelay(9);
+		    	   int D = 0;
+			        double S = 30;
+		            D = (int)((360*S)/17);
+			        int G = -50;
+		            int PG=(int)(2*Math.PI*12);
+		   	        int R = 0;
+		   	        R = (int)(((G/2)*360)/PG);
+		   	        int G1 = 120;
+		   	        int PG1=(int)(2*Math.PI*12);
+		   	        int R1 = 0;
+		   	        R1 = (int)(((G1/2)*360)/PG1);
+		   	        int G2 = -70;
+		   	        int PG2=(int)(2*Math.PI*12);
+		   	        int R2 = 0;
+		   	        R2 = (int)(((G2/2)*360)/PG2);
+		            motorI.setSpeed(motorI.getMaxSpeed());
+		    	    motorD.setSpeed(motorD.getMaxSpeed());
+		    	    motorI.rotate(-R, true);
+		            motorD.rotate(R);
+		            motorI.rotate(D, true);
+		            motorD.rotate(D);
+		            motorI.rotate(R1, true);
+		            motorD.rotate(-R1);
+		            motorI.rotate(D, true);
+		            motorD.rotate(D);
+		            motorI.rotate(-R2, true);
+		            motorD.rotate(R2);
 	           }
 } 
     public void rutaA(String Color) 
                {
     	       System.out.println(Color);
     	       if(Color == "Azul"){
- 	           motorI.setSpeed(motorI.getMaxSpeed());
- 	           motorD.setSpeed(motorD.getMaxSpeed());
- 	           motorI.rotate(360, true);
-               motorD.rotate(-460);
-               Delay.msDelay(9);    	
+    	    	   int D = 0;
+   		        double S = 30;
+   	            D = (int)((360*S)/17);
+   		        int G = 70;
+   	            int PG=(int)(2*Math.PI*12);
+   	   	        int R = 0;
+   	   	        R = (int)(((G/2)*360)/PG);
+   	   	        int G1 = -100;
+   	   	        int PG1=(int)(2*Math.PI*12);
+   	   	        int R1 = 0;
+   	   	        R1 = (int)(((G1/2)*360)/PG1);
+   	   	        int G2 = 30;
+   	   	        int PG2=(int)(2*Math.PI*12);
+   	   	        int R2 = 0;
+   	   	        R2 = (int)(((G2/2)*360)/PG2);
+   	            motorI.setSpeed(motorI.getMaxSpeed());
+   	    	    motorD.setSpeed(motorD.getMaxSpeed());
+   	    	    motorI.rotate(R, true);
+   	            motorD.rotate(-R);
+   	            motorI.rotate(D, true);
+   	            motorD.rotate(D);
+   	            motorI.rotate(R1, true);
+   	            motorD.rotate(-R1);
+   	            motorI.rotate(D, true);
+   	            motorD.rotate(D);
+   	            motorI.rotate(R2, true);
+   	            motorD.rotate(-R2);    	
                }
                }
                public void rutaY(String Color) 
                {
                System.out.println(Color);   
                if(Color == "Amarillo"){
-               motorI.setSpeed(motorI.getMaxSpeed());
-               motorD.setSpeed(motorD.getMaxSpeed());
-               motorI.rotate(360, true);
-               motorD.rotate(360);
-               Delay.msDelay(9);    	
+            	   int D = 0;
+   		        double S = 30;
+   	            D = (int)((360*S)/17);
+   		        int G = 20;
+   	            int PG=(int)(2*Math.PI*12);
+   	   	        int R = 0;
+   	   	        R = (int)(((G/2)*360)/PG);
+   	   	        int G1 = -92;
+   	   	        int PG1=(int)(2*Math.PI*12);
+   	   	        int R1 = 0;
+   	   	        R1 = (int)(((G1/2)*360)/PG1);
+   	   	        int G2 = 72;
+   	   	        int PG2=(int)(2*Math.PI*12);
+   	   	        int R2 = 0;
+   	   	        R2 = (int)(((G2/2)*360)/PG2);
+   	            motorI.setSpeed(motorI.getMaxSpeed());
+   	    	    motorD.setSpeed(motorD.getMaxSpeed());
+   	    	    motorI.rotate(R, true);
+   	            motorD.rotate(-R);
+   	            motorI.rotate(D, true);
+   	            motorD.rotate(D);
+   	            motorI.rotate(R1, true);
+   	            motorD.rotate(-R1);
+   	            motorI.rotate(D, true);
+   	            motorD.rotate(D);
+   	            motorI.rotate(R2, true);
+   	            motorD.rotate(-R2);   	
     }
     }
     public void leer(String Color){
