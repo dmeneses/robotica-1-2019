@@ -2,7 +2,7 @@
 public class PruebaCarro {
 
 	public static void main(String[] args) {
-		int[] gradosRojo = {20, -90, 70};
+		int[] gradosRojo = {80, -270, 280};
 		int[] gradosAzul ={70, -100, 30};
 		int[] gradosVerde ={-50, 120, -70};
 		double distanciaFijaRecorrida = 30;

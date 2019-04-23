@@ -12,11 +12,11 @@ public class Principal {
 			//EV3LargeRegulatedMotor motorB = new EV3LargeRegulatedMotor(MotorPort.C);
 		    
 			Robot killer = new Robot(" ", 30);
-			killer.avanzar();
-			killer.girar(90);
+			//killer.avanzar();
+			//killer.girar(90);
 			String color = killer.reconocerColor();
 			
 		    killer.avanzarRuta(color);
-			
+			killer.avanzarUltrasonico();
 	}
 }

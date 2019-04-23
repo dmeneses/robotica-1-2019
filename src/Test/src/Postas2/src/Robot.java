@@ -24,11 +24,12 @@ public class Robot {
 	  motorB = new EV3LargeRegulatedMotor(MotorPort.B);
 	  motorC = new EV3LargeRegulatedMotor(MotorPort.C);
 	 colores = new EV3ColorSensor(SensorPort.S2);
+	 ojos = new EV3UltrasonicSensor(SensorPort.S4);
 	 
-	 int[] rojo = {90, -90, 90};
-	 int[] verde = {180, -90, 90};
-	 int[] azul = {270, -70, 180};
-	 int[] amarillo = {360, -180, 100};
+	 int[] rojo = {70, -100, 30}; 
+	 int[] verde = {50, -120, 70}; 
+	 int[] azul = {90, 90, 90}; 
+	 int[] amarillo = {70,-100,30};
 	 
 	 color = new Colores(rojo,verde,azul,amarillo);
 	  
@@ -44,21 +45,25 @@ public class Robot {
 		motorB.setSpeed(500);
 		motorC.setSpeed(500);
 		
-		distancia = distancia-5;
+		distancia = distancia;
 		Avanzar=(int)distancia*360/17;
+		
+		motorB.setAcceleration(1500); 
+		motorC.setAcceleration(1500); 
+		motorB.setSpeed(500);
+		motorB.forward();
+		motorC.setSpeed(500);
+		motorC.forward();	
 		motorB.rotate(Avanzar,true);
 		motorC.rotate(Avanzar);
-		
-		
-				
 	}
 	
 	public void girar(int numero)
 	{
 		 int grados = ge.girar(numero);
 		 
-		 motorB.rotate(-grados,true);
-			motorC.rotate(grados);		
+		 motorB.rotate(grados,true);
+			motorC.rotate(-grados);		
 		
 	}
 	public String reconocerColor()
@@ -102,7 +107,7 @@ public class Robot {
 
 	public void avanzarRuta(String colorRuta) {
 		// TODO Auto-generated method stub
-		int[] giros = color.elegirRuta(colorRuta);//{60, -90, 40}
+		int[] giros = color.elegirRuta(colorRuta);//{710, -100, 30}
 		girar(giros[0]);
 		avanzar();
 		girar(giros[1]);
@@ -116,16 +121,18 @@ public class Robot {
 			ojos.fetchSample(muestras,0);
 			double distancia = muestras[0]*100;
 			System.out.println("distancia : "+ distancia);
+		distancia= (distancia-5);
+		int grados= (int)distancia*360/17;
+		motorB.rotate(grados,true);
+		motorC.rotate(grados); 
 		
-	//	int grados= (int)distancia	
-			
 		}
 		
 	
 	    }
+	 
 	
-	
-		 
+		  
 	    
 
 	
