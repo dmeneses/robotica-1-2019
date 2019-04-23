@@ -18,24 +18,24 @@ public class Array
 	
 	public Array()
 	{
-		distanciafija = 30;
-		robot = new Pato(3, 12.25);
+		distanciafija = 50;
+		robot = new Pato(2.5, 12.5);
 		angulosRojo = new int[3];
 		angulosRojo[0]=270;
 		angulosRojo[1]=255;
-		angulosRojo[2]=290;
+		angulosRojo[2]=260;
 		angulosAmarillo = new int[3];
 		angulosAmarillo[0]=200;
 		angulosAmarillo[1]=-370;
-		angulosAmarillo[2]=220;
+		angulosAmarillo[2]=170;
 		angulosAzul = new int[3];
-		angulosAzul[0]=390;
-		angulosAzul[1]=401;
-		angulosAzul[2]=760;
+		angulosAzul[0]=370;
+		angulosAzul[1]=371;
+		angulosAzul[2]=730;
 		angulosVerde = new int[3];
-		angulosVerde[0]=-80;
-		angulosVerde[1]=150;
-		angulosVerde[2]=-100;
+		angulosVerde[0]=90;
+		angulosVerde[1]=-150;
+		angulosVerde[2]=50;
 	}
 	public void jugar()
 	{
@@ -54,6 +54,7 @@ public class Array
 		}
 		if(color == 3)//se detecto amarillo
 		{
+			robot.avanzarCentimetros(distanciafija);
 			robot.girarGrados(angulosAmarillo[0]);
 			robot.avanzarCentimetros(distanciafija);
 			robot.girarGrados(angulosAmarillo[1]);
@@ -65,6 +66,7 @@ public class Array
 		}
 		if(color == 2)//se detecto Azul
 		{
+			robot.avanzarCentimetros(distanciafija);
 			robot.girarGrados(angulosAzul[0]);
 			robot.avanzarCentimetros(distanciafija);
 			robot.girarGrados(angulosAzul[1]);
@@ -81,8 +83,8 @@ public class Array
 			robot.girarGrados(angulosVerde[1]);
 			robot.avanzarCentimetros(distanciafija);
             robot.girarGrados(angulosVerde[2]);
-            robot.acelerar(600);
             int distancia = robot.detectarDistancia();
+            robot.acelerar(600);
             robot.avanzarCentimetros(distancia); 
 		}
 	}	

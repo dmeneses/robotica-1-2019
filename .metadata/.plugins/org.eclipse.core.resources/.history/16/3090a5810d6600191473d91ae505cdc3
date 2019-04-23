@@ -52,7 +52,7 @@ public class Pato
 	   {
 		   
 		ojos.fetchSample(muestrasOjos, 0);
-		return (int)(muestrasOjos[0]*100);
+		return (int)muestrasOjos[0]*100;
 	   }
 	   /*public int detectarPulsador()
 	   {

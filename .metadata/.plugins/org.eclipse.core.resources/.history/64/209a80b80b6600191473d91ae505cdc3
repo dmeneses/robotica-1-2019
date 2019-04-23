@@ -52,7 +52,7 @@ public class Pato
 	   {
 		   
 		ojos.fetchSample(muestrasOjos, 0);
-		return (int)(muestrasOjos[0]*100);
+		return (int)muestrasOjos[0]*100;
 	   }
 	   /*public int detectarPulsador()
 	   {
@@ -67,7 +67,7 @@ public class Pato
 		   //distancia del arco a moverse
 		   double giro=   girarGrados*perimetroG/360;
 		   //perimetro de la rueda 
-		   double perimetro= radio*Math.PI*2.5;
+		   double perimetro= radio*Math.PI*2;
 		   //regla de tres para obtener grados
 		   
 		double grado= giro*360/perimetro;

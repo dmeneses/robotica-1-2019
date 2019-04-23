@@ -23,7 +23,7 @@ public class Array
 		angulosRojo = new int[3];
 		angulosRojo[0]=270;
 		angulosRojo[1]=255;
-		angulosRojo[2]=290;
+		angulosRojo[2]=260;
 		angulosAmarillo = new int[3];
 		angulosAmarillo[0]=200;
 		angulosAmarillo[1]=-370;
