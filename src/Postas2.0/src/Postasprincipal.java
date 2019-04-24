@@ -1,16 +1,16 @@
 
 //public class Postasprincipal {
 
-	public static void main(String[] args) {
+	
         
 
 
 public class Postasprincipal {
 
 public static void main(String[] args) {
-int[] rojo = {70,-100,30};
-int[] amarillo = {50,-120,70};
-int[] verde = {50,-120,70 };
+int[] rojo = {20,-90,70};
+int[] amarillo = {-50,120,-70};
+int[] verde = {-50,120,-70 };
 int[] azul = {70,-100,30};
 Ruta ruta = new Ruta(rojo,amarillo,verde,azul,30);
 
@@ -44,6 +44,7 @@ bender.avanzarconojos();
 
 
 
+    }
 }
 
 
@@ -61,6 +62,8 @@ bender.avanzarconojos();
  
 		// TODO Auto-generated method stub
 
-	}
+	
 
-
+	
+	
+	

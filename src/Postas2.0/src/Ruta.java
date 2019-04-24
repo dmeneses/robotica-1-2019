@@ -1,5 +1,4 @@
 
-//public class Ruta {
     
   public class Ruta {
   int[] listarojo ;

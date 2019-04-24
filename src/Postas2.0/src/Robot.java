@@ -1,5 +1,4 @@
 
-//public class Robot {
 
 import lejos.hardware.motor.EV3LargeRegulatedMotor;
 import lejos.hardware.port.MotorPort;
@@ -23,8 +22,8 @@ public class Robot {
      ojos = new EV3UltrasonicSensor (SensorPort.S4);
      recorrido = r;
      
-     //motorA.setSpeed(motorA.getMaxSpeed());
-     //motorC.setSpeed(motorC.getMaxSpeed());
+      //motorA.setSpeed(motorA.getMaxSpeed());
+      //motorC.setSpeed(motorC.getMaxSpeed());
 	}
     public void avanzar (double distancia){
      
@@ -35,6 +34,8 @@ public class Robot {
     
     public void avanzarconojos ()
     {
+    	motorA.setSpeed(motorA.getMaxSpeed());
+        motorC.setSpeed(motorC.getMaxSpeed());
     	float [] muestras= new float[ojos.sampleSize()];
 		
 		
@@ -114,4 +115,4 @@ public class Robot {
 
 
 
-}
+
