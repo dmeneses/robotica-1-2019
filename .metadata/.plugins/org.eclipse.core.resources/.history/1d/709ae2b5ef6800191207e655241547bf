@@ -29,7 +29,6 @@ public class Robot
 		muestrasOjos = new float[ojos.sampleSize()];
 		//muestrasBoton = new float [boton.sampleSize()];
 		muestrasColor = new float [color.sampleSize()];
-		//color.setFloodlight(C);
 	}
 	//metodos
 	public void avanzarCentimentros (int distancia)

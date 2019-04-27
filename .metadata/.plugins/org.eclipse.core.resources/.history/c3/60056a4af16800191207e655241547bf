@@ -47,9 +47,9 @@ public class Colors
 	
 	public void acelerar(int aceleracion)
 	{
-		Motor.B.setSpeed(aceleracion);
+		//Motor.B.setSpeed(aceleracion);
 		Motor.B.setAcceleration(aceleracion);
-		Motor.C.setSpeed(aceleracion);
+		//Motor.C.setSpeed(aceleracion);
 		Motor.C.setAcceleration(aceleracion);
 	}
 	
