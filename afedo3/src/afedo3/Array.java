@@ -21,21 +21,21 @@ public class Array
 		distanciafija = 30;
 		robot = new Pato(3, 12.25);
 		angulosRojo = new int[3];
-		angulosRojo[0]=270;
-		angulosRojo[1]=255;
-		angulosRojo[2]=290;
+		angulosRojo[0]=20;
+		angulosRojo[1]=-90;
+		angulosRojo[2]=70;
 		angulosAmarillo = new int[3];
 		angulosAmarillo[0]=200;
 		angulosAmarillo[1]=-370;
 		angulosAmarillo[2]=220;
 		angulosAzul = new int[3];
-		angulosAzul[0]=390;
-		angulosAzul[1]=401;
-		angulosAzul[2]=760;
+		angulosAzul[0]=70;
+		angulosAzul[1]=-100;
+		angulosAzul[2]=40;
 		angulosVerde = new int[3];
-		angulosVerde[0]=-80;
-		angulosVerde[1]=150;
-		angulosVerde[2]=-100;
+		angulosVerde[0]=-50;
+		angulosVerde[1]=120;
+		angulosVerde[2]=-800;
 	}
 	public void jugar()
 	{
