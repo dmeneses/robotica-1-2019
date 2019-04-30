@@ -1,0 +1,20 @@
+package morse;
+
+public class robot2 {
+	double telegrafo; 
+	String pal = "....*---*.-..*.-";
+	String h = "....";
+	String o = "---";
+	String l= " .-..";
+	String a= ".-";
+	public static void main (String[]args){
+	/* System.out.println("hola");*/
+		String morse= "saludo";
+	    for (int x=0;x<morse.length();x++)
+	        System.out.println("Caracter " + x + ": " + morse.charAt(x));
+	    String pal = "....*---*.-..*.-";
+	    for (int x=0;x<pal.length();x++)
+	        System.out.println("Caracter " + x + ": " + pal.charAt(x));
+	   System.out.println(morse.charAt(3));
+	}
+}

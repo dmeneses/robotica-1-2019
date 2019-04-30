@@ -1,0 +1,15 @@
+package morse;
+
+public class robot2 {
+	double telegrafo; 
+	String pal = "....*---*.-..*.-";
+	String h = "....";
+	String o = "---";
+	String l= " .-..";
+	String a= ".-";
+	public static void main (String[]args){
+	/* System.out.println("hola");*/
+		String morse= "saludo";
+	   System.out.println(morse.charAt(3));
+	}
+}
