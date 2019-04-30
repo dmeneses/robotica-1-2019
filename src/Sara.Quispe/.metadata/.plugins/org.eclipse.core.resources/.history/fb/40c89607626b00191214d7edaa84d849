@@ -1,0 +1,13 @@
+import lejos.hardware.port.SensorPort;
+import lejos.hardware.sensor.EV3TouchSensor;
+
+
+public class Pulsador {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		EV3TouchSensor sensorTouch=sensorTouch=new EV3TouchSensor(SensorPort.S2);
+
+	}
+
+}

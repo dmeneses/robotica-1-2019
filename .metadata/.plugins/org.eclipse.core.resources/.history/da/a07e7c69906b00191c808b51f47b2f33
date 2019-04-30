@@ -1,0 +1,13 @@
+
+public class Pruebas {
+
+	public static void main(String[] args)
+	{
+		String entradaTeclado = null;
+		for (int i=1;i<=entradaTeclado.length();i++){
+            System.out.println("Letra "+i+" : "+entradaTeclado.substring((i-1),i));
+        }
+
+	}
+
+}

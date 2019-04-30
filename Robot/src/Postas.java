@@ -22,21 +22,21 @@ public class Postas
 		azul = new int[3];
 		
 		
-		rojo[0]=90;
-		rojo[1]=180;
-		rojo[2]=90;
+		rojo[0]=20;
+		rojo[1]=-90;
+		rojo[2]=70;
 		
-		amarillo[0]=300;
-		amarillo[1]=300;
-		amarillo[2]=300;
+		amarillo[0]=70;
+		amarillo[1]=-100;
+		amarillo[2]=30;
 		
-		verde[0]=300;
-		verde[1]=300;
-		verde[2]=300;
+		verde[0]=-50;
+		verde[1]=120;
+		verde[2]=-70;
 		 
-		azul[0]=-50;
-		azul[1]=120;
-		azul[2]=-70;
+		azul[0]=0;
+		azul[1]=0;
+		azul[2]=0;
 	}
 	
 	//metodos
