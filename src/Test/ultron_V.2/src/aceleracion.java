@@ -5,32 +5,57 @@ import lejos.hardware.port.SensorPort;
 import lejos.hardware.sensor.EV3TouchSensor;
 import lejos.hardware.sensor.EV3UltrasonicSensor;
 import lejos.robotics.SampleProvider;
+import lejos.utility.Delay;
 
 
 public class aceleracion {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		EV3LargeRegulatedMotor motorB = new EV3LargeRegulatedMotor(MotorPort.B);
+		 /*EV3TouchSensor sensor = new EV3TouchSensor(SensorPort.S4);
+		 int cobito;
+		 int dabito = 1;
+		 boolean botonActivado;
+		 while(true)
+		 {
+		 
+		   SampleProvider sp = sensor.getTouchMode();
+		   float[] sample = new float [sp.sampleSize()];
+		   sp.fetchSample(sample, 0);
+		   sp.fetchSample(sample, 5);
+		   if(sample[0] == 1)
+		   {
+			   cobito = 1;
+		      System.out.println("A");
+		      
+		   }*/
+		   int suma = 0;
+		  for (int i=1; i >= 1; i++);
+		  {
+			  suma = suma + 1;
+			  System.out.println(suma);
+		  }
+		  
+	
+		 }
+		 
+		 
+		/**EV3LargeRegulatedMotor motorB = new EV3LargeRegulatedMotor(MotorPort.B);
 		EV3LargeRegulatedMotor motorC = new EV3LargeRegulatedMotor(MotorPort.C);
 		
 		
 		
-		 EV3TouchSensor sensor = new EV3TouchSensor(SensorPort.S4);
+		
 		  
 		  motorB.setAcceleration(350);
   			motorC.setAcceleration(350);
 		  
-		  SampleProvider sp = sensor.getTouchMode();
+		  
 	       boolean botonActivado;
          EV3UltrasonicSensor ojos;
          ojos = new  EV3UltrasonicSensor (SensorPort.S1);
          float[] muestras = new float[ojos.sampleSize()];
          
-         while(true)
-         {
-        	 float[] sample = new float [sp.sampleSize()];
-      	   sp.fetchSample(sample, 0);
       	   if (sample[0] == 0){
       		   botonActivado = false;
       	   }else{
@@ -59,18 +84,17 @@ public class aceleracion {
       	    
         		
         	 
-        	 System.out.println("Distancia: " + distancia);
+        	 System.out.println("Distancia: " + distancia);*/
 		
          }
 	
 
 
-	}
+	
 
 
 
 
-}
 
 
-}
+

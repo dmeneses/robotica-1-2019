@@ -43,8 +43,8 @@ public class Acciones
     	Motor.C.rotate((int)grados);
     	/*Motor.B.setAcceleration(900);
     	Motor.C.setAcceleration(900);*/
-    	Motor.B.setSpeed(550);
-    	Motor.C.setSpeed(550);
+    	Motor.B.setSpeed(500);
+    	Motor.C.setSpeed(500);
     	
     }
     

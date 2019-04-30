@@ -13,9 +13,9 @@ public class Robot
 		
 		while(colorNoConocido)
 		{
-		    int numero = acb.detectarColor();
+		    //int numero = acb.detectarColor();
 		
-			System.out.println(numero);
+			//System.out.println(numero);
 			
 			 
 		    if(acb.detectarColor() == 0)
@@ -40,7 +40,7 @@ public class Robot
 				 colorNoConocido = false;
 			 }	
 			
-			
+		    System.out.println(colorA);
 			
 		}
 		
@@ -49,12 +49,12 @@ public class Robot
 	
 	public void avanzarRojo()
 	{	
-			acb.girar(-70);
+			acb.girar(20);
 			acb.avanzar(30);
-			acb.girar(100);
+			acb.girar(-90);
 			acb.avanzar(30);
-			acb.girar(-30);
-			Delay.msDelay(1000);
+			acb.girar(70);
+			Delay.msDelay(0);
 			boolean dis = true;
 			while (dis)
 			{
@@ -73,11 +73,11 @@ public class Robot
 	
 	public void avanzarAzul()
 	{			
-			acb.girar(50);
+			acb.girar(70);
 			acb.avanzar(30);
 			acb.girar(-100);
 			acb.avanzar(30);
-			acb.girar(50);
+			acb.girar(30);
 			Delay.msDelay(0);
 			boolean dis = true;
 			while (dis)
@@ -96,12 +96,12 @@ public class Robot
 	
 	public void avanzarAmarillo()
 	{		
-			acb.girar(20);
+			acb.girar(-20);
 			acb.avanzar(30);
-			acb.girar(-40);
+			acb.girar(40);
 			acb.avanzar(30);
-			acb.girar(20);
-			Delay.msDelay(1000);
+			acb.girar(-20);
+			Delay.msDelay(0);
 			boolean dis = true;
 			while (dis)
 			{
@@ -124,7 +124,7 @@ public class Robot
 			acb.girar(120);
 			acb.avanzar(30);
 			acb.girar(-70);
-			Delay.msDelay(1000);
+			Delay.msDelay(0);
 			boolean dis = true;
 			while (dis)
 			{
