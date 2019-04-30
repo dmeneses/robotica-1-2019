@@ -1,0 +1,62 @@
+import lejos.hardware.motor.EV3LargeRegulatedMotor;
+import lejos.hardware.port.MotorPort;
+
+
+public class Motor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double distanciaLapizArriba = 40;
+		double distanciaLapizAbajo=30;
+		EV3LargeRegulatedMotor ruedas1 = new EV3LargeRegulatedMotor(MotorPort.A);
+		EV3LargeRegulatedMotor ruedas2= new EV3LargeRegulatedMotor(MotorPort.B);
+		EV3LargeRegulatedMotor lapiz = new EV3LargeRegulatedMotor(MotorPort.C);
+		System.out.println("presione un boton");
+		// realizando el movimiento de los lapices
+		int gradosRuedasLapizArriba = 0;
+		int gradosRuedasLapizAbajo = 0;
+		int gradosLapiz = 100;
+		
+		double diametroRueda = 5.5;
+		double circunferencia = Math.PI * diametroRueda;
+		double numeroDeRotaciones = distanciaLapizArriba / circunferencia;
+		gradosRuedasLapizArriba = (int)(numeroDeRotaciones * 360);
+		// 2. Calcular grados Lapiz abajo usando distanciaLapizAbajo
+	    double numeroDeRotaciones1 = distanciaLapizAbajo / circunferencia;
+		gradosRuedasLapizAbajo = (int)(numeroDeRotaciones1 * 360);
+		//comenzar co lapiz arriba que rote
+		//lapiz.rotate(gradosLapiz);
+		//lapiz.stop();
+		int TermimandoTramos=0;
+		int NumeroDeTramos=5;
+		while( TermimandoTramos< NumeroDeTramos)
+		{
+		//lapiz arriba
+			lapiz.rotate((-1)* gradosLapiz );
+	
+			ruedas1.rotate(gradosRuedasLapizArriba, true);
+			ruedas2.rotate(gradosRuedasLapizArriba);
+			
+		//lapiz abajo 
+			
+			 lapiz.rotate(gradosLapiz);
+			 ruedas1.rotate(gradosRuedasLapizAbajo, true);
+				ruedas2.rotate(gradosRuedasLapizAbajo);
+				//velocidad
+				
+				
+				// cuento para poder salir del while
+				TermimandoTramos=TermimandoTramos+ 1;
+		}
+		
+		lapiz.rotate((-1)* gradosLapiz );
+		lapiz.stop();
+		lapiz.rotate(gradosLapiz);
+		lapiz.stop();
+		
+		
+		
+
+	}
+
+}

@@ -1,0 +1,24 @@
+import lejos.hardware.motor.EV3LargeRegulatedMotor;
+import lejos.hardware.port.MotorPort;
+
+
+public class JuniorMorse {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		EV3LargeRegulatedMotor Motor1 = new EV3LargeRegulatedMotor(MotorPort.A);
+		EV3LargeRegulatedMotor Motor2 = new EV3LargeRegulatedMotor(MotorPort.B);
+		EV3LargeRegulatedMotor lapiz = new EV3LargeRegulatedMotor(MotorPort.C);
+		System.out.println("presione un boton");
+		
+		//ecuacion del lapiz
+		int gradosRuedasLapizArriba = 0;
+		int gradosRuedasLapizAbajo = 0;
+		int gradosLapiz = 100; // gradosLapiz * (-1)
+		//ecuasion de motores
+		//
+		
+
+	}
+
+}

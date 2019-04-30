@@ -1,0 +1,36 @@
+import lejos.hardware.motor.EV3LargeRegulatedMotor;
+import lejos.hardware.port.MotorPort;
+import lejos.hardware.port.SensorPort;
+import lejos.hardware.sensor.*;
+import lejos.robotics.SampleProvider;
+
+public class Carrito {
+	// EV3GyroSensor gyro = new EV3GyroSensor(SensorPort.S1);
+	EV3ColorSensor sensorColor = new EV3ColorSensor(SensorPort.S1);
+	EV3LargeRegulatedMotor motor1 = new EV3LargeRegulatedMotor(MotorPort.A);
+	EV3LargeRegulatedMotor motor2 = new EV3LargeRegulatedMotor(MotorPort.A);
+	double diametroRueda = 5.5;
+	
+	
+	// dectectarColor metodo o accion
+	// void el metodo no devuelve un resultado
+	public float dectectarColor() {
+		SampleProvider muestrasCapturadasColor  = sensorColor.getColorIDMode() ;
+		float[] datosDelSensor = new float[muestrasCapturadasColor.sampleSize()];
+		muestrasCapturadasColor.fetchSample(datosDelSensor, 0);
+		float color = datosDelSensor[0];
+		System.out.println("color=" + color);
+		return color;
+	}
+	
+	public void avanzar(double distancia) {
+		// calcular angulo de giro usando *distancia*
+		// usar motores para avanzar
+		
+	}
+	
+	public void girar(int gradoGiro) {
+		// girar usando el valor de la variable *gradoGiro*
+		
+	}
+}

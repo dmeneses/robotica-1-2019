@@ -54,23 +54,31 @@ public class Robot {
                 }
 	public void rutaR(String Color)
 	{
-		        System.out.println(Color);
+		        
+		System.out.println(Color);
 		        if(Color == "Rojo"){
-		        int D = 0;
-		        double S = 30;
-	            D = (int)((360*S)/17);
+		        double perimetro = 2.8*Math.PI*2;
+				double S = 30; 
+				int D = 0;
+				D= (int)(S*360/perimetro);
 		        int G = 20;
-	            int PG=(int)(2*Math.PI*12);
-	   	        int R = 0;
-	   	        R = (int)(((G/2)*360)/PG);
-	   	        int G1 = -92;
-	   	        int PG1=(int)(2*Math.PI*12);
+	            double PG=(15*Math.PI);
+	            double Gir = G*PG/360;
+	            double PL = 2.5*Math.PI*2;
+	         	int R = 0;
+	   	        R = (int)(Gir*360/PL);
+	   	        int G1 = -90;
+	   	        int PG1=(int)(15*Math.PI);
+	   	        double Gir1 = G1*PG1/360;
+	            double PL1 = 2.5*Math.PI*2;
 	   	        int R1 = 0;
-	   	        R1 = (int)(((G1/2)*360)/PG1);
-	   	        int G2 = 72;
-	   	        int PG2=(int)(2*Math.PI*12);
+	   	        R1 = (int)(Gir1*360/PL1);
+	   	        int G2 = 70;
+	   	        int PG2=(int)(15*Math.PI);
+	   	        double Gir2 = G2*PG2/360;
+	            double PL2 = 2.5*Math.PI*2;
 	   	        int R2 = 0;
-	   	        R2 = (int)(((G2/2)*360)/PG2);
+	   	        R2 = (int)(Gir2*360/PL2);
 	            motorI.setSpeed(motorI.getMaxSpeed());
 	    	    motorD.setSpeed(motorD.getMaxSpeed());
 	    	    motorI.rotate(R, true);
@@ -83,60 +91,74 @@ public class Robot {
 	            motorD.rotate(D);
 	            motorI.rotate(R2, true);
 	            motorD.rotate(-R2);
-	           }	      
+		       }	      
 	           }
 	public void rutaV(String Color)
 	           {
 		       System.out.println(Color);
 		       if(Color == "Verde"){
-		    	   int D = 0;
-			        double S = 30;
-		            D = (int)((360*S)/17);
-			        int G = -50;
-		            int PG=(int)(2*Math.PI*12);
-		   	        int R = 0;
-		   	        R = (int)(((G/2)*360)/PG);
-		   	        int G1 = 120;
-		   	        int PG1=(int)(2*Math.PI*12);
-		   	        int R1 = 0;
-		   	        R1 = (int)(((G1/2)*360)/PG1);
-		   	        int G2 = -70;
-		   	        int PG2=(int)(2*Math.PI*12);
-		   	        int R2 = 0;
-		   	        R2 = (int)(((G2/2)*360)/PG2);
-		            motorI.setSpeed(motorI.getMaxSpeed());
-		    	    motorD.setSpeed(motorD.getMaxSpeed());
-		    	    motorI.rotate(-R, true);
-		            motorD.rotate(R);
-		            motorI.rotate(D, true);
-		            motorD.rotate(D);
-		            motorI.rotate(R1, true);
-		            motorD.rotate(-R1);
-		            motorI.rotate(D, true);
-		            motorD.rotate(D);
-		            motorI.rotate(-R2, true);
-		            motorD.rotate(R2);
+		        double perimetro = 2.8*Math.PI*2;
+			    double S = 30; 
+			    int D = 0;
+			    D= (int)(S*360/perimetro);
+			    int G = -50;
+		        double PG=(15*Math.PI);
+		        double Gir = G*PG/360;
+		        double PL = 2.5*Math.PI*2;
+		       	int R = 0;
+		   	    R = (int)(Gir*360/PL);
+		   	    int G1 = 120;
+		   	    int PG1=(int)(15*Math.PI);
+		   	    double Gir1 = G1*PG1/360;
+		        double PL1 = 2.5*Math.PI*2;
+		   	    int R1 = 0;
+		   	    R1 = (int)(Gir1*360/PL1);
+		   	    int G2 = -70;
+		   	    int PG2=(int)(15*Math.PI);
+		   	    double Gir2 = G2*PG2/360;
+		        double PL2 = 2.5*Math.PI*2;
+		   	    int R2 = 0;
+		   	    R2 = (int)(Gir2*360/PL2);
+		        motorI.setSpeed(motorI.getMaxSpeed());
+		    	motorD.setSpeed(motorD.getMaxSpeed());
+		    	motorI.rotate(R, true);
+		        motorD.rotate(-R);
+		        motorI.rotate(D, true);
+		        motorD.rotate(D);
+		        motorI.rotate(R1, true);
+		        motorD.rotate(-R1);
+		        motorI.rotate(D, true);
+		        motorD.rotate(D);
+		        motorI.rotate(R2, true);
+		        motorD.rotate(-R2);	
 	           }
 } 
     public void rutaA(String Color) 
                {
     	       System.out.println(Color);
     	       if(Color == "Azul"){
-    	    	   int D = 0;
-   		        double S = 30;
-   	            D = (int)((360*S)/17);
-   		        int G = 70;
-   	            int PG=(int)(2*Math.PI*12);
-   	   	        int R = 0;
-   	   	        R = (int)(((G/2)*360)/PG);
+    	    	double perimetro = 2.8*Math.PI*2;
+   			    double S = 30; 
+   			    int D = 0;
+   			    D= (int)(S*360/perimetro);   		        
+   			    int G = 70;
+   	            double PG=(15*Math.PI);
+   	            double Gir = G*PG/360;
+   	            double PL = 2.5*Math.PI*2;
+   	         	int R = 0;
+   	   	        R = (int)(Gir*360/PL);
    	   	        int G1 = -100;
-   	   	        int PG1=(int)(2*Math.PI*12);
+   	   	        int PG1=(int)(15*Math.PI);
+   	   	        double Gir1 = G1*PG1/360;
+   	            double PL1 = 2.5*Math.PI*2;
    	   	        int R1 = 0;
-   	   	        R1 = (int)(((G1/2)*360)/PG1);
+   	   	        R1 = (int)(Gir1*360/PL1);
    	   	        int G2 = 30;
-   	   	        int PG2=(int)(2*Math.PI*12);
+   	   	        int PG2=(int)(15*Math.PI);
+   	   	        double Gir2 = G2*PG2/360;
+   	            double PL2 = 2.5*Math.PI*2;
    	   	        int R2 = 0;
-   	   	        R2 = (int)(((G2/2)*360)/PG2);
+   	   	        R2 = (int)(Gir2*360/PL2);
    	            motorI.setSpeed(motorI.getMaxSpeed());
    	    	    motorD.setSpeed(motorD.getMaxSpeed());
    	    	    motorI.rotate(R, true);
@@ -148,28 +170,35 @@ public class Robot {
    	            motorI.rotate(D, true);
    	            motorD.rotate(D);
    	            motorI.rotate(R2, true);
-   	            motorD.rotate(-R2);    	
-               }
-               }
+   	            motorD.rotate(-R2);
+    	       }
+}
                public void rutaY(String Color) 
                {
                System.out.println(Color);   
                if(Color == "Amarillo"){
-            	   int D = 0;
-   		        double S = 30;
-   	            D = (int)((360*S)/17);
+            	double perimetro = 2.8*Math.PI*2;
+   			    double S = 30; 
+   			    int D = 0;
+   			    D= (int)(S*360/perimetro);
    		        int G = 20;
-   	            int PG=(int)(2*Math.PI*12);
-   	   	        int R = 0;
-   	   	        R = (int)(((G/2)*360)/PG);
-   	   	        int G1 = -92;
-   	   	        int PG1=(int)(2*Math.PI*12);
+   	            double PG=(15*Math.PI);
+   	            double Gir = G*PG/360;
+   	            double PL = 2.5*Math.PI*2;
+   	         	int R = 0;
+   	   	        R = (int)(Gir*360/PL);
+   	   	        int G1 = -90;
+   	   	        int PG1=(int)(15*Math.PI);
+   	   	        double Gir1 = G1*PG1/360;
+   	            double PL1 = 2.5*Math.PI*2;
    	   	        int R1 = 0;
-   	   	        R1 = (int)(((G1/2)*360)/PG1);
-   	   	        int G2 = 72;
-   	   	        int PG2=(int)(2*Math.PI*12);
+   	   	        R1 = (int)(Gir1*360/PL1);
+   	   	        int G2 = 70;
+   	   	        int PG2=(int)(15*Math.PI);
+   	   	        double Gir2 = G2*PG2/360;
+   	            double PL2 = 2.5*Math.PI*2;
    	   	        int R2 = 0;
-   	   	        R2 = (int)(((G2/2)*360)/PG2);
+   	   	        R2 = (int)(Gir2*360/PL2);
    	            motorI.setSpeed(motorI.getMaxSpeed());
    	    	    motorD.setSpeed(motorD.getMaxSpeed());
    	    	    motorI.rotate(R, true);
@@ -181,9 +210,9 @@ public class Robot {
    	            motorI.rotate(D, true);
    	            motorD.rotate(D);
    	            motorI.rotate(R2, true);
-   	            motorD.rotate(-R2);   	
+   	            motorD.rotate(-R2);
     }
-    }
+}
     public void leer(String Color){
                 if(Color != null){
                	float[] muestras = new float[eyes.sampleSize()];
@@ -195,7 +224,7 @@ public class Robot {
                        	int D = 0;
                        	int S = 0;
                         double x = distancia;
-                        D = (int)(((360*x)-2300)/17);
+                        D = (int)(((360*x)-6000)/17);
                        	S = D ;
                        	motorI.setSpeed(motorI.getMaxSpeed());
                        	motorD.setSpeed(motorD.getMaxSpeed());

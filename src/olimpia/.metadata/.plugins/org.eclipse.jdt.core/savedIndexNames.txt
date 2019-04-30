@@ -1,3 +1,0 @@
-INDEX VERSION 1.127+/home/roboticaest/robotica-1-2019/src/olimpia/.metadata/.plugins/org.eclipse.jdt.core
-4190936548.index
-1623575646.index

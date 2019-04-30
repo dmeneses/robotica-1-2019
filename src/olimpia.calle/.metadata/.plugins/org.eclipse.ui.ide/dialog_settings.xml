@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="BasicNewProjectResourceWizard">
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/home/roboticaest/robotica-1-2019/src/olimpia.calle/Challenge2"/>
+			<item value="/home/roboticaest/robotica-1-2019/src/olimpia.calle/Challenge2_NombreGrupo"/>
+			<item value="/home/roboticaest/robotica-1-2019/src/olimpia.calle/DetectarMover"/>
+			<item value="/home/roboticaest/robotica-1-2019/src/olimpia.calle/EjerciciosSInRobot"/>
+			<item value="/home/roboticaest/robotica-1-2019/src/olimpia.calle/EstructurasControl"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+	</section>
+</section>

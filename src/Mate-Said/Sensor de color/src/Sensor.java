@@ -4,6 +4,6 @@ import lejos.robotics.SampleProvider;
 public class Sensor {
 	public static void main(String[] args) {
 		Robot fury = new Robot();
-		fury.ReconocerColor();
+		fury.ReconocerColor();		
  }
 }
