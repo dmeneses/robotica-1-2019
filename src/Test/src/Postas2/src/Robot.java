@@ -26,10 +26,10 @@ public class Robot {
 	 colores = new EV3ColorSensor(SensorPort.S2);
 	 ojos = new EV3UltrasonicSensor(SensorPort.S4);
 	 
-	 int[] rojo = {70, -100, 30}; 
-	 int[] verde = {50, -120, 70}; 
-	 int[] azul = {90, 90, 90}; 
-	 int[] amarillo = {70,-100,30};
+	 int[] rojo = {20, -90, 70};  
+	 int[] verde = {-50,120,-70};
+	 int[] azul = {70, -100, 30}; 
+	 int[] amarillo = {-50,120,-70};
 	 
 	 color = new Colores(rojo,verde,azul,amarillo);
 	  
@@ -48,12 +48,6 @@ public class Robot {
 		distancia = distancia;
 		Avanzar=(int)distancia*360/17;
 		
-		motorB.setAcceleration(1500); 
-		motorC.setAcceleration(1500); 
-		motorB.setSpeed(500);
-		motorB.forward();
-		motorC.setSpeed(500);
-		motorC.forward();	
 		motorB.rotate(Avanzar,true);
 		motorC.rotate(Avanzar);
 	}

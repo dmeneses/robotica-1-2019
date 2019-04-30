@@ -1,0 +1,15 @@
+
+public class ConvertidorString {
+	char[] ConvertidorStringEnArreglo(String texto)
+	{
+		char [] resultado = null;
+		int cantidadCaracteres = texto.length();
+		resultado = new char[cantidadCaracteres];
+		for(int piso = 0; piso<cantidadCaracteres; piso = piso +1 )
+		{
+			char caracter = texto.charAt(piso);
+			resultado[piso] = caracter;
+		}
+		return resultado;
+	}
+}

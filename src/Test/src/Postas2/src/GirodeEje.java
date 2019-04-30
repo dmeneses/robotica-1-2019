@@ -12,7 +12,7 @@ public class GirodeEje {
 	public int girar(int numero)
 	{
 		 
-	circunferencia=(int) numero*(800/360);
+	circunferencia=(int) numero*(815/360);
 	return circunferencia;
 	
 	
