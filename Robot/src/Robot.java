@@ -115,9 +115,5 @@ public class Robot
 		
 	}
 
-	public telgrafo() 
-	{
-		
-		return  muestrasboton[0];
-	}
+	
 }

@@ -11,4 +11,5 @@
 <fullyQualifiedTypeName name="lejos.hardware.sensor.EV3TouchSensor"/>
 <fullyQualifiedTypeName name="lejos.hardware.port.SensorPort"/>
 <fullyQualifiedTypeName name="lejos.robotics.SampleProvider"/>
+<fullyQualifiedTypeName name="java.awt.Robot"/>
 </qualifiedTypeNameHistroy>

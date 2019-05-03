@@ -34,17 +34,28 @@
 		char[] letrasBusqueda = {'a', 'z', '1', 'T'};
 		char[] letrasReemplazo = {'A', 'Z', '#', '.'};
 		String miPalabra = "la ecuacion respuesTa es: z = z + T111;";
-		String palabraCodificada = convertidor.codificar(miPalabra, letrasBusqueda, letrasReemplazo);
+		String palabraCodificada = convertidor.codificar();
 		
-		// 4. Escribir codigo que convierta una palabra a morse
-		String textoNormal = "aeiou";
+		 4. Escribir codigo que convierta una palabra a morse
+		 String textoNormal = "aeiou";
 		String textoMorse = convertidor.convertirAMorse(textoNormal);
+		 
 		if (textoMorse == ".- . .. --- ..-")
 		{
 			System.out.print("textoNormal="+ textoNormal);
 			System.out.print(" en morse es textoMorse="+ textoMorse);
+			  
 		}
 		
-	}
-
-}
+		/*String mensaje="laboratorio";
+		 
+		char[]arreglo1= convertidor.convertirStringEnArreglo(mensaje);
+		for(int piso=0; piso < arreglo1.length; piso = piso + 1)
+		{
+			System.out.println(arreglo1[piso]);
+			
+		}
+		String[] codigoMorse={".-..",".-","-...","---",".-.","-","---",".-.","..","---"};
+		
+	 System.out.println(mensaje + "es ="+ codigoMorse );*/
+}}

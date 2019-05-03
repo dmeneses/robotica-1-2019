@@ -1,0 +1,18 @@
+import lejos.hardware.Button;
+
+
+public class Pruebas {
+
+	public static void main(String[] args)
+	{
+		Telegrafo telegrafo1;
+		
+		telegrafo1 = new Telegrafo();
+		
+		telegrafo1.insertarmorse();
+
+		Button.waitForAnyPress();
+	}
+	
+
+}

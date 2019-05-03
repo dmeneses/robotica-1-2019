@@ -1,0 +1,16 @@
+
+public class Robot {
+
+	public boolean pedirDatosAlPulsadorTerminar() {
+		
+		
+		 
+		return false;
+	}
+	
+
+	public char pedirDatosAlPulsadorCodigo() {
+		 
+		return 0;
+	}
+}

@@ -1,0 +1,22 @@
+import lejos.hardware.Button;
+
+
+public class Pruebas {
+
+	public static void main(String[] args)
+	{
+		Telegrafo telegrafo1;
+		
+		telegrafo1 = new Telegrafo();
+		
+		while(1==1)
+		{
+		
+		int simbolo = telegrafo1.insertarmorse();
+		System.out.println("Sim: " + simbolo);
+		Button.waitForAnyPress();
+		}
+	}
+	
+
+}

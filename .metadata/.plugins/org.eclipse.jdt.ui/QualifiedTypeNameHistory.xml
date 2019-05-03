@@ -5,7 +5,8 @@
 <fullyQualifiedTypeName name="Robot"/>
 <fullyQualifiedTypeName name="lejos.hardware.port.SensorPort"/>
 <fullyQualifiedTypeName name="lejos.hardware.sensor.EV3ColorSensor"/>
-<fullyQualifiedTypeName name="lejos.hardware.Button"/>
 <fullyQualifiedTypeName name="lejos.robotics.Color"/>
 <fullyQualifiedTypeName name="lejos.hardware.sensor.EV3TouchSensor"/>
+<fullyQualifiedTypeName name="lejos.utility.Stopwatch"/>
+<fullyQualifiedTypeName name="lejos.hardware.Button"/>
 </qualifiedTypeNameHistroy>

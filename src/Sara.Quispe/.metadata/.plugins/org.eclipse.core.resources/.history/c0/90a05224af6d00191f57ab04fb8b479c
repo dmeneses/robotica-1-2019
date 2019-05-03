@@ -1,0 +1,9 @@
+
+public class TraductorString {
+
+	public void declarar(String string, String string2) {
+	 
+		
+	}
+
+}

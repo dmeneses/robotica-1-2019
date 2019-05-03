@@ -1,0 +1,48 @@
+import lejos.hardware.Button;
+import lejos.hardware.port.SensorPort;
+import lejos.hardware.sensor.EV3TouchSensor;
+import lejos.utility.Stopwatch;
+
+	public class Telegrafo
+	{
+		float[] muestrasboton;
+		EV3TouchSensor boton;
+		Stopwatch watch;
+	
+	public Telegrafo ()
+	{
+		watch = new Stopwatch ();
+		boton = new EV3TouchSensor (SensorPort.S1);
+		muestrasboton = new float [boton.sampleSize()];
+	}
+	
+	
+	public int insertarmorse()
+	{
+		boton.fetchSample(muestrasboton, 0);
+		
+		watch.reset();
+		while (muestrasboton[0] == 1)
+		{
+			boton.fetchSample(muestrasboton, 0);
+			
+		}
+		
+		int tiempo = watch.elapsed();
+		
+		
+		if (tiempo >= 2000)
+		{
+			System.out.println("linea");
+		}
+		else 
+		{
+			System.out.println("punto");
+		}
+		
+		
+		
+		return (int)muestrasboton[0];
+		
+	}
+}

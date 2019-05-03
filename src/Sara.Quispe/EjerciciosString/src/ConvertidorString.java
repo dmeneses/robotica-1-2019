@@ -42,4 +42,24 @@
 		}
 		return resultado;
 	}
+	public String codificar() {
+		
+		String textoNormal="Hola como estas";
+		
+		
+		return null;
+		
+		
+	}
+	
+
+	public String convertirAMorse(String textoNormal) {
+		 
+		
+		
+		
+		
+		return null;
+	}
+	
 }
