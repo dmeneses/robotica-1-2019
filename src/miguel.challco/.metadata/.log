@@ -322,3 +322,137 @@ org.lejos.ev3.ldt.util.LeJOSEV3Exception: EV3_HOME is not set. Please specify it
 	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1498)
 	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:45)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2019-05-03 13:18:08.494 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.7.0_75
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.lejos.ev3.ldt 4 0 2019-05-03 13:18:42.583
+!MESSAGE EV3_HOME is not set. Please specify it in the plug-in's preferences
+!STACK 0
+org.lejos.ev3.ldt.util.LeJOSEV3Exception: EV3_HOME is not set. Please specify it in the plug-in's preferences
+	at org.lejos.ev3.ldt.util.LeJOSEV3Util.getEV3Home(LeJOSEV3Util.java:219)
+	at org.lejos.ev3.ldt.container.LeJOSEV3LibContainer.createClasspath(LeJOSEV3LibContainer.java:87)
+	at org.lejos.ev3.ldt.container.LeJOSEV3LibContainer.<init>(LeJOSEV3LibContainer.java:81)
+	at org.lejos.ev3.ldt.container.LeJOSEV3LibContainerInitializer.initialize(LeJOSEV3LibContainerInitializer.java:20)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:2902)
+	at org.eclipse.jdt.internal.core.JavaModelManager$9.run(JavaModelManager.java:2808)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:2846)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:1932)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3247)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2693)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2857)
+	at org.eclipse.jdt.internal.core.ClasspathChange.generateDelta(ClasspathChange.java:221)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:2065)
+	at org.eclipse.jdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:477)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:378)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1498)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.lejos.ev3.ldt 4 0 2019-05-03 13:18:43.259
+!MESSAGE EV3_HOME is not set. Please specify it in the plug-in's preferences
+!STACK 0
+org.lejos.ev3.ldt.util.LeJOSEV3Exception: EV3_HOME is not set. Please specify it in the plug-in's preferences
+	at org.lejos.ev3.ldt.util.LeJOSEV3Util.getEV3Home(LeJOSEV3Util.java:219)
+	at org.lejos.ev3.ldt.container.LeJOSEV3LibContainer.createClasspath(LeJOSEV3LibContainer.java:87)
+	at org.lejos.ev3.ldt.container.LeJOSEV3LibContainer.<init>(LeJOSEV3LibContainer.java:81)
+	at org.lejos.ev3.ldt.container.LeJOSEV3LibContainerInitializer.initialize(LeJOSEV3LibContainerInitializer.java:20)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:2902)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:1937)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3247)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2693)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2857)
+	at org.eclipse.jdt.internal.core.ClasspathChange.generateDelta(ClasspathChange.java:221)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:2065)
+	at org.eclipse.jdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:477)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:378)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1498)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.lejos.ev3.ldt 4 0 2019-05-03 13:18:43.314
+!MESSAGE EV3_HOME is not set. Please specify it in the plug-in's preferences
+!STACK 0
+org.lejos.ev3.ldt.util.LeJOSEV3Exception: EV3_HOME is not set. Please specify it in the plug-in's preferences
+	at org.lejos.ev3.ldt.util.LeJOSEV3Util.getEV3Home(LeJOSEV3Util.java:219)
+	at org.lejos.ev3.ldt.container.LeJOSEV3LibContainer.createClasspath(LeJOSEV3LibContainer.java:87)
+	at org.lejos.ev3.ldt.container.LeJOSEV3LibContainer.<init>(LeJOSEV3LibContainer.java:81)
+	at org.lejos.ev3.ldt.container.LeJOSEV3LibContainerInitializer.initialize(LeJOSEV3LibContainerInitializer.java:20)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:2902)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:1937)
+	at org.eclipse.jdt.internal.core.ClasspathEntry.validateClasspathEntry(ClasspathEntry.java:1951)
+	at org.eclipse.jdt.internal.core.ClasspathEntry.validateClasspathEntry(ClasspathEntry.java:1910)
+	at org.eclipse.jdt.internal.core.ClasspathValidation.validate(ClasspathValidation.java:72)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:2143)
+	at org.eclipse.jdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:477)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:364)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:139)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.lejos.ev3.ldt 4 0 2019-05-03 13:18:43.325
+!MESSAGE EV3_HOME is not set. Please specify it in the plug-in's preferences
+!STACK 0
+org.lejos.ev3.ldt.util.LeJOSEV3Exception: EV3_HOME is not set. Please specify it in the plug-in's preferences
+	at org.lejos.ev3.ldt.util.LeJOSEV3Util.getEV3Home(LeJOSEV3Util.java:219)
+	at org.lejos.ev3.ldt.container.LeJOSEV3LibContainer.createClasspath(LeJOSEV3LibContainer.java:87)
+	at org.lejos.ev3.ldt.container.LeJOSEV3LibContainer.<init>(LeJOSEV3LibContainer.java:81)
+	at org.lejos.ev3.ldt.container.LeJOSEV3LibContainerInitializer.initialize(LeJOSEV3LibContainerInitializer.java:20)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:2902)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:1937)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3247)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2693)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2616)
+	at org.eclipse.jdt.internal.core.ClasspathEntry.validateClasspath(ClasspathEntry.java:1651)
+	at org.eclipse.jdt.internal.core.ClasspathValidation.validate(ClasspathValidation.java:77)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:2143)
+	at org.eclipse.jdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:477)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:364)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:139)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.lejos.ev3.ldt 4 0 2019-05-03 13:18:43.675
+!MESSAGE EV3_HOME is not set. Please specify it in the plug-in's preferences
+!STACK 0
+org.lejos.ev3.ldt.util.LeJOSEV3Exception: EV3_HOME is not set. Please specify it in the plug-in's preferences
+	at org.lejos.ev3.ldt.util.LeJOSEV3Util.getEV3Home(LeJOSEV3Util.java:219)
+	at org.lejos.ev3.ldt.container.LeJOSEV3LibContainer.createClasspath(LeJOSEV3LibContainer.java:87)
+	at org.lejos.ev3.ldt.container.LeJOSEV3LibContainer.<init>(LeJOSEV3LibContainer.java:81)
+	at org.lejos.ev3.ldt.container.LeJOSEV3LibContainerInitializer.initialize(LeJOSEV3LibContainerInitializer.java:20)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:2902)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:1937)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3247)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2693)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2857)
+	at org.eclipse.jdt.internal.core.ClasspathChange.generateDelta(ClasspathChange.java:221)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:2065)
+	at org.eclipse.jdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:477)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:378)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1498)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
