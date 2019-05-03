@@ -29,15 +29,17 @@ public class aceleracion {
 		      System.out.println("A");
 		      
 		   }*/
-		   int suma = 0;
-		  for (int i=1; i >= 1; i++);
-		  {
-			  suma = suma + 1;
-			  System.out.println(suma);
-		  }
+		int u;
+		 
+		    for ( u=1; u<=100; u = u + 1);
+		    {
+			  
+			System.out.println(u);
+			  
+		    }
 		  
-	
-		 }
+		 
+	 }
 		 
 		 
 		/**EV3LargeRegulatedMotor motorB = new EV3LargeRegulatedMotor(MotorPort.B);
