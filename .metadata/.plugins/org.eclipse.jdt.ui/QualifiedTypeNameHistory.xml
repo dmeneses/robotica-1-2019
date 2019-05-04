@@ -5,9 +5,16 @@
 <fullyQualifiedTypeName name="lejos.hardware.motor.Motor"/>
 <fullyQualifiedTypeName name="java.awt.Color"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
-<fullyQualifiedTypeName name="lejos.hardware.port.SensorPort"/>
 <fullyQualifiedTypeName name="lejos.hardware.Button"/>
 <fullyQualifiedTypeName name="lejos.hardware.sensor.EV3ColorSensor"/>
 <fullyQualifiedTypeName name="java.util.Calendar"/>
 <fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="java.awt.BorderLayout"/>
+<fullyQualifiedTypeName name="java.awt.Font"/>
+<fullyQualifiedTypeName name="javax.swing.JButton"/>
+<fullyQualifiedTypeName name="java.awt.event.ActionEvent"/>
+<fullyQualifiedTypeName name="reset.Reset"/>
+<fullyQualifiedTypeName name="Return.Return"/>
+<fullyQualifiedTypeName name="lejos.hardware.port.SensorPort"/>
+<fullyQualifiedTypeName name="lejos.utility.Stopwatch"/>
 </qualifiedTypeNameHistroy>

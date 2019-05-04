@@ -54,11 +54,11 @@ public class Pato
 		ojos.fetchSample(muestrasOjos, 0);
 		return (int)(muestrasOjos[0]*100);
 	   }
-	   /*public int detectarPulsador()
+	  /*public int detectarPulsador()
 	   {
 		   boton.fetchSample(muestrasBoton, 0);
 		   return (int)muestrasBoton[0];
-	   }*/
+	   }*/ 
 	   public void girarGrados(int girarGrados  )
 	   
 	   {
