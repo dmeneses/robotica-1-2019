@@ -85,20 +85,15 @@ public class robot2
    		   break;
    	   }
        }//while
-	 	//pal1: "....*---*.-..*.-"
+	 	
 	   for (int x=0;x<pal1.length();x++)
 	    {
 	        System.out.println("Caracter " + x + ": " + pal1.charAt(x));
 	       
-	        //almacenar letra por letra en un string
-	        //encontrar un asterisco
-	        //traducir letra
-	        
-	        tradletra = tradletra + pal1.charAt(x);//"...." 	        
-	        if(tradletra == h)
-	        	traduccion=traduccion+"h";
+	        if(0)
+	        	traduccion=traduccion+"...."+"*";
 	        if(1)
-	        	traduccion=traduccion+"o";
+	        	traduccion=traduccion+"---"+"*";
 	        if (2)
 	        	traduccion = traduccion +".-.."+"*";
 	        if (3)
