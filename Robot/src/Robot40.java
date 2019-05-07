@@ -40,9 +40,8 @@ public class Robot40
 		double avan= distancia *360/perimetro;
 		//mover motores 
 		
-		Motor.C.setAcceleration(650);
-		
-		Motor.C.setAcceleration(650);
+		Motor.C.setAcceleration(700/1);	
+		Motor.B.setAcceleration(700/1);
 		Motor.B. rotate((int) avan, true);
 		Motor.C.rotate((int)avan);
 	}
@@ -70,7 +69,8 @@ public class Robot40
 		double perimetro = radio  * Math.PI *2;
 		//rule of three
 		double gradito=giro*360/perimetro;
-		
+		Motor.B.setSpeed(400);
+		Motor.C.setSpeed(400);
 		Motor.B.rotate((int)gradito, true);
 		Motor.C.rotate((int)-gradito );
 					
