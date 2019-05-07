@@ -69,29 +69,18 @@ import java.util.HashMap;
 	        	else
 	        	{
 	        		BotonActivo = true;
-	        	} 
-	        	if(BotonActivo && !contador){
+	        	}
+	        	System.out.println(BotonActivo); 
+	        	if(BotonActivo && contador){
 	        	timer.reset();
 	        	contador= true;
 	            }
-	        	if(!BotonActivo && contador){
+	        	if(BotonActivo && contador){
 	        	apretar = timer.elapsed();
 	           	System.out.println(apretar);
 	           	Delay.msDelay(1000);
 	            contador = false;
-	            }
-	        	if(apretar > 0|| apretar <=1000)
-	        	{
-	        	System.out.println(".");
-	        	}
-	        	else if(apretar > 1000 || apretar <= 3000)
-	        	{
-	        	System.out.println("-");	
-	        	}
-	        	else if(apretar > 3000 || apretar <= 10000)
-	        	{
-	        	System.out.println(" ");	
-	        	}
+	          }
 			/*public void mostrarCodigo(String codigo){ //codigo = ".-"
 				String letra = (String)morse.get(codigo); // letra = "a"
 				System.out.println(codigo);

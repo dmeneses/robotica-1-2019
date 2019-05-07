@@ -80,7 +80,7 @@ import java.util.HashMap;
 	           	Delay.msDelay(1000);
 	            contador = false;
 	            }
-	        	if(apretar > 0|| apretar <=1000)
+	        	if(apretar <= 1000|| apretar !=0)
 	        	{
 	        	System.out.println(".");
 	        	}

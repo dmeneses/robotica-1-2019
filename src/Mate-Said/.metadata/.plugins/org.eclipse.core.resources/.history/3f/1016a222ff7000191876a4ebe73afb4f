@@ -69,7 +69,8 @@ import java.util.HashMap;
 	        	else
 	        	{
 	        		BotonActivo = true;
-	        	} 
+	        	}
+	        	System.out.println(BotonActivo); 
 	        	if(BotonActivo && !contador){
 	        	timer.reset();
 	        	contador= true;
@@ -80,7 +81,7 @@ import java.util.HashMap;
 	           	Delay.msDelay(1000);
 	            contador = false;
 	            }
-	        	if(apretar > 0|| apretar <=1000)
+	        	if(apretar <= 1000)
 	        	{
 	        	System.out.println(".");
 	        	}
