@@ -8,19 +8,9 @@ public class inicio
 	{
 		thefish tf = new thefish();
 		String morse = "";
-		int simbolo = tf.morsecopiado();
-		if(simbolo == 1)
-		{
-			morse = morse + ".";
-		}
-		else if(simbolo == 2)
-		{
-			morse = morse + "-";
-		}
-		else
-		{
-			morse = morse + " ";
-		}
+		String palabraMorse = tf.morsecopiado();
+		
+		System.out.println(palabraMorse);
 			
 		
 		/*String[] codigo = null;
@@ -83,7 +73,6 @@ public class inicio
 		codigo[56] = "...-..-";	//$
 		codigo[57] = ".--.-.";	//@
 		*/
-		  String mensaje1 = ".... --- ..-. .-";
 
 	
 		Button.waitForAnyPress();

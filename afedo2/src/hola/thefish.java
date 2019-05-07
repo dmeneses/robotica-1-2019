@@ -12,11 +12,11 @@ import lejos.utility.Stopwatch;
 
 public class thefish
 {		
-	
-	EV3TouchSensor touchBoton = new EV3TouchSensor(SensorPort.S1);
+	String morse = "";
+  	EV3TouchSensor touchBoton = new EV3TouchSensor(SensorPort.S2);
 	float[] muestrasBoton = new float [touchBoton.sampleSize()];
 	   
-	public int morsecopiado()
+	public String morsecopiado()
 	{
 		
 		Stopwatch cronos = new Stopwatch();
@@ -39,20 +39,26 @@ public class thefish
 			    //despues de presionar			    
 			    int tiempo = cronos.elapsed();//recuperamos el tiempo que estuvo presionado
 			    System.out.println("tiempo presionad: "+tiempo);
-			    if(tiempo > 1000 && tiempo < 2000)
+			    if(tiempo > 300 && tiempo < 1000)
 			    {
+			    	morse = morse + "-";
 			    	System.out.println("rayita");
-			    	return 2;
 			    }
-			    else if(tiempo > 2000)
+			    else if(tiempo > 1000)
 			    {
+			    	morse = morse + " ";
 			    	System.out.println("fin de letra");
-			    	return 3;
 			    }
 			    else
 			    {
+			    	morse = morse + ".";
 			    	System.out.println("punto");
-			    	return 1;
+			    }
+			    System.out.println(morse);
+			    int boton = Button.waitForAnyPress();
+			    if(boton == Button.ID_ENTER)
+			    {
+			    	return morse;
 			    }
 			}
 		}

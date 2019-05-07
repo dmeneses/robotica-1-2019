@@ -32,7 +32,7 @@ public class Inicio {
 		Button.waitForAnyPress();
 		/*String codigo[] = new String[60];
 		String slash = "/";
-		String morse = " ";
+		String morse = ".";
 
 		codigo[0] = ".-";		//a
 		codigo[1] = "-...";		//b
