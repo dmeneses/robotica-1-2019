@@ -5,11 +5,13 @@
 <fullyQualifiedTypeName name="lejos.hardware.motor.EV3LargeRegulatedMotor"/>
 <fullyQualifiedTypeName name="lejos.hardware.Sound"/>
 <fullyQualifiedTypeName name="lejos.hardware.sensor.EV3UltrasonicSensor"/>
-<fullyQualifiedTypeName name="lejos.hardware.Button"/>
-<fullyQualifiedTypeName name="lejos.utility.Delay"/>
 <fullyQualifiedTypeName name="java.lang.Float"/>
-<fullyQualifiedTypeName name="lejos.hardware.sensor.EV3TouchSensor"/>
-<fullyQualifiedTypeName name="lejos.hardware.port.SensorPort"/>
-<fullyQualifiedTypeName name="lejos.robotics.SampleProvider"/>
 <fullyQualifiedTypeName name="java.awt.Robot"/>
+<fullyQualifiedTypeName name="lejos.hardware.port.SensorPort"/>
+<fullyQualifiedTypeName name="lejos.hardware.sensor.EV3TouchSensor"/>
+<fullyQualifiedTypeName name="lejos.robotics.SampleProvider"/>
+<fullyQualifiedTypeName name="lejos.hardware.Button"/>
+<fullyQualifiedTypeName name="lejos.robotics.TouchAdapter"/>
+<fullyQualifiedTypeName name="lejos.utility.Stopwatch"/>
+<fullyQualifiedTypeName name="lejos.utility.Delay"/>
 </qualifiedTypeNameHistroy>

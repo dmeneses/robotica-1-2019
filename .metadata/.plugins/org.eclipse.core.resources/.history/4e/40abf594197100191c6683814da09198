@@ -1,0 +1,168 @@
+import lejos.hardware.Button;
+
+
+public class Letra 
+{
+	
+	Telegrafo telegrafo1;
+	int t = 1;
+	String letra = "";	
+
+public Letra(int t)
+{
+	telegrafo1 = new Telegrafo();
+	t=1;
+}
+
+public String insertarletra()
+{
+	letra = "";
+	t=1;
+	while(t==1)
+	{
+
+			int simbolo = telegrafo1.insertarmorse();
+
+			System.out.println("Sim: " + simbolo);
+
+
+			if(simbolo==0)
+			{
+				System.out.println("error");
+			}
+			else
+			{
+				if (simbolo == 3)
+				{
+					System.out.println("Letra: completa");
+					t=2;
+					
+				}
+				else
+				{
+					letra = letra + simbolo;
+				}
+			}
+			//Button.waitForAnyPress();
+			
+			System.out.println("Letra: " + letra);
+			
+			Button.waitForAnyPress();
+			
+	}
+	//letra = letra + "3;
+	Button.waitForAnyPress();
+	return letra;
+}
+
+public String traducirletra()
+{
+	System.out.println("l en tra: " + letra);
+	if (letra == "12")
+	{
+		letratrad = "A";
+	}
+	if (letra == "2111")
+	{
+		letratrad = "B";
+	}
+	if (letra == "2121")
+	{
+		letratrad = "C";
+	}
+	if (letra == "211")
+	{
+		letratrad = "D";
+	}
+	if (letra == "1")
+	{
+		letratrad = "E";
+	}
+	if (letra == "1121")
+	{
+		letratrad = "F";
+	}
+	if (letra == "221")
+	{
+		letratrad = "G";
+	}
+	if (letra == "1111")
+	{
+		letratrad = "H";
+	}
+	if (letra == "11")
+	{
+		letratrad = "I";
+	}
+	if (letra == "1222")
+	{
+		letratrad = "J";
+	}
+	if (letra == "212")
+	{
+		letratrad = "K";
+	}
+	if (letra == "1211")
+	{
+		letratrad = "L";
+	}
+	if (letra == "22")
+	{
+		letratrad = "M";
+	}
+	if (letra == "21")
+	{
+		letratrad = "N";
+	}
+	if (letra == "222")
+	{
+		letratrad = "O";
+	}
+	if (letra == "1221")
+	{
+		letratrad = "P";
+	}
+	if (letra == "2212")
+	{
+		letratrad = "Q";
+	}
+	if (letra == "121")
+	{
+		letratrad = "R";
+	}
+	if (letra == "111")
+	{
+		letratrad = "S";
+	}
+	if (letra == "2")
+	{
+		letratrad = "T";
+	}
+	if (letra == "112")
+	{
+		letratrad = "U";
+	}
+	if (letra == "1112")
+	{
+		letratrad = "V";
+	}
+	if (letra == "122")
+	{
+		letratrad = "W";
+	}
+	if (letra == "2112")
+	{
+		letratrad = "X";
+	}
+	if (letra == "2122")
+	{
+		letratrad = "Y";
+	}
+	if (letra == "2211")
+	{
+		letratrad = "Z";
+	}
+	
+	return letratrad;
+}
+}

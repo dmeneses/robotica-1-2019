@@ -36,7 +36,7 @@
 		String miPalabra = "la ecuacion respuesTa es: z = z + T111;";
 		String palabraCodificada = convertidor.codificar();
 		
-		 4. Escribir codigo que convierta una palabra a morse
+		// 4. Escribir codigo que convierta una palabra a morse
 		 String textoNormal = "aeiou";
 		String textoMorse = convertidor.convertirAMorse(textoNormal);
 		 
