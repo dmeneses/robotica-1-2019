@@ -90,16 +90,16 @@ public class robot2
 	
 	String letraMorse = "";
 	String traduccionLetra = "";
-	for (int x=0;x<pal1.length();x++)
+	for (int x=-1;x<pal1.length();x++)
     {
 		if(pal1.charAt(x) == '*')
 		{
 			System.out.println("aste");
 			if(letraMorse == "....")
 			{
-				traduccionLetra = traduccionLetra + "h"+"*";
+				traduccionLetra = traduccionLetra + "h";
 			}			
-			letraMorse = "";//falta un espacio
+			letraMorse = "";
 		}
 		else
 		{

@@ -99,7 +99,7 @@ public class robot2
 			{
 				traduccionLetra = traduccionLetra + "h"+"*";
 			}			
-			letraMorse = "";//falta un espacio
+			letraMorse = "";
 		}
 		else
 		{

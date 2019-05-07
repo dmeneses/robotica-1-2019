@@ -95,11 +95,11 @@ public class robot2
 		if(pal1.charAt(x) == '*')
 		{
 			System.out.println("aste");
-			if(letraMorse == "....")
+			if(letraMorse == "...")
 			{
-				traduccionLetra = traduccionLetra + "h"+"*";
+				traduccionLetra = traduccionLetra + "h";
 			}			
-			letraMorse = "";//falta un espacio
+			letraMorse = "";
 		}
 		else
 		{

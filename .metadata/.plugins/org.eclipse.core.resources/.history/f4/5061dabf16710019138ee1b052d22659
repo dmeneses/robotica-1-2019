@@ -97,9 +97,9 @@ public class robot2
 			System.out.println("aste");
 			if(letraMorse == "....")
 			{
-				traduccionLetra = traduccionLetra + "h"+"*";
+				traduccionLetra = traduccionLetra + "h";
 			}			
-			letraMorse = "";//falta un espacio
+			letraMorse = "";
 		}
 		else
 		{

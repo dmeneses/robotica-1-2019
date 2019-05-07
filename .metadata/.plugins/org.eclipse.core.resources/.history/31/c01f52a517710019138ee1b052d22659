@@ -97,16 +97,16 @@ public class robot2
 			System.out.println("aste");
 			if(letraMorse == "....")
 			{
-				traduccionLetra = traduccionLetra + "h"+"*";
+				traduccionLetra = traduccionLetra + "h";
 			}			
-			letraMorse = "";//falta un espacio
+			letraMorse = "";
 		}
 		else
 		{
 			letraMorse = letraMorse + pal1.charAt(x);
 		}
     }
-	System.out.println("traduccion "+traduccionLetra);
+	System.out.println("traduccion "+traduccionLetra+"*");
 	Button.waitForAnyPress();
 	//while
 	 	//pal1: "....*---*.-..*.-"

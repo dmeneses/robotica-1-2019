@@ -12,9 +12,9 @@ import lejos.utility.Stopwatch;
 
 public class robot2 
 {
-	///double telegrafo; 
-	//String pal = "....*---*.-..*.-";
-	/*String h = "....";
+	/*double telegrafo; 
+	String pal = "....*---*.-..*.-";
+	String h = "....";
 	String o = "---";
 	String l= " .-..";
 	String a= ".-" ;
@@ -57,7 +57,7 @@ public class robot2
 		}
 		
  	   int tiempo = relog.elapsed ();
- 	  boolean puntito=tiempo<1000 && tiempo>100;   
+ 	  boolean puntito=tiempo<1000 ;   
  	  boolean espacio= tiempo>1000 && tiempo<2000;
  	  boolean linea= tiempo>2000;
  	  
@@ -84,29 +84,8 @@ public class robot2
    	   {
    		   break;
    	   }
-    }
-	System.out.println("resultado "+pal1);
-	Button.waitForAnyPress();
-	
-	String letraMorse = "";
-	String traduccionLetra = "";
-	for (int x=0;x<pal1.length();x++)
-    {
-		if(pal1.charAt(x) == '*')
-		{
-			System.out.println("aste");
-			if(letraMorse == "....")
-			{
-				traduccionLetra = traduccionLetra + "h"+"*";
-			}			
-			letraMorse = "";//falta un espacio
-		}
-		else
-		{
-			letraMorse = letraMorse + pal1.charAt(x);
-		}
-    }
-	System.out.println("traduccion "+traduccionLetra);
+       }
+	System.out.println(pal1);
 	Button.waitForAnyPress();
 	//while
 	 	//pal1: "....*---*.-..*.-"
