@@ -1,0 +1,18 @@
+import java.util.HashMap;
+import java.util.Map;
+
+
+
+public class traductor
+
+{
+
+	char punto = '.';
+	char raya = '-';
+	
+	Map mochila = new HashMap();
+	
+	
+	
+	 //.put(".-", "A");
+}

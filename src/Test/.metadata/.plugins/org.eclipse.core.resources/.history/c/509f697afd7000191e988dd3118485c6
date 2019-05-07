@@ -1,0 +1,12 @@
+
+public class jarvis {
+
+	public static void main(String[] args)
+	
+	{
+		traductor tr = new traductor();
+
+		tr.traducir();
+	}
+
+}
