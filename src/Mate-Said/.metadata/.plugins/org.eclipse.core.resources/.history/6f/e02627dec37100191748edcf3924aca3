@@ -30,7 +30,6 @@ import java.util.HashMap;
 			motor = new EV3MediumRegulatedMotor(MotorPort.D);
 			timer = new Stopwatch();
 			morse = new HashMap();
-			listaMorse = new ArrayList<String>();
 			
 			morse.put(".-","a");
 			morse.put("-...","b");

@@ -6,7 +6,7 @@ import lejos.hardware.sensor.EV3TouchSensor;
 import lejos.robotics.SampleProvider;
 import lejos.utility.Delay;
 import lejos.utility.Stopwatch;
-import java.util.ArrayList;
+
 import java.util.HashMap;
 
 	public class Morse {
@@ -20,7 +20,7 @@ import java.util.HashMap;
 		SampleProvider spX;
 		HashMap morse;
 		String morsex;
-		ArrayList<String> listaMorse;
+		String[] listaMorse;
 		public Morse ()
 		{
 			sensor = new  EV3TouchSensor(SensorPort.S2);
@@ -30,7 +30,6 @@ import java.util.HashMap;
 			motor = new EV3MediumRegulatedMotor(MotorPort.D);
 			timer = new Stopwatch();
 			morse = new HashMap();
-			listaMorse = new ArrayList<String>();
 			
 			morse.put(".-","a");
 			morse.put("-...","b");
@@ -101,10 +100,8 @@ import java.util.HashMap;
 	            }
 	        	if(BotonActivoX == true)
 	        	{
-	        	for(String i: listaMorse){	
-	        	System.out.println(i);
-	        	Delay.msDelay(1000);
-	        	}
+	        	System.out.println(listaMorse);	
+	         	Delay.msDelay(1000);
 	        	}
   }
  }
@@ -125,7 +122,9 @@ import java.util.HashMap;
         	else if(apretar > 3000 || apretar <= 10000)
         	{
         	System.out.println(" ");
-        	listaMorse.add(morsex);
+        	for(int i=0; i<=100; i=i+1){
+        	listaMorse[i] = morsex;
+        	}
         	Delay.msDelay(1000);
         	morsex = "";
     }

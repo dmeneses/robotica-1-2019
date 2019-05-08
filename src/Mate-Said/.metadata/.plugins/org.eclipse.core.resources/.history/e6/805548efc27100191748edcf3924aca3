@@ -6,7 +6,7 @@ import lejos.hardware.sensor.EV3TouchSensor;
 import lejos.robotics.SampleProvider;
 import lejos.utility.Delay;
 import lejos.utility.Stopwatch;
-import java.util.ArrayList;
+
 import java.util.HashMap;
 
 	public class Morse {
@@ -17,10 +17,9 @@ import java.util.HashMap;
 	    EV3LargeRegulatedMotor motorI;
 	    Stopwatch timer;
 		SampleProvider sp;
-		SampleProvider spX;
 		HashMap morse;
 		String morsex;
-		ArrayList<String> listaMorse;
+		String[] listaMorse;
 		public Morse ()
 		{
 			sensor = new  EV3TouchSensor(SensorPort.S2);
@@ -30,7 +29,6 @@ import java.util.HashMap;
 			motor = new EV3MediumRegulatedMotor(MotorPort.D);
 			timer = new Stopwatch();
 			morse = new HashMap();
-			listaMorse = new ArrayList<String>();
 			
 			morse.put(".-","a");
 			morse.put("-...","b");
@@ -62,16 +60,12 @@ import java.util.HashMap;
 		public void leerCodigo()
 		{
 			sp = sensor.getTouchMode();
-			spX = sensorX.getTouchMode();
 			boolean BotonActivo;
-			boolean BotonActivoX;
 			boolean contador = false;
 			int apretar=0;
 			while(true){
 	        	float[] sample = new float [sp.sampleSize()];
 	        	sp.fetchSample(sample, 0);
-	        	float[] sampleX = new float [spX.sampleSize()];
-	        	spX.fetchSample(sampleX, 0);
 	        	if(sample[0]==0)
 	        	{
 	        		BotonActivo = false;
@@ -79,14 +73,6 @@ import java.util.HashMap;
 	        	else
 	        	{
 	        		BotonActivo = true;
-	        	} 
-	        	if(sampleX[0]==0)
-	        	{
-	        		BotonActivoX = false;
-	        	}
-	        	else
-	        	{
-	        		BotonActivoX = true;
 	        	} 
 	        	if(BotonActivo && !contador){
 	        	timer.reset();
@@ -99,13 +85,6 @@ import java.util.HashMap;
 	           	Delay.msDelay(1000);
 	            contador = false;
 	            }
-	        	if(BotonActivoX == true)
-	        	{
-	        	for(String i: listaMorse){	
-	        	System.out.println(i);
-	        	Delay.msDelay(1000);
-	        	}
-	        	}
   }
  }
 		public void introducirCodigo(int apretar)
@@ -125,8 +104,11 @@ import java.util.HashMap;
         	else if(apretar > 3000 || apretar <= 10000)
         	{
         	System.out.println(" ");
-        	listaMorse.add(morsex);
+        	for(int i=0; i<=100; i=i+1){
+        	listaMorse[i] = morsex;
+        	}
         	Delay.msDelay(1000);
+        	System.out.println(listaMorse);
         	morsex = "";
     }
   }
