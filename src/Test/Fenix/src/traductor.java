@@ -1,7 +1,11 @@
 import java.util.HashMap;
 import java.util.Map;
 
+import lejos.hardware.port.SensorPort;
+import lejos.hardware.sensor.EV3TouchSensor;
+import lejos.robotics.SampleProvider;
 import lejos.utility.Delay;
+import lejos.utility.Stopwatch;
 
 
 
@@ -11,10 +15,20 @@ public class traductor
 
 	char sim;
 	
-	String palabra;
+	String palabra = "";
 	
 	Map mochila = new HashMap();
-	viernes cosa = new viernes();
+	//viernes cosa = new viernes();
+	Stopwatch strange = new Stopwatch();
+	EV3TouchSensor sensor = new EV3TouchSensor(SensorPort.S4);
+	EV3TouchSensor sensor2 = new EV3TouchSensor(SensorPort.S1);
+	SampleProvider sp = sensor.getTouchMode();
+	SampleProvider sp2 = sensor2.getTouchMode();
+	boolean botonActivado;
+	boolean botonActivado2;
+	boolean strangeon = false;
+	int tiempo = 0;
+	
 	public traductor()
 	{
 	     
@@ -47,35 +61,105 @@ public class traductor
 		
 	}
 	
-	public char traducir()
-	{
+	public double medir()
+    {
+	   //while(true)
+	    //{
+		  float[] sample = new float [sp.sampleSize()];
+		  sp.fetchSample(sample, 0);
+		  if (sample[0] == 0)
+		  {
+			  botonActivado = false;
+		  }
 		
-		 int t = cosa.medir();
-		if( t > 1 &&  t <= 500)
-		{
+		  else
+		  {
+			 botonActivado = true;
+		  }  
+		
+		  if (botonActivado && !strangeon)
+		  {
+			 strange.reset();
+			 strangeon = true;
+		  }
+		
+		  if (!botonActivado && strangeon)
+		  {
+			  tiempo = strange.elapsed();
+			  strangeon = false;
+			  //System.out.println(tiempo);
+			  //Delay.msDelay(3000);
+		  }
+	      
+		  return tiempo;
+		  
+	    //}	
+	  
+  }
+	
+	
+	
+	public char traducir()
+	{		
+	 double t = tiempo;
+	 
+	  float[] sample2 = new float [sp2.sampleSize()];
+	  sp2.fetchSample(sample2, 0);
+	  
+	   if (sample2[0] == 0)
+	   {
+		  //botonActivado2 = false;
+		   System.out.println(palabra);
+		   sample2[0] = 2;
+	   }
+	
+	   else
+	   {
+		 //botonActivado2 = true;
+		   
+		   if( t > 1 &&  t <= 500)
+	     {
 			sim = '.';
 			palabra = palabra + sim; 
-			System.out.println(sim);
-			System.out.println(palabra);
-			Delay.msDelay(1000);
-		}
+			tiempo = 0;
+			
+		 }
 		
-		if(cosa.medir() >= 500)
+		if(tiempo >= 500)
 		{
 			sim = '-';
 			palabra = palabra + sim;
-			System.out.println(sim);
-			System.out.println(palabra);
-			Delay.msDelay(1000);
+			tiempo = 0;
+			
 			
 		}
-		
-		return sim;
-		
+	   }
+	  
+	  //if(botonActivado2 == true)
+	  //{
+	  
+	  //}
+	 
+	  //else
+	  //{
+		  
+		  
+		 
+	  //}
+	  
+	  return sim;
+	  
+	  
 	}
 	
-	public void presionar()
-	{
-		
-	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

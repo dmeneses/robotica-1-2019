@@ -1,13 +1,13 @@
-import java.util.Timer;
+//import java.util.Timer;
 
-import lejos.hardware.port.SensorPort;
-import lejos.hardware.sensor.EV3TouchSensor;
-import lejos.robotics.SampleProvider;
-import lejos.utility.Delay;
-import lejos.utility.Stopwatch;
+//import lejos.hardware.port.SensorPort;
+//import lejos.hardware.sensor.EV3TouchSensor;
+//import lejos.robotics.SampleProvider;
+//import lejos.utility.Delay;
+//import lejos.utility.Stopwatch;
 
 
-public class viernes 
+/*public class viernes 
 
 {
 	
@@ -19,10 +19,10 @@ public class viernes
 	int tiempo = 0;
 	
 	
-    public int medir()
+    public double medir()
      {
-	   while(true)
-	    {
+	   //while(true)
+	    //{
 		  float[] sample = new float [sp.sampleSize()];
 		  sp.fetchSample(sample, 0);
 		  if (sample[0] == 0)
@@ -46,13 +46,15 @@ public class viernes
 			  tiempo = strange.elapsed();
 			  strangeon = false;
 			  System.out.println(tiempo);
-			  Delay.msDelay(1000);
+			  Delay.msDelay(3000);
 		  }
 	      
 		  return tiempo;
-	    }	
+	    //}	
 	  
-   }
-}
+   }*/
+  
+    
+//}
 
 

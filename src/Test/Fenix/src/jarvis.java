@@ -5,28 +5,25 @@ public class jarvis
 	public static void main(String[] args)
 	
 	{
-		viernes we = new viernes();
+		//viernes we = new viernes();
 		traductor tr = new traductor();
-		int yo;
-       while(true)
-       {
-		 yo = we.medir();
+		
        
+		while(true)
+        {
+		   // double yo = tr.medir();
        
-       
-       if(yo > 0)
-       {
-    	   tr.traducir();
-       }
-       
-       
-       
-      
-       
-       }
-       
-       
-      
-	}
-
+           if(tr.medir() > 0)
+           {
+    	      tr.traducir();
+    	      
+           }		
+        
+        } 
+	
+		
+		
+		
+		
+     }
 }
