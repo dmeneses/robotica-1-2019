@@ -15,7 +15,7 @@ public class ProgramaBase {
 		guion = "-";
 		avanzar = 30;
 		distancia = 30;
-		bot = new Robot();
+		bot = new Robot(3);
 		codigo = "";
 		
 	}
