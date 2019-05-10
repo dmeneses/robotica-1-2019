@@ -1,0 +1,40 @@
+import lejos.hardware.motor.EV3LargeRegulatedMotor;
+import lejos.hardware.port.MotorPort;
+
+
+public class Lapiz {
+	public static void main(String[] args) {
+	int numeroTramos=6;
+	double distanciaLapizArriba=30;
+	double distanciaLapizAbajo=20;		
+	  
+	EV3LargeRegulatedMotor motorB = new EV3LargeRegulatedMotor(MotorPort.B);
+	EV3LargeRegulatedMotor motorD = new EV3LargeRegulatedMotor(MotorPort.D);
+	EV3LargeRegulatedMotor motorC = new EV3LargeRegulatedMotor(MotorPort.C);
+
+
+	int tramos=4;
+	while(tramos<6){
+		 
+	tramos=tramos+1;
+	
+	
+	motorC.rotate(-100,true);
+	
+	int grados=0;
+	double diametroRueda=5.5;
+	double circunferencia=Math.PI* diametroRueda;
+	double numeroDeRotaciones=distanciaLapizArriba/circunferencia;
+	grados=(int)(numeroDeRotaciones* 360);
+	
+	int velocidad=300; 
+	motorB.setSpeed(velocidad);
+	motorB.rotate(grados,true);
+	motorD.setSpeed(velocidad);
+	motorD.rotate(grados);
+
+	motorC.rotate(100,true);
+	
+	
+	}
+} }

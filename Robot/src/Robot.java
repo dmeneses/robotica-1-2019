@@ -1,11 +1,11 @@
-import lejos.hardware.Button;
+//import lejos.hardware.Button;
 import lejos.hardware.motor.Motor;
 import lejos.hardware.port.SensorPort;
-import lejos.hardware.sensor.EV3ColorSensor;
+//import lejos.hardware.sensor.EV3ColorSensor;
 import lejos.hardware.sensor.EV3TouchSensor;
 //import lejos.hardware.sensor.EV3TouchSensor;
 import lejos.hardware.sensor.EV3UltrasonicSensor;
-import lejos.robotics.Color;
+//import lejos.robotics.Color;
 
 
 public class Robot
@@ -15,11 +15,11 @@ public class Robot
 	double eje;
 	EV3UltrasonicSensor ojos;
 	float[] muestrasojos;
-	float[] muestrasboton;
-	EV3TouchSensor boton;
+	//float[] muestrasboton;
+	//EV3TouchSensor boton;
 	//int t=1;
-	EV3ColorSensor color;
-	float[] muestrascolor;
+	//EV3ColorSensor color;
+	//float[] muestrascolor;
 	
 	
 	//constructor
@@ -28,12 +28,12 @@ public class Robot
 		radio = rad;
 		eje = ej;
 		ojos = new EV3UltrasonicSensor (SensorPort.S4);
-		boton = new EV3TouchSensor (SensorPort.S1);
+		//boton = new EV3TouchSensor (SensorPort.S1);
 		muestrasojos = new float [ojos.sampleSize()];
-		muestrasboton = new float [boton.sampleSize()];
-		color = new EV3ColorSensor (SensorPort.S2);
-		muestrascolor = new float [color.sampleSize()];
-		color.setFloodlight(Color.WHITE);
+		//muestrasboton = new float [boton.sampleSize()];
+		//color = new EV3ColorSensor (SensorPort.S2);
+		//muestrascolor = new float [color.sampleSize()];
+		//color.setFloodlight(Color.WHITE);
 	}
 	
 	//metodos
@@ -58,9 +58,10 @@ public class Robot
 	
 	public int detectarpulsador()
 	{
-		boton.fetchSample(muestrasboton, 0);
+		//boton.fetchSample(muestrasboton, 0);
 		
-		return (int)muestrasboton[0];
+		//return (int)muestrasboton[0];
+		return 0;
 		
 	}
 	
@@ -97,7 +98,7 @@ public class Robot
 	}
 	public int detectarColor()
 	{
-		color.fetchSample(muestrascolor, 0);
+		/*color.fetchSample(muestrascolor, 0);
 		
 		int colorcito = (int)muestrascolor[0]; 
 				
@@ -111,8 +112,13 @@ public class Robot
 			System.out.println ("color : " + colorcito);
 		}
 		
-		return (int)muestrascolor[0];
+		return (int)muestrascolor[0];*/
+		return 0;
 		
+	}
+	public void subirbajar(int g)
+	{
+		Motor.A.rotate(g);
 	}
 
 	

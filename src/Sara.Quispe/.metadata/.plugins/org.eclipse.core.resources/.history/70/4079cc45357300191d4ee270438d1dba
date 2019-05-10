@@ -1,0 +1,61 @@
+ import lejos.hardware.Sound;
+import lejos.hardware.motor.EV3LargeRegulatedMotor;
+import lejos.hardware.port.MotorPort;
+
+
+public class Lapiz{
+
+	public static void main(String[] args) {
+	
+		EV3LargeRegulatedMotor motorB = new EV3LargeRegulatedMotor(MotorPort.B);
+		EV3LargeRegulatedMotor motorD = new EV3LargeRegulatedMotor(MotorPort.D);
+		EV3LargeRegulatedMotor lapiz = new EV3LargeRegulatedMotor(MotorPort.A);
+		
+		lapiz.rotate((-1)*100, true);	
+		Sound.beepSequence();		
+		lapiz.rotate(110);
+
+		int num = 1;
+		while (num <= 4) {
+			System.out.println(num);
+			num++;
+		
+		double distanciaAMoverme = 3; 
+		int grados = 0;
+		double diametroRueda = 5.5;
+		double circunferencia = Math.PI * diametroRueda;
+		double numeroDeRotaciones = distanciaAMoverme / circunferencia;
+		grados = (int)(numeroDeRotaciones * 360);
+		
+		int velocidad = 210;
+		motorB.setSpeed(velocidad); 
+		motorB.rotate(grados, true);
+		motorD.setSpeed(velocidad);
+		motorD.rotate(grados);
+		
+		lapiz.rotate((-1)*110);
+		//int velocidad = 210;
+		motorB.setSpeed(velocidad); 
+		motorB.rotate(grados, true);
+		motorD.setSpeed(velocidad);
+		motorD.rotate(grados);
+		
+		lapiz.rotate(110, true);		
+		//int velocidad2 = 210;
+		motorB.setSpeed(velocidad); 
+		motorB.rotate(grados, true);
+		motorD.setSpeed(velocidad);
+		motorD.rotate(grados);
+		
+		lapiz.rotate((-1)*110);
+		distanciaAMoverme = 3;
+		motorB.rotate(-30);
+		lapiz.rotate(110, true);
+		motorB.rotate(360);
+		}
+		motorB.close();
+		motorD.close();
+	}
+}
+
+ 

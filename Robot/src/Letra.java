@@ -58,7 +58,7 @@ public String insertarletra()
 public String traducirletra()
 {
 	String letratrad = "";
-	System.out.println("l en tra: " + letra);
+	//System.out.println("l en tra: " + letra);
 	if (letra.equals("12"))
 	{
 		letratrad = "A";

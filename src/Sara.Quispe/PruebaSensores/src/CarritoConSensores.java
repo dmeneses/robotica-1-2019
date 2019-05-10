@@ -17,7 +17,7 @@ public class CarritoConSensores {
 		EV3LargeRegulatedMotor motor2=new EV3LargeRegulatedMotor(MotorPort.B);
 		
 		EV3TouchSensor sensorTouch; 
-		sensorTouch=new EV3TouchSensor(SensorPort.S2);
+		sensorTouch=new EV3TouchSensor(SensorPort.S1);
 		
 		
 		SampleProvider muestrasCapturadasTouch=  sensorTouch.getTouchMode();
@@ -41,9 +41,7 @@ public class CarritoConSensores {
 			sensorTouchDetectoToque=true;
 			
 		}
-	}
-		
-		System.out.println("deje de esperar");
+		 System.out.println("deje de esperar");
 			Button.waitForAnyPress();
 	
 			 
@@ -68,7 +66,7 @@ public class CarritoConSensores {
 			System.out.println("esperando para cerrar el programa");
 			Button.waitForAnyPress();
 	}
-}
+}}
 
 		
 		

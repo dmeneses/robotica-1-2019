@@ -1,0 +1,46 @@
+import lejos.hardware.Button;
+import lejos.hardware.device.SensorMux;
+import lejos.hardware.port.SensorPort;
+import lejos.hardware.sensor.EV3TouchSensor;
+import lejos.robotics.SampleProvider;
+import lejos.robotics.TouchAdapter;
+import lejos.utility.Delay;
+import lejos.utility.Stopwatch;
+
+public class Robot {
+	EV3TouchSensor sensorTouch = new EV3TouchSensor(SensorPort.S1);
+	TouchAdapter touchAdaptador = new TouchAdapter(sensorTouch);
+	Stopwatch timer = new Stopwatch();
+	
+	SampleProvider muestrasCapturadasTouch = sensorTouch.getTouchMode();
+
+	public boolean pedirDatosAlPulsadorTerminar() {
+  
+		boolean resultado = false;
+
+		return resultado;
+	}
+
+	public char pedirDatosAlPulsadorCodigo() {
+
+		 
+
+		while (!touchAdaptador.isPressed()) {
+			System.out.println("alguien esta presionando el touch");
+		}
+		int tiempoDePulsacion=0;
+		timer.reset();
+		if(tiempoDePulsacion<2000){
+			char valor='.';
+			System.out.println("equivale a="+valor);
+		}
+		
+		return 0;
+		 
+		 
+		}
+		
+	 
+	} 
+
+ 

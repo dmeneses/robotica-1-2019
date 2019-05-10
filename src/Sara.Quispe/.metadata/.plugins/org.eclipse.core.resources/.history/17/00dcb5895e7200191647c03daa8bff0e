@@ -1,0 +1,94 @@
+/*import lejos.hardware.Button;
+import lejos.hardware.port.SensorPort;
+import lejos.hardware.sensor.EV3TouchSensor;
+import lejos.robotics.SampleProvider;
+import lejos.robotics.TouchAdapter;
+import lejos.utility.Delay;
+import lejos.utility.Stopwatch;
+
+public class Robot {
+	EV3TouchSensor sensorTouch = new EV3TouchSensor(SensorPort.S1);
+	TouchAdapter touchAdaptador = new TouchAdapter(sensorTouch);
+	Stopwatch timer = new Stopwatch();
+	
+	SampleProvider muestrasCapturadasTouch = sensorTouch.getTouchMode();
+
+	public boolean pedirDatosAlPulsadorTerminar() {
+
+		boolean resultado = false;
+
+		return resultado;
+	}
+
+	public char pedirDatosAlPulsadorCodigo() {
+
+		 char resultado = ' ';
+			timer.reset();
+
+		while (!touchAdaptador.isPressed()) {
+		}
+		int tiempoDeReaccion = timer.elapsed();
+ 		 
+			if (tiempoDeReaccion >0&& tiempoDeReaccion< 1000) {
+				resultado = '.';
+			
+			}
+			if (tiempoDeReaccion > 0&& tiempoDeReaccion<2050) {
+				resultado = '_';
+TouchAdapter touchAdaptador = new TouchA
+			}
+			return resultado;
+	 
+	}
+}*/
+import lejos.hardware.port.SensorPort;
+import lejos.hardware.sensor.EV3TouchSensor;
+import lejos.robotics.SampleProvider;
+import lejos.robotics.TouchAdapter;
+import lejos.utility.Delay;
+import lejos.utility.Stopwatch;
+
+
+public class Robot {
+	EV3TouchSensor codigoTouch = new EV3TouchSensor(SensorPort.S1);
+	TouchAdapter touchAdaptador = new TouchAdapter(codigoTouch);
+	Stopwatch timer = new Stopwatch();
+	
+	EV3TouchSensor terminarTouch = new EV3TouchSensor(SensorPort.S3);
+	SampleProvider muestrasCapturadasTouch  = terminarTouch.getTouchMode();
+	
+	public boolean pedirDatosAlPuldadorTerminar() {
+		boolean resultado = false;
+		
+		float[] datosDelSensor = new float[muestrasCapturadasTouch.sampleSize()];
+		muestrasCapturadasTouch.fetchSample(datosDelSensor, 0);
+		float dato = datosDelSensor[0];
+		if (dato != 0) {
+			resultado = true;
+		}
+		return resultado;
+	}
+	
+	public char pedirDatosAlPulsadorCodigo(){
+		char resultado = ' ';
+		
+		Delay.msDelay(500);
+		timer.reset();
+		int tiempoDeReaccion = 0;
+		while (touchAdaptador.isPressed()) {
+			System.out.println("Alguien esta presionando el touch!");
+			tiempoDeReaccion = tiempoDeReaccion + 1;
+		}
+		int tiempoDeReaccion1 = timer.elapsed();
+		if (tiempoDeReaccion1 > 0 && tiempoDeReaccion1 < 100){
+			 
+			char resulatdo='.';
+			System.out.println(resulatdo);
+		} else if (tiempoDeReaccion1 > 100 && tiempoDeReaccion1 < 200){
+			char resultado1 = '_';
+			System.out.println(resultado1);
+		}
+		return resultado;
+	}
+	
+}

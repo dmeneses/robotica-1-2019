@@ -17,7 +17,7 @@ public class CarritoDibujar {
 		  
 		EV3LargeRegulatedMotor motorB = new EV3LargeRegulatedMotor(MotorPort.B);
 		EV3LargeRegulatedMotor motorD = new EV3LargeRegulatedMotor(MotorPort.D);
-		EV3LargeRegulatedMotor motorA = new EV3LargeRegulatedMotor(MotorPort.A);
+		EV3LargeRegulatedMotor motorC = new EV3LargeRegulatedMotor(MotorPort.C);
 
 		 
 		Button.LEDPattern(3);
@@ -47,7 +47,7 @@ public class CarritoDibujar {
  
 		motorA.rotate(100,true);
   
-  		//double distanciaMover1=20;
+  		 
 		int grados1=0;
 		double diametroRueda1=5.5;
 		double circunferencia1=Math.PI* diametroRueda1;
@@ -62,7 +62,7 @@ public class CarritoDibujar {
 	
 		motorA.rotate(100*-1,true);
 		Sound.beepSequence();
-		}
+		
  		 
 		motorB.stop();
 		motorD.stop();
@@ -72,7 +72,7 @@ public class CarritoDibujar {
 		motorD.close();
 		motorA.close();
 		
-		
+		}
  	 
 		 }
 

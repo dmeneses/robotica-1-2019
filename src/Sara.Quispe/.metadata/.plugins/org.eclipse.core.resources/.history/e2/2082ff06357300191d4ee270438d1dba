@@ -1,0 +1,52 @@
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+
+public class CodigoMorse {
+	 
+
+		public static void main(String[] args) {
+
+			String cad;
+			
+		Scanner leer = new Scanner(System.in);
+		
+		    System.out.println("ingrese la palabra morse");
+		    cad = leer.nextLine();
+		    StringTokenizer tokens = new StringTokenizer(cad);
+		    
+		    while(tokens.hasMoreTokens()){
+		    	System.out.println(tokens.nextToken());
+		    }
+		    
+		    System.out.println("\n\n");
+		    String [] palabra = cad.split("\\ ");
+		    int i=0;
+		    while(i <= palabra.length-1);
+		    
+		        if (palabra[i].equals(".-"));
+		   {
+		         System.out.println("A");
+		        
+		       } while (palabra[i].equals("-..."));      
+	      {
+	    	  System.out.println("B");
+		        
+	         while (palabra[i].equals("-.-."));
+	         }
+		     System.out.println("C");      
+	         while (palabra[i].equals("-.."));
+	         {
+	         System.out.println("D");      
+	         while (palabra[i].equals(".")); 
+	         {
+	         System.out.println("E");      
+	         while (palabra[i].equals("..-."));
+	         }
+	         i++;
+	         }
+		
+
+	}
+
+}
