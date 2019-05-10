@@ -1,6 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
+import lejos.hardware.Button;
 import lejos.hardware.port.SensorPort;
 import lejos.hardware.sensor.EV3TouchSensor;
 import lejos.robotics.SampleProvider;
@@ -18,7 +19,7 @@ public class traductor
 	String palabra = "";
 	
 	Map mochila = new HashMap();
-	//viernes cosa = new viernes();
+	viernes cosa = new viernes();
 	Stopwatch strange = new Stopwatch();
 	EV3TouchSensor sensor = new EV3TouchSensor(SensorPort.S4);
 	EV3TouchSensor sensor2 = new EV3TouchSensor(SensorPort.S1);
@@ -99,7 +100,7 @@ public class traductor
 	
 	
 	
-	public char traducir()
+	public String traducir()
 	{		
 	 double t = tiempo;
 	 
@@ -108,16 +109,25 @@ public class traductor
 	  
 	   if (sample2[0] == 0)
 	   {
-		  //botonActivado2 = false;
-		   System.out.println(palabra);
-		   sample2[0] = 2;
+		  botonActivado2 = false;
+		 
+		   
 	   }
 	
 	   else
 	   {
-		 //botonActivado2 = true;
+		 botonActivado2 = true;
 		   
-		   if( t > 1 &&  t <= 500)
+		   
+			
+			
+		}
+	   
+	  
+	  if(botonActivado2 == true)
+	  {
+	  
+		  if( t > 1 &&  t <= 500)
 	     {
 			sim = '.';
 			palabra = palabra + sim; 
@@ -129,30 +139,32 @@ public class traductor
 		{
 			sim = '-';
 			palabra = palabra + sim;
-			tiempo = 0;
-			
-			
-		}
-	   }
-	  
-	  //if(botonActivado2 == true)
-	  //{
-	  
-	  //}
+		}	tiempo = 0;
+	  }
+	 	  
 	 
-	  //else
-	  //{
-		  
-		  
-		 
-	  //}
+	  return palabra;
 	  
-	  return sim;
-	  
+	
 	  
 	}
 	
-	
+	  public void escribir(String palabra)
+	  
+	  {
+		 // if(palabra == ".")
+		  //{
+		  int y = 40;
+			  cosa.moverbrazo(y);
+			  cosa.moverbrazo(-y);
+			  Delay.msDelay(1000);
+			  cosa.caminar(1);
+			  cosa.moverbrazo(50);
+			  cosa.caminar(2);
+			  cosa.moverbrazo(-y);
+			  cosa.caminar(1);
+		  //}
+	  }
 	
 	
 	

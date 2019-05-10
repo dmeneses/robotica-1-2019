@@ -1,3 +1,6 @@
+import lejos.hardware.Button;
+import lejos.utility.Delay;
+
 
 public class jarvis
 {
@@ -5,7 +8,7 @@ public class jarvis
 	public static void main(String[] args)
 	
 	{
-		//viernes we = new viernes();
+		viernes we = new viernes();
 		traductor tr = new traductor();
 		
        
@@ -17,10 +20,15 @@ public class jarvis
            {
     	      tr.traducir();
     	      
-           }		
+           }
+           if(Button.readButtons() == 1)
+     	  {
+     		  System.out.println(tr.traducir());
+     		   tr.escribir(".-.-. ..");
+     	  }   	  
         
-        } 
-	
+       
+        }
 		
 		
 		
