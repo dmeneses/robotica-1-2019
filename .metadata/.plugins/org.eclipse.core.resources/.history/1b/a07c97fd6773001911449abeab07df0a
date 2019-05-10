@@ -1,5 +1,4 @@
 import lejos.hardware.Button;
-import lejos.hardware.motor.Motor;
 import lejos.hardware.port.SensorPort;
 import lejos.hardware.sensor.EV3TouchSensor;
  
@@ -39,9 +38,7 @@ public class robot2
 	    	}
 	      */  
 	   //System.out.println(morse.charAt(3));
-		Robot robot1;
-		robot1= new Robot(3, 12.310);
-		int distancia;
+	
 	EV3TouchSensor boton;
 	boton = new EV3TouchSensor (SensorPort.S4);
 	
@@ -123,36 +120,30 @@ public class robot2
     }
 	System.out.println("traduccion "+traduccionLetra);
 	Button.waitForAnyPress();
-	
-	for (int x=0;x<pal1.length();x++)
-	{
-		if(pal1.charAt(x) == '.')
-		{ 
-			robot1.bajarMarcador();
-			robot1.avanzarCentimentros(1);
-			robot1.levantarMarcador();
-		
-		}
-	if(pal1.charAt(x) == '-')
-		{
-		robot1.bajarMarcador();
-		robot1.avanzarCentimentros(5);
-		robot1.levantarMarcador();
-		robot1.avanzarCentimentros(4);
+	//while
+	 	//pal1: "....*---*.-..*.-"
+	   /*for (int x=0;x<pal1.length();x++)
+	    {
+	        System.out.println("Caracter " + x + ": " + pal1.charAt(x));
+	       
+	        //almacenar letra por letra en un string
+	        //encontrar un asterisco
+	        //traducir letra
+	      
+	        tradletra = tradletra + pal1.charAt(x);//"...." 	        
+	        if(tradletra == 0)
+	        	traduccion=traduccion+"...."+"*";
+	        if(1)
+	        	traduccion=traduccion+"---"+"*";
+	        if (2)
+	        	traduccion = traduccion +".-.."+"*";
+	        if (3)
+	        	traduccion = traduccion +".-"+ "*";
+	        if()
+		        traduccion = traduccion + "h";traduccion = traduccion +"h"+"o";
+		        traduccion = traduccion +"h"+"o"+"l";traduccion = traduccion +"h"+"o"+"l"+"a";
+	        
+	        
+	    }*/
 	}
-	if(pal1.charAt(x) == '*')
-	{
-		
-		robot1.avanzarCentimentros(3);
-		
-		
-	}
-	}
-	
-		
-	
-	
-	  
-	    }
-	}
-
+}

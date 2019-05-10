@@ -39,9 +39,7 @@ public class robot2
 	    	}
 	      */  
 	   //System.out.println(morse.charAt(3));
-		Robot robot1;
-		robot1= new Robot(3, 12.310);
-		int distancia;
+	
 	EV3TouchSensor boton;
 	boton = new EV3TouchSensor (SensorPort.S4);
 	
@@ -124,35 +122,20 @@ public class robot2
 	System.out.println("traduccion "+traduccionLetra);
 	Button.waitForAnyPress();
 	
-	for (int x=0;x<pal1.length();x++)
-	{
-		if(pal1.charAt(x) == '.')
-		{ 
-			robot1.bajarMarcador();
-			robot1.avanzarCentimentros(1);
-			robot1.levantarMarcador();
-		
-		}
-	if(pal1.charAt(x) == '-')
-		{
-		robot1.bajarMarcador();
-		robot1.avanzarCentimentros(5);
-		robot1.levantarMarcador();
-		robot1.avanzarCentimentros(4);
-	}
-	if(pal1.charAt(x) == '*')
-	{
-		
-		robot1.avanzarCentimentros(3);
-		
+	 public void avanzarCentimentros //(int distancia)
+	{   double distancia= [0];
+		double perimetro= radio*Math.PI*2;//regla de tres
+		double pato= distancia*360/perimetro;		
+		Motor.B.rotate((int)pato, true);
+		Motor.C.rotate ((int)pato);
 		
 	}
-	}
+	if (pal1="....*---*.-..*.-");
 	
-		
-	
-	
+	{ punto = avanzarCentimetros (0);
+	  linea= avanzarCentimetros(5);
+	  espacio= avanzarCentimetros (3);
 	  
 	    }
 	}
-
+}

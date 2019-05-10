@@ -110,7 +110,7 @@ public class robot2
 			{
 				traduccionLetra = traduccionLetra + "l";
 			}			
-			if(letraMorse.equals(".-"))
+			if(letraMorse.equals(".|-"))
 			{
 				traduccionLetra = traduccionLetra + "a";
 			}			
@@ -124,26 +124,19 @@ public class robot2
 	System.out.println("traduccion "+traduccionLetra);
 	Button.waitForAnyPress();
 	
-	for (int x=0;x<pal1.length();x++)
-	{
+	{for (int x=0;x<pal1.length();x++)
+    
 		if(pal1.charAt(x) == '.')
-		{ 
-			robot1.bajarMarcador();
-			robot1.avanzarCentimentros(1);
-			robot1.levantarMarcador();
+		{ bajarMarcador && levantarMarcador;
 		
 		}
 	if(pal1.charAt(x) == '-')
-		{
-		robot1.bajarMarcador();
-		robot1.avanzarCentimentros(5);
-		robot1.levantarMarcador();
-		robot1.avanzarCentimentros(4);
+		{bajarMarcador && avanzarCentimetros+(5)&& levantarMarcador;
 	}
 	if(pal1.charAt(x) == '*')
 	{
 		
-		robot1.avanzarCentimentros(3);
+		bajarMarcador && avanzarCentimetros+(3)&& levantarMarcador;
 		
 		
 	}
@@ -155,4 +148,4 @@ public class robot2
 	  
 	    }
 	}
-
+}

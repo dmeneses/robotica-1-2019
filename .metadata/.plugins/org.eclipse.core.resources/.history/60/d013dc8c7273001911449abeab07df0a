@@ -110,7 +110,7 @@ public class robot2
 			{
 				traduccionLetra = traduccionLetra + "l";
 			}			
-			if(letraMorse.equals(".-"))
+			if(letraMorse.equals(".|-"))
 			{
 				traduccionLetra = traduccionLetra + "a";
 			}			
