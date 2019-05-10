@@ -54,6 +54,7 @@ public class thefish
 			    	morse = morse + ".";
 			    	System.out.println("punto");
 			    }
+			    
 			    System.out.println(morse);
 			    int boton = Button.waitForAnyPress();
 			    if(boton == Button.ID_ENTER)
@@ -61,6 +62,7 @@ public class thefish
 			    	return morse;
 			    }
 			}
+		  
 		}
 		 
 	  }
