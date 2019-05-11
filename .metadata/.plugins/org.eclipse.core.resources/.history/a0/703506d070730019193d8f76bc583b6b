@@ -46,7 +46,7 @@ public class telegrafo{
         	}
         	if(mili>4000)//salir y escribir
         	{
-        		ss=ss+" ";
+        		
         		break;
           }
        
@@ -54,9 +54,8 @@ public class telegrafo{
         
 	          System.out.println(ss);                      
         			String oracion= ss;
-        			traducirMorse(ss);
-        			Button.waitForAnyPress();
-			}
+        			
+		Button.waitForAnyPress();	}
 
     
 		public static void traducirMorse(String ss){
@@ -72,19 +71,12 @@ public class telegrafo{
 					{
 						if(ss.charAt(indice) == ' ')
 						{
-							System.out.println("espacio " + letraMorse);
-							
 							if(letraMorse.equals("...."))
-							{
-								tradLetra = tradLetra + "h";
-								}								
+							{tradLetra = tradLetra + "h";}								
 							
 							
 							if (letraMorse.equals(".-"))
-							{
-								System.out.println("entro a");
-								tradLetra =tradLetra +"a";
-							}
+								{tradLetra =tradLetra +"a";}
 	                       
 							
 							if(letraMorse.equals("-..."))
@@ -182,35 +174,24 @@ public class telegrafo{
 							if(letraMorse.equals("--.."))
 							{  tradLetra =tradLetra +"z";}
 	                        
-							
+							if(tradLetra.equals(".")){
+								Motor.A.rotate(90);
+								Motor.A.rotate(-90);
+								Motor.B.rotate(60,true);
+								Motor.C.rotate(60);
+							}
+							                      
 		        			        
 							letraMorse = "";
 						}
-						else						
+						else
+						
 						{
 							letraMorse = letraMorse + ss.charAt(indice);
 						}
 						
 						    indice ++;
-						    if(tradLetra.equals(".")){
-								Motor.A.rotate(90);
-								Motor.A.rotate(-90);
-								Motor.B.rotate(60,true);
-								Motor.C.rotate(60);
-							}
-							if(tradLetra.equals("-")){
-								Motor.A.rotate(90);
-								
-								Motor.B.rotate(60,true);
-								
-								Motor.C.rotate(60);
-								Motor.A.rotate(-90);
-							}
-							if(tradLetra.equals(" ")){
-								
-								Motor.B.rotate(60,true);
-								Motor.C.rotate(60);
-							}        
+						   
 						    
 					
 					//while

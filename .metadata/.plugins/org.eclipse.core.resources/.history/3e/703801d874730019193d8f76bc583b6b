@@ -75,16 +75,12 @@ public class telegrafo{
 							System.out.println("espacio " + letraMorse);
 							
 							if(letraMorse.equals("...."))
-							{
-								tradLetra = tradLetra + "h";
-								}								
+							{tradLetra = tradLetra + "h";}								
 							
 							
-							if (letraMorse.equals(".-"))
-							{
-								System.out.println("entro a");
-								tradLetra =tradLetra +"a";
-							}
+							if (letraMorse.equals(".- "))
+								{tradLetra =tradLetra +"a";
+								}
 	                       
 							
 							if(letraMorse.equals("-..."))
@@ -182,17 +178,7 @@ public class telegrafo{
 							if(letraMorse.equals("--.."))
 							{  tradLetra =tradLetra +"z";}
 	                        
-							
-		        			        
-							letraMorse = "";
-						}
-						else						
-						{
-							letraMorse = letraMorse + ss.charAt(indice);
-						}
-						
-						    indice ++;
-						    if(tradLetra.equals(".")){
+							if(tradLetra.equals(".")){
 								Motor.A.rotate(90);
 								Motor.A.rotate(-90);
 								Motor.B.rotate(60,true);
@@ -211,6 +197,16 @@ public class telegrafo{
 								Motor.B.rotate(60,true);
 								Motor.C.rotate(60);
 							}        
+		        			        
+							letraMorse = "";
+						}
+						else						
+						{
+							letraMorse = letraMorse + ss.charAt(indice);
+						}
+						
+						    indice ++;
+						   
 						    
 					
 					//while
