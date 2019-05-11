@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="lejos.hardware.motor.UnregulatedMotor"/>
+<fullyQualifiedTypeName name="lejos.utility.Delay"/>
+<fullyQualifiedTypeName name="lejos.hardware.Sound"/>
+<fullyQualifiedTypeName name="lejos.ev3.tools.SensorPanel"/>
+<fullyQualifiedTypeName name="lejos.hardware.sensor.EV3GyroSensor"/>
+<fullyQualifiedTypeName name="lejos.hardware.motor.EV3LargeRegulatedMotor"/>
+<fullyQualifiedTypeName name="lejos.hardware.Button"/>
+<fullyQualifiedTypeName name="lejos.hardware.port.MotorPort"/>
+<fullyQualifiedTypeName name="lejos.hardware.sensor.EV3ColorSensor"/>
+<fullyQualifiedTypeName name="lejos.hardware.sensor.EV3UltrasonicSensor"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="lejos.hardware.sensor.EV3TouchSensor"/>
+<fullyQualifiedTypeName name="lejos.hardware.port.SensorPort"/>
+<fullyQualifiedTypeName name="lejos.robotics.SampleProvider"/>
+</qualifiedTypeNameHistroy>
