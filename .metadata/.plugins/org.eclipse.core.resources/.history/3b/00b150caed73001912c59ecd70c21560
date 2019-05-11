@@ -114,31 +114,6 @@ public class robot2
 			{
 				traduccionLetra = traduccionLetra + "a";
 			}			
-			if(letraMorse.equals(".-."))
-			{
-				traduccionLetra = traduccionLetra + "r";
-			}			
-			if(letraMorse.equals("-..."))
-			{
-				traduccionLetra = traduccionLetra + "b";
-			}			
-			if(letraMorse.equals("-"))
-			{
-				traduccionLetra = traduccionLetra + "t";
-		
-			}
-			if(letraMorse.equals(".."))
-			{
-				traduccionLetra = traduccionLetra + "i";
-			}			
-			if(letraMorse.equals("-.-."))
-			{
-				traduccionLetra = traduccionLetra + "c";
-			}			
-
-
-
-
 			letraMorse = "";//falta un espacio
 		}
 		else

@@ -114,31 +114,6 @@ public class robot2
 			{
 				traduccionLetra = traduccionLetra + "a";
 			}			
-			if(letraMorse.equals(".-."))
-			{
-				traduccionLetra = traduccionLetra + "r";
-			}			
-			if(letraMorse.equals("-..."))
-			{
-				traduccionLetra = traduccionLetra + "b";
-			}			
-			if(letraMorse.equals("-"))
-			{
-				traduccionLetra = traduccionLetra + "t";
-		
-			}
-			if(letraMorse.equals(".."))
-			{
-				traduccionLetra = traduccionLetra + "i";
-			}			
-			if(letraMorse.equals("-.-."))
-			{
-				traduccionLetra = traduccionLetra + "c";
-			}			
-
-
-
-
 			letraMorse = "";//falta un espacio
 		}
 		else
@@ -154,9 +129,8 @@ public class robot2
 		if(pal1.charAt(x) == '.')
 		{ 
 			robot1.bajarMarcador();
-			//robot1.avanzarCentimentros(2);
+			robot1.avanzarCentimentros(1);
 			robot1.levantarMarcador();
-			robot1.avanzarCentimentros(2);
 		
 		}
 	if(pal1.charAt(x) == '-')
@@ -164,11 +138,11 @@ public class robot2
 		robot1.bajarMarcador();
 		robot1.avanzarCentimentros(5);
 		robot1.levantarMarcador();
-		robot1.avanzarCentimentros(3);
-		
+		robot1.avanzarCentimentros(4);
 	}
 	if(pal1.charAt(x) == '*')
 	{
+		
 		robot1.avanzarCentimentros(3);
 		
 		

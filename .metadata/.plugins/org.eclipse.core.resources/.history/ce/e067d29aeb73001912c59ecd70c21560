@@ -54,12 +54,12 @@ public class Robot
 	public void levantarMarcador()
 	
 	{ 
-		Motor.D.rotate (45);
+		Motor.D.rotate (90);
 	}
 public void bajarMarcador()
 	
 	{ 
-	Motor.D.rotate (-45);
+	Motor.D.rotate (-90);
 	}
 	
 	public int detectarColor()
