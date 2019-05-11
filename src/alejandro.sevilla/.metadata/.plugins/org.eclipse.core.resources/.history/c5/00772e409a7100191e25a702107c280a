@@ -1,0 +1,78 @@
+import lejos.hardware.Button;
+import lejos.hardware.port.SensorPort;
+import lejos.hardware.sensor.EV3TouchSensor;
+import lejos.robotics.TouchAdapter;
+import lejos.utility.Delay;
+import lejos.utility.Stopwatch;
+
+
+public class ChallengeMorse {
+	CodigoMorse Codigo = new CodigoMorse(); 
+	Pulsadores pulsar = new Pulsadores();
+	public static void main(String[] args) {
+		EV3TouchSensor CodigoMorse = new EV3TouchSensor(SensorPort.S3);
+		TouchAdapter Adaptador = new TouchAdapter(CodigoMorse);
+	
+		Stopwatch timer = new Stopwatch();
+		int tiempoDeReaccion = 0;
+		Delay.msDelay(3000);
+		timer.reset();
+		while(Adaptador.isPressed()){
+			System.out.println("hay toque");
+		}
+		tiempoDeReaccion = timer.elapsed();
+		System.out.println("el toque duro "+ tiempoDeReaccion);
+		timer.reset();
+		
+		while(!Adaptador.isPressed()){
+			System.out.println(" no hay toque");
+		}
+		tiempoDeReaccion = timer.elapsed();
+		System.out.println("no hubo toque durante  "+ tiempoDeReaccion);
+		
+		Button.waitForAnyPress();
+
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*carro Carro = new carro();
+	boolean terminarCodigo = false;
+	char[] CodigoMorse = new char[200];
+	int contadorCaracter = 0;*/
+	/*while(terminarCodigo == false){
+		terminarCodigo = carro.pedirDatosAlPulsadorTerminar();
+		System.out.println("terminar codigo "+ terminarCodigo);
+		char caracter = carro.pedirDatosAlPulsadorCodigo();
+		System.out.println(" caracter = "+ caracter);
+		CodigoMorse(contadorCaracter) = caracter;
+		contadorCaracter = contadorCaracter+1;
+	}*/	
+
+	}
+
+}

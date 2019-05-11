@@ -1,0 +1,57 @@
+import lejos.hardware.Button;
+
+
+public class ChallengeMorse {
+
+	public static void main(String[] args) {
+		CodigoMorse Codigo = new CodigoMorse(); 
+		Pulsadores pulsar = new Pulsadores();
+	carro Carro = new carro();
+	boolean terminarCodigo = false;
+	char[] CodigoMorse = new char[200];
+	int contadorCaracter = 0;
+	
+	
+	
+	
+	/*while(terminarCodigo == false){
+		terminarCodigo = carro.pedirDatosAlPulsadorTerminar();
+		System.out.println("terminar codigo "+ terminarCodigo);
+		char caracter = carro.pedirDatosAlPulsadorCodigo();
+		System.out.println(" caracter = "+ caracter);
+		CodigoMorse(contadorCaracter) = caracter;
+		contadorCaracter = contadorCaracter+1;
+	}/*/
+	
+		
+
+		
+		
+		
+		
+		
+		
+		
+				
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+		
+		
+
+
+		
+		
+		
+		
+
+	}
+
+}

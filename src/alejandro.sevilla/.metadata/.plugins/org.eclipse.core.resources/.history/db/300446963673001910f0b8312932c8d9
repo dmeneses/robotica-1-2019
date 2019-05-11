@@ -1,0 +1,16 @@
+
+public class CodigoMorse {
+	
+	
+	public String convertirCodigo(char[] codigoMorse){
+		String resultado = "";
+		String letras = "abcdefghiklmnñopqrst";
+		
+		
+		return resultado;
+	}
+
+}
+	
+
+

@@ -1,0 +1,73 @@
+import lejos.hardware.Button;
+import lejos.hardware.port.SensorPort;
+import lejos.hardware.sensor.EV3TouchSensor;
+import lejos.robotics.SampleProvider;
+import lejos.robotics.TouchAdapter;
+import lejos.utility.Delay;
+import lejos.utility.Stopwatch;
+
+
+public class Pulsadores {
+	
+	EV3TouchSensor sensorTouch = new EV3TouchSensor(SensorPort.S1);
+	EV3TouchSensor CodigoMorse = new EV3TouchSensor(SensorPort.S3);
+	TouchAdapter Adaptador = new TouchAdapter(CodigoMorse);
+	
+	public void pedirDatosAlPulsadorTerminar(){
+	//SampleProvider muestrasCapturadasTouch = CodigoMorse.getTouchMode();
+	Stopwatch timer = new Stopwatch();
+	int tiempoDeReaccion = 0;
+	Delay.msDelay(300);
+	timer.reset();
+	while(Adaptador.isPressed()){
+		System.out.println("hay toque");
+	}
+	tiempoDeReaccion = timer.elapsed();
+	System.out.println("el toque duro "+ tiempoDeReaccion);
+	timer.reset();
+	while(!Adaptador.isPressed()){
+		System.out.println(" no hay toque");
+	}
+	tiempoDeReaccion = timer.elapsed();
+	System.out.println("no hubo toque durante  "+ tiempoDeReaccion);
+
+	/*boolean AccionarPulsador = false;
+	while (AccionarPulsador == false){
+		float[] datosDelSensor = new float[muestrasCapturadasTouch.sampleSize()];
+		muestrasCapturadasTouch.fetchSample(datosDelSensor, 0);	
+		double datosSensor = datosDelSensor[0];
+		
+	}*/
+	
+	
+
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*public void terminarPrograma(){
+		SampleProvider muestrasCapturadasTouch1 = sensorTouch.getTouchMode();
+		
+		boolean AccionarPulsador1 = false;
+		while (AccionarPulsador1 == false){
+			float[] datosDelSensor1 = new float[muestrasCapturadasTouch1.sampleSize()];
+			muestrasCapturadasTouch1.fetchSample(datosDelSensor1, 0);
+		if(datosDelSensor1[0] != 0){
+			System.out.println("Codigo Terminado");
+		}
+		AccionarPulsador1 = true;
+		}
+		sensorTouch.close();
+		}*/
+}

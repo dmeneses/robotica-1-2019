@@ -1,0 +1,67 @@
+import lejos.hardware.Button;
+import lejos.hardware.port.SensorPort;
+import lejos.hardware.sensor.EV3TouchSensor;
+import lejos.robotics.SampleProvider;
+import lejos.robotics.TouchAdapter;
+import lejos.utility.Delay;
+import lejos.utility.Stopwatch;
+
+
+public class Pulsadores {
+	
+	EV3TouchSensor sensorTouch = new EV3TouchSensor(SensorPort.S1);
+	EV3TouchSensor CodigoMorse = new EV3TouchSensor(SensorPort.S3);
+	TouchAdapter Adaptador = new TouchAdapter(CodigoMorse);
+	
+	public void EscribirCodigo(){
+	SampleProvider muestrasCapturadasTouch = CodigoMorse.getTouchMode();
+	
+	boolean AccionarPulsador = false;
+	while (AccionarPulsador == false){
+		float[] datosDelSensor = new float[muestrasCapturadasTouch.sampleSize()];
+		muestrasCapturadasTouch.fetchSample(datosDelSensor, 0);	
+		double datosSensor = datosDelSensor[0];
+		
+		if (datosSensor == 1){
+			System.out.println("marcando punto");
+			char marcacion = '.';
+		}
+		else if (datosSensor == 0){
+			System.out.println("marcando linea");
+			char marcacion = '-';
+		}
+		
+	}
+	
+	
+
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*public void terminarPrograma(){
+		SampleProvider muestrasCapturadasTouch1 = sensorTouch.getTouchMode();
+		
+		boolean AccionarPulsador1 = false;
+		while (AccionarPulsador1 == false){
+			float[] datosDelSensor1 = new float[muestrasCapturadasTouch1.sampleSize()];
+			muestrasCapturadasTouch1.fetchSample(datosDelSensor1, 0);
+		if(datosDelSensor1[0] != 0){
+			System.out.println("Codigo Terminado");
+		}
+		AccionarPulsador1 = true;
+		}
+		sensorTouch.close();
+		}*/
+}
