@@ -1,0 +1,7 @@
+
+public class Principal8 {
+	public static void main(String[] args) {
+		Cadenas cadena= new Cadenas();
+		cadena.iniciales("Pedro Perez  Crespo");
+}
+}
