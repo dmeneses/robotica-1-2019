@@ -9,8 +9,7 @@ public class Principal {
 	   ProgramaBase pb = new ProgramaBase();
 	    
 		pb.recibirCodigoMorse();
-		 boolean botonTerminar = true;
-	    pb.operacion("");
+		
 	    
 	// Robot bender = new Robot(3);
 	// bender.dibujarPunto();

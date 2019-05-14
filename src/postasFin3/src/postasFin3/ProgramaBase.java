@@ -89,6 +89,7 @@ public class ProgramaBase {
 			{
 				System.out.println("segundo pulsador ");
 				Delay.msDelay(2000);
+				dibujarCodigo();
 			}
 			
 			if(botonActivado && !contando)
@@ -113,6 +114,10 @@ public class ProgramaBase {
 		
 	
 	
+	}
+	public void dibujarCodigo()
+	{
+		codigo
 	}
 	public void traducir (String traduccion){
 		List<String> codigoLista = new ArrayList<String>(Arrays.asList(codigo.split(" ")));
