@@ -3,7 +3,6 @@ INDEX VERSION 1.127+/home/roboticaest/robotica-1-2019/src/Mate-Said/.metadata/.p
 2281809582.index
 432949035.index
 3354003163.index
-1144619804.index
 1922074808.index
 4116331546.index
 138652781.index

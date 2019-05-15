@@ -33,7 +33,6 @@ import java.util.HashMap;
 			morsex = "";
 			listaMorse = new ArrayList<String>();
 			
-			
 			morse.put(".-","a");
 			morse.put("-...","b");
 			morse.put("-.-.","c");
