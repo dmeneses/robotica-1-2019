@@ -1,0 +1,25 @@
+import lejos.hardware.port.SensorPort;
+import lejos.hardware.sensor.EV3TouchSensor;
+import lejos.robotics.SampleProvider;
+
+
+public class Robot {
+	   
+	EV3TouchSensor touchterminar = new EV3TouchSensor(SensorPort.S2);
+	SampleProvider MuestrasCapturadas = touchterminar.getTouchMode();
+	public boolean terminarya(){
+	
+		
+	boolean terminar=false;
+	 while(terminar== false){
+	 float[]datosdelsensor= new float[MuestrasCapturadas.sampleSize()];
+	 MuestrasCapturadas.fetchSample(datosdelsensor, 0);
+	 float dato = datosdelsensor[0];
+	 terminar= true;
+	 }
+	
+	 
+	 return terminar;
+		
+	}
+}

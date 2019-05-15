@@ -1,0 +1,27 @@
+
+public class PruebaRobot {
+
+	public static void main(String[] args) {
+		Robot robot= new Robot();
+		pulsadoresMorse morseP= new pulsadoresMorse();
+		boolean terminarcodigo= false;
+		char[] codigoEnMorse= new char[200];
+		int contadorCaracter=0;
+       
+		while (terminarcodigo==false){
+			terminarcodigo=robot.terminarya();
+			char caracter = morseP.pulsadorMorse();
+			codigoEnMorse[contadorCaracter] = caracter;
+			contadorCaracter = contadorCaracter +1;
+		}
+		System.out.println(codigoEnMorse);
+		/*System.out.println("termine de ingresar codigo Morse");
+		for(int i =0; i< codigoEnMorse.length; i = i+1);
+	}
+	TraductorMorse traductor = new TraductorMorse();
+	String enEspaniol = tradutor.convertirAEspañol(codigoEnMorse);
+	System.out.println(enEspaniol);
+	
+	robot.dibujarMorse(codigoEnMorse);*/
+	}
+}

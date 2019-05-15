@@ -3,12 +3,14 @@
 <fullyQualifiedTypeName name="lejos.hardware.motor.UnregulatedMotor"/>
 <fullyQualifiedTypeName name="lejos.hardware.sensor.EV3ColorSensor"/>
 <fullyQualifiedTypeName name="lejos.hardware.sensor.EV3UltrasonicSensor"/>
-<fullyQualifiedTypeName name="lejos.utility.Delay"/>
 <fullyQualifiedTypeName name="lejos.hardware.Sound"/>
-<fullyQualifiedTypeName name="lejos.hardware.Button"/>
 <fullyQualifiedTypeName name="lejos.hardware.motor.EV3LargeRegulatedMotor"/>
 <fullyQualifiedTypeName name="lejos.hardware.port.MotorPort"/>
 <fullyQualifiedTypeName name="lejos.hardware.sensor.EV3TouchSensor"/>
 <fullyQualifiedTypeName name="lejos.hardware.port.SensorPort"/>
+<fullyQualifiedTypeName name="lejos.robotics.TouchAdapter"/>
+<fullyQualifiedTypeName name="lejos.utility.Stopwatch"/>
+<fullyQualifiedTypeName name="lejos.utility.Delay"/>
 <fullyQualifiedTypeName name="lejos.robotics.SampleProvider"/>
+<fullyQualifiedTypeName name="lejos.hardware.Button"/>
 </qualifiedTypeNameHistroy>

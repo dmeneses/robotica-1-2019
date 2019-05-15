@@ -1,0 +1,14 @@
+
+public class Traductor {
+	public String traducirMorse(String Morse){
+		String laLetra= "a";
+		if(laLetra== "a"){
+		laLetra=Morse;
+		}
+		
+	return laLetra;
+		    
+		
+	}
+
+}

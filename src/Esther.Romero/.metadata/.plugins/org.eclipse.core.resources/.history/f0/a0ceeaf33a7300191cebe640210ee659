@@ -1,0 +1,31 @@
+import lejos.hardware.Button;
+
+
+public class PruebaRobot {
+
+	public static void main(String[] args) {
+		Robot robot= new Robot();
+		pulsadoresMorse morseP= new pulsadoresMorse();
+		Morse traductor = new Morse();
+		boolean terminarcodigo= false;
+		char[] codigoEnMorse= new char[200];
+		int contadorCaracter=0;
+       
+		while (terminarcodigo==false){
+			terminarcodigo = robot.terminarya();
+			System.out.println("terminarcodigo="+terminarcodigo);
+			char caracter = morseP.pulsadorMorse();
+			codigoEnMorse[contadorCaracter] = caracter;
+			contadorCaracter = contadorCaracter +1;
+			System.out.println("morse = "+ caracter);
+		}
+		Button.waitForAnyPress();
+		/*System.out.println("termine de ingresar codigo Morse");
+		for(int i =0; i< codigoEnMorse.length; i = i+1){
+			String enEspaniol = traductor.convertirAMorse();
+		}
+	
+	robot.dibujarMorse(codigoEnMorse);
+		Button.waitForAnyPress();*/
+	}
+}
