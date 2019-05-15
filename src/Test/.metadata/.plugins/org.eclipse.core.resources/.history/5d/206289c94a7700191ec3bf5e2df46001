@@ -1,0 +1,13 @@
+
+public class Escr 
+{
+
+	viernes t = new viernes();
+	
+	
+	
+	public void punto()
+	{
+		t.moverbrazo(50);
+	}
+}

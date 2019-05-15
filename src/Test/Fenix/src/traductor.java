@@ -17,7 +17,8 @@ public class traductor
 	char sim;
 	
 	String palabra = "";
-	
+	String letra = "";
+	String texto = "";
 	Map mochila = new HashMap();
 	viernes cosa = new viernes();
 	Stopwatch strange = new Stopwatch();
@@ -29,6 +30,7 @@ public class traductor
 	boolean botonActivado2;
 	boolean strangeon = false;
 	int tiempo = 0;
+	Escr rito = new Escr();
 	
 	public traductor()
 	{
@@ -100,7 +102,7 @@ public class traductor
 	
 	
 	
-	public String traducir()
+	public void traducir()
 	{		
 	 double t = tiempo;
 	 
@@ -139,32 +141,52 @@ public class traductor
 		{
 			sim = '-';
 			palabra = palabra + sim;
-		}	tiempo = 0;
-	  }
-	 	  
-	 
-	  return palabra;
+		}	tiempo = 0;    
+	   				
+	  }	  
+	   
+	  
+	  
 	  
 	
 	  
 	}
 	
-	  public void escribir(String palabra)
 	  
+	  public void trad()
 	  {
-		 // if(palabra == ".")
-		  //{
-		  int y = 40;
-			  cosa.moverbrazo(y);
-			  cosa.moverbrazo(-y);
-			  Delay.msDelay(1000);
-			  cosa.caminar(1);
-			  cosa.moverbrazo(50);
-			  cosa.caminar(2);
-			  cosa.moverbrazo(-y);
-			  cosa.caminar(1);
-		  //}
+		  letra = palabra;
+		  String codigo = palabra;
+		  
+		  if(mochila.containsKey(letra))
+		    {
+		       texto = texto + (String)mochila.get(letra);
+		      System.out.println(texto);
+		      palabra = "";
+		     
+		    }  
+		  
 	  }
+	  
+	 public void dibujar()
+	 {
+		 if(texto == "HOLA")
+		 {
+			 rito.punto();
+			 rito.punto();
+			 rito.punto();
+			 rito.punto();
+			 rito.raya();
+			 rito.raya();
+			 rito.raya();
+			 rito.punto();
+			 rito.raya();
+			 rito.punto();
+			 rito.punto();
+			 rito.punto();
+			 rito.raya();
+		 }
+	 }
 	
 	
 	

@@ -23,9 +23,14 @@ public class jarvis
            }
            if(Button.readButtons() == 1)
      	  {
-     		  System.out.println(tr.traducir());
-     		   tr.escribir(".-.-. ..");
+        	  tr.trad();
+     		 
      	  }   	  
+           
+           if(Button.readButtons() == 4)
+      	  {     		  
+      		   tr.dibujar();
+      	  } 
         
        
         }
