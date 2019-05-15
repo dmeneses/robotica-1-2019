@@ -27,7 +27,7 @@ public class ProgramaBase {
 		bot = new Robot(3);
 		codigo = "";
 		
-	morse = new HashMap();
+	morse = new HashMap();//.... --- .-.. .-  -- ..- -. -..- ---
 	morse .put(".-","a");
 	morse .put("-...","b");
 	morse .put("-.-.","c");
@@ -89,7 +89,7 @@ public class ProgramaBase {
 			{
 				System.out.println("segundo pulsador ");
 				Delay.msDelay(2000);
-				dibujarCodigo();
+				//dibujarCodigo();
 			}
 			
 			if(botonActivado && !contando)
@@ -115,10 +115,7 @@ public class ProgramaBase {
 	
 	
 	}
-	public void dibujarCodigo()
-	{
-		codigo
-	}
+	
 	public void traducir (String traduccion){
 		List<String> codigoLista = new ArrayList<String>(Arrays.asList(codigo.split(" ")));
 		

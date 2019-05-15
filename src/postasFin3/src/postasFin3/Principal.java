@@ -10,6 +10,8 @@ public class Principal {
 	    
 		pb.recibirCodigoMorse();
 		
+		pb.operacion("");
+		
 	    
 	// Robot bender = new Robot(3);
 	// bender.dibujarPunto();
