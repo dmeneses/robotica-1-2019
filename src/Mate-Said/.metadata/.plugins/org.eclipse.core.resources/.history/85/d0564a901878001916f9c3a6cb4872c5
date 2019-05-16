@@ -21,12 +21,16 @@ public class Zumillo {
 			{
 			
 				System.out.println("sigo en la cancha");
+				System.out.println(iluz);
 			}
 			else{
 				System.out.println("estoy fuera debo entrar");
 				Delay.msDelay(1000);
 			}
+			
 		}
+				
+
 	}
 
 }
