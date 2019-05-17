@@ -15,8 +15,11 @@ public class Zumillo {
 			
 			luz.fetchSample(muestras, 0);
 			float iluz = muestras[0];
+			
+			
 			if (iluz < 0.2 )
 			{
+			
 				System.out.println("sigo en la cancha");
 			}
 			else{

@@ -32,6 +32,8 @@ import java.util.HashMap;
 			morse = new HashMap();
 			morsex = "";
 			listaMorse = new ArrayList<String>();
+			
+			
 			morse.put(".-","a");
 			morse.put("-...","b");
 			morse.put("-.-.","c");
