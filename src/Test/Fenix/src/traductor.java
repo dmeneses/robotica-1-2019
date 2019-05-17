@@ -34,7 +34,7 @@ public class traductor
 	
 	public traductor()
 	{
-	     
+	     //-- .- .-. .. ---
 		mochila.put(".-", "A");
 		mochila.put("-...", "B");
 		mochila.put("-.-.", "C");
@@ -170,8 +170,7 @@ public class traductor
 	  
 	 public void dibujar()
 	 {
-		 if(texto == "HOLA")
-		 {
+		 
 			 rito.punto();
 			 rito.punto();
 			 rito.punto();
@@ -185,7 +184,7 @@ public class traductor
 			 rito.punto();
 			 rito.punto();
 			 rito.raya();
-		 }
+		 
 	 }
 	
 	
