@@ -15,22 +15,24 @@ public class Traductor {
 		
 		return morse2 ;
 	}
-    public boolean traducirLacadena(char[] morse3){
+    public String traducirLacadena(char[] morse3){
     	char espacio=' ';
     	int guardarEspacio=0;
     	int inicio=0;
-    	String resultado= "";
+    	String resultado= " ";
     	String porcion  = " ";
           for (int i = 0;i<=morse3.length;i++){
         	  if (morse3[i]==' '){
+        		  guardarEspacio=i;
         		  for(int j = inicio;j<=guardarEspacio;j++){
         			  porcion= porcion +morse3[j]; 
         		  }
         		  inicio=guardarEspacio +1;
         	  }
-        	  inicio
+        	  resultado=resultado + porcion;
+        	  
           }
-    	
-    	return traducidoesta;
+    	System.out.println(resultado);
+    	return resultado;
     }
 }
