@@ -1,13 +1,16 @@
-import lejos.hardware.motor.Motor;
+
+import lejos.hardware.motor.*;
 import lejos.hardware.port.SensorPort;
 import lejos.hardware.sensor.EV3ColorSensor;
 import lejos.hardware.sensor.EV3TouchSensor;
 import lejos.hardware.sensor.EV3UltrasonicSensor;
+import lejos.internal.ev3.EV3MotorPort;
+import lejos.robotics.SampleProvider;
 
 
 
 
-public class Robot 
+public class robosumito 
 {	
 	//propiedades
 	double radio;
@@ -16,19 +19,19 @@ public class Robot
 	float[]muestrasOjos;
 	//float[] muestrasBoton;
 	float[]muestrasColor;
+	SampleProvider luz;
 	//EV3TouchSensor boton;
 	EV3ColorSensor color;
 	//constructor
-	public Robot(double rad, double ej)
+	public robosumito(double rad, double ej)
 	{
 		radio= rad;
 		eje=ej;
-		ojos=new EV3UltrasonicSensor(SensorPort.S3);
-		//boton= new EV3TouchSensor(SensorPort.S4);
-		color= new EV3ColorSensor(SensorPort.S4);
+		ojos=new EV3UltrasonicSensor(SensorPort.S1);
+		color= new EV3ColorSensor(SensorPort.S2);
+		luz = color.getRedMode();
 		muestrasOjos = new float[ojos.sampleSize()];
-		//muestrasBoton = new float [boton.sampleSize()];
-		muestrasColor = new float [color.sampleSize()];
+		muestrasColor = new float [luz.sampleSize()];
 		//color.setFloodlight(C);
 	}
 	//metodos
@@ -48,18 +51,11 @@ public class Robot
 	
 	}
 
-	/*public int detectarPulsador()
 	
-	{
-		boton.fetchSample(muestrasBoton, 0);
-		return (int)muestrasBoton[0];
-		
-	}*/
-	
-	public int detectarColor()
+	public int detectarLuz()
 	{	
-			color.fetchSample(muestrasColor, 0);
-			return (int)muestrasColor[0];
+			luz.fetchSample(muestrasColor, 0);
+			return (int)(muestrasColor[0]*100);
 	}
 	
 	public void girarGrados (int grados)
@@ -79,25 +75,36 @@ public class Robot
 	}
 	public void acelerar(int aceleracion)
 	{
-		Motor.B.setSpeed(100);
-		Motor.B.setAcceleration(50);
-		Motor.C.setSpeed(100);
-		Motor.C.setAcceleration(50);
-	}
+		Motor.B.setSpeed(200);
+		Motor.B.setAcceleration(100);
+		Motor.C.setSpeed(200);
+		Motor.C.setAcceleration(100);
+		
+		}
+	public void levantarMarcador()
+		
+		{ 
+		Motor.D.rotate (45);
+		}
+			public void bajarMarcador()
 	
-	public void dibujarTriangulo(int lado)
-	{ 
-		  avanzarCentimentros(lado);
-		  girarGrados(120);
-		 avanzarCentimentros(lado);
-		  girarGrados(120);
-		  avanzarCentimentros(lado);
-		  girarGrados(120); 
-		  
-	}
+			{ 
+				Motor.D.rotate (-45);
+			}
+	
 }
 	
 	
+
+
+
 	
+	
+	
+	
+	
+	
+			
+
 			
 
