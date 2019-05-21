@@ -19,7 +19,7 @@ public class robosumito
 	float[]muestrasOjos;
 	//float[] muestrasBoton;
 	float[]muestrasColor;
-	SampleProvider luz;
+	SampleProvider luz; 
 	//EV3TouchSensor boton;
 	EV3ColorSensor color;
 	//constructor
@@ -38,19 +38,19 @@ public class robosumito
 	public void avanzarCentimentros (int distancia)
 	{
 		double perimetro= radio*Math.PI*2;//regla de tres
-		double pato= distancia*360/perimetro;		
-		Motor.D.rotate((int)pato, true);
-		Motor.A.rotate ((int)pato);
+		double camino= distancia*360/perimetro;		
+		Motor.D.rotate((int)camino, true);
+		Motor.A.rotate ((int)camino);
 	}
 
 	public int detectarDistancia ()
 	{
 	
 		ojos.fetchSample(muestrasOjos,0);
-		return (int)(muestrasOjos[0]*100);//cm
+		return (int)(muestrasOjos[0]*100);
+				//cm
 	
-	}
-
+        }
 	
 	public int detectarLuz()
 	{	
@@ -81,16 +81,24 @@ public class robosumito
 		Motor.A.setAcceleration(100);
 		
 		}
-	public void girarOjitosDerecha()
+	public void girarOjitos(boolean derecha)
 		
 		{ 
+		if(derecha)
+		{
 		Motor.B.rotate (45);
+		}
+		else
+		{
+		Motor.B.rotate(-45);
+		}
 		}
 			public void girarOjitosIzquierda()
 	
 			{ 
 				Motor.B.rotate (-45);
 			}
+	
 	
 }
 	

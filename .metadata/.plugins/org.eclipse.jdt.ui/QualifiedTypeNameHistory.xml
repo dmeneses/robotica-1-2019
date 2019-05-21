@@ -6,4 +6,5 @@
 <fullyQualifiedTypeName name="lejos.hardware.port.SensorPort"/>
 <fullyQualifiedTypeName name="lejos.hardware.Button"/>
 <fullyQualifiedTypeName name="lejos.robotics.Color"/>
+<fullyQualifiedTypeName name="lejos.robotics.SampleProvider"/>
 </qualifiedTypeNameHistroy>
