@@ -1,4 +1,12 @@
+
+
+
 package cesar;
+import lejos.hardware.port.MotorPort;
+import lejos.hardware.motor.EV3LargeRegulatedMotor;
+import lejos.hardware.sensor.EV3UltrasonicSensor;
+import lejos.robotics.SampleProvider;
+
 
 public class ModoDefensa {
 

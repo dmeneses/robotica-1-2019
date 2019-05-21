@@ -5,6 +5,12 @@ public class PruebaTraductor {
 
 	public static void main(String[] args) {
 		Button.waitForAnyPress();
+
+		System.out.println("el mensaje morse es traducido y es =");
+		
+		Button.waitForAnyPress();
+
+		Button.waitForAnyPress();
 		
 		String morse= "._";
 		Traductor traducir= new Traductor();
@@ -19,10 +25,12 @@ public class PruebaTraductor {
 			System.out.println(Elmorse + " es traducido el morse y es = "+ palabra );
 		}
 		Button.waitForAnyPress();
-		char[] CadenaMorse= {'_' , ' ' , '.' , '_' , ' '};
+		/*char[] CadenaMorse= {'_' , ' ' , '.' , '_' , ' '};
 		palabra = traducir.traducirLacadena(CadenaMorse);
-		boolean resultado=(palabra=="ta");
+		boolean resultado=(palabra=="ta");*/
 		
+ 		 
+		Button.waitForAnyPress();
 	}
    
 }

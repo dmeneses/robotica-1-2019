@@ -1,3 +1,4 @@
+import lejos.hardware.Button;
 import lejos.hardware.motor.EV3LargeRegulatedMotor;
 import lejos.hardware.port.MotorPort;
 import lejos.hardware.port.SensorPort;
@@ -9,36 +10,25 @@ import lejos.robotics.SampleProvider;
 public class Clase1 {
 
 	public static void main(String[] args) {
-		EV3ColorSensor sensorColor= new  EV3ColorSensor(SensorPort.S1);
-		EV3UltrasonicSensor ultrasonic= new EV3UltrasonicSensor(SensorPort.S2);
-		EV3LargeRegulatedMotor motorA=new  EV3LargeRegulatedMotor(MotorPort.A);
-		EV3LargeRegulatedMotor motorB=new  EV3LargeRegulatedMotor(MotorPort.B);
-		
-		SampleProvider muestrasCapturadasObstaculo=ultrasonic.getDistanceMode();
-
 		 
-		SampleProvider muestrasCapturadasColor=sensorColor.getColorIDMode();
-		float [] datosDelSensor= new float[muestrasCapturadasColor.sampleSize()];
-		muestrasCapturadasColor.fetchSample(datosDelSensor,0);
-		float color=datosDelSensor[0];
-		System.out.println(color);
+		 float colorBlanco=6.0f;
+		 float colorNegro=7.0f;
+ 		Clase2 carrito=new Clase2();
+		boolean detecteColor = false;
+		float colorDetectado = 0;
+		while (detecteColor == false) {
+		colorDetectado = Clase2.detectarColor();
 		
 		
 	 
 		
-		float distanciaAlObstaculo=0;
-		while (distanciaAlObstaculo!= Float.POSITIVE_INFINITY){
-			float[]datosObstaculo=new float [muestrasCapturadasObstaculo.sampleSize()];
-			muestrasCapturadasObstaculo.fetchSample(datosObstaculo,0);
-			System.out.println("dato enviado por  sensor = "+ distanciaAlObstaculo);
-			
-		}
-			      
-			
-		
-
-	}
-
-	 
-
+		boolean detecteSiguiente = false;
+		double distanciaDetectada = 0;
+		while (detecteSiguiente == false){
+		distanciaDetectada  = Clase2.detectarObstaculo();
+		detecteSiguiente = true;
+		carro.detectarObstaculo();
 }
+		}
+
+		

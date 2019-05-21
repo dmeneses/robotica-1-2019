@@ -14,8 +14,73 @@ public class Traductor {
 		}
 		
 		return morse2 ;
+		
 	}
-    public String traducirLacadena(char[] morse3){
+ 	  
+	  public static String convertirOracionAMorse(String oracion) {
+	        if (estaVacia(oracion)) {
+	            return "";
+	        } else {
+	            
+	            String resultado = "";
+	            
+	            String palabras[] = oracion.split(" ");
+
+	            for (int i = 0; i < palabras.length; i++) {
+	                resultado += convertirMensajeAEspañol (palabras[i]);
+
+	                if (i + 1 < palabras.length)
+	                    resultado += " / ";
+	            }
+
+	            return resultado;
+	        }
+	    }
+
+	    public static String convertirMensajeAEspañol(String palabra) {
+	        String resultado = "";
+	        
+	       
+	        for (int i = 0; i < palabra.length(); i++) {
+	             
+	            resultado += convertirCaracterAMorse(palabra.charAt(i));
+
+	            if (i + 1 < palabra.length())
+	                resultado += " ";
+	        }
+
+	        return resultado;
+	    }
+
+	    public static String letrasMorse[] = { ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..",
+	            "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.." };
+
+	    public static String numerosMorse[] = { "-----", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..",
+	            "----." };
+
+	    public static String convertirCaracterAMorse(char caracter) {
+	       
+	        if (Character.isLetter(caracter)) {
+	            char caracterMinuscula = Character.toLowerCase(caracter);
+	            return letrasMorse[caracterMinuscula - 'a'];
+	        } else if (Character.isDigit(caracter)) {
+	            return numerosMorse[caracter - '0'];
+	        } else {
+	            return " ";
+	        }
+	    }
+
+	    public static boolean estaVacia(String cadena) {
+	        for (int i = 0; i < cadena.length(); i++)
+	            if (!Character.isWhitespace(cadena.charAt(i)))
+	                return false;
+
+	        return true;
+	    }
+	   
+	  {System.out.println(convertirOracionAMorse("clase java  "+ " "));}
+
+   /*  public String traducirLacadena(char[] morse3){
     	char espacio=' ';
     	int guardarEspacio=0;
     	int inicio=0;
@@ -33,6 +98,6 @@ public class Traductor {
         	  
           }
     	System.out.println(resultado);
-    	return resultado;
-    }
+    	return resultado;*/
+    
 }
