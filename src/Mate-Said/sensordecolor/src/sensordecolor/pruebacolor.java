@@ -11,13 +11,7 @@ public class pruebacolor {
 			sensor.fetchSample(sample, 0);
 			
 			return (int) sample[0];
-		
-		
-		
-		}
-
-	   
-	   
+		}	   
 	}
 
 
