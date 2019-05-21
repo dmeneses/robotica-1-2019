@@ -1,0 +1,18 @@
+package robozumo;
+
+public class Zumo {
+
+		Acciones Wilson = new Acciones();
+		
+		 
+		public void contrAtaque()
+		 {
+			 if (Wilson.detectarDistancia() <= 400)
+			 {
+				Wilson.girar(50);
+			 }
+		 }
+		
+	
+
+}

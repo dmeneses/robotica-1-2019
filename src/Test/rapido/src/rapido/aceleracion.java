@@ -12,9 +12,13 @@ public class aceleracion {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		/*EV3LargeRegulatedMotor motorB = new EV3LargeRegulatedMotor(MotorPort.B);
+		EV3LargeRegulatedMotor motorB = new EV3LargeRegulatedMotor(MotorPort.B);
 		EV3LargeRegulatedMotor motorC = new EV3LargeRegulatedMotor(MotorPort.C);
-		  EV3TouchSensor sensor = new EV3TouchSensor(SensorPort.S4);
+		motorC.setSpeed(2000);
+		motorB.setSpeed(2000);
+		motorB.rotate(-1000, true);
+		motorC.rotate(-1000);
+		 /* EV3TouchSensor sensor = new EV3TouchSensor(SensorPort.S4);
 		  
 		  motorB.setAcceleration(350);
   			motorC.setAcceleration(350);
@@ -58,7 +62,7 @@ public class aceleracion {
         		
         	 
         	 System.out.println("avanze: " + distancia);*/
-		EV3ColorSensor ojitos = new EV3ColorSensor(SensorPort.S4);
+		/*EV3ColorSensor ojitos = new EV3ColorSensor(SensorPort.S4);
 		SampleProvider sp = ojitos.getColorIDMode();
 		   float[] muestrasC = new float[ojitos.sampleSize()];
 		   while(true)
@@ -66,15 +70,15 @@ public class aceleracion {
 			   sp.fetchSample(muestrasC, 0);
 		       System.out.println("NUmero" + muestrasC[0]);
 		   } 
-         }
+         }*/
 	
 
-
+       
 
 
 	}
 
-
+}
 
 
 
