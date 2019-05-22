@@ -1,11 +1,28 @@
 package robozumo;
 
-public class Principal {
+import lejos.hardware.Button;
+import lejos.utility.Delay;
 
-	public static void main(String[] args) {
-		Acciones Wilson = new Acciones();
+public class Principal 
+{
+
+	public static void main(String[] args) 
+	{
+		Zumo kamizake = new Zumo();
 		
-			Wilson.girar(500);
+		Button.waitForAnyPress();
+		Delay.msDelay(3000);
+		
+		while(true)
+		{
+			
+			kamizake.Atacar();
+			//kamizake.contrAtaque();
+			
+		}
+		
+		
+		
 				
 
 	}

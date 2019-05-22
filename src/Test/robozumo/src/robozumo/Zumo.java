@@ -3,35 +3,39 @@ package robozumo;
 public class Zumo {
 
 		
-	Acciones Wilson = new Acciones();	
-		
+	Acciones Wilson = new Acciones();
 	
-		/*public void Atacar()
+		public void Atacar()
 		{
-			Wilson.RompeTormentas(50);
-			if (Wilson.detectarColor() <= 0.2)
+			
+			
+	    while(true)
+          {
+   			if (Wilson.detectarColor() <= 0.2)
 			{	
-			Wilson.avanzar(100);
+			  Wilson.avanzar();
 			}
 			else 
 			{
-				Wilson.girar(50);
+				Wilson.parar();
+				Wilson.retroceder();
+				Wilson.girar(180);
 			}	
-			
+          }	
 		}
 		 
 		public void contrAtaque()
 		 {
-			 if (Wilson.detectarDistancia() <= 400)
+			while(true)
+			{
+			if (Wilson.detectarDistancia() <= 10)
 			 {
-				Wilson.girar(50);
-				Wilson.avanzar(30);
+				Wilson.girar(180);
+				Wilson.avanzar();
 			 }
-		 }*/
-	 public void girar()
-	 {
-		 Wilson.girar(500);
-	 }
+		 
+			}
+		 }
 	
 
 }

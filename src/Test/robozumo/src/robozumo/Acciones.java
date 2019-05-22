@@ -11,7 +11,7 @@ public class Acciones {
 	
 	double radio = 3;
 	double gabo = 2.8;
-	double eje = 13.5;
+	double eje = 20;
 	EV3ColorSensor ojito = new EV3ColorSensor(SensorPort.S4);
 	SampleProvider luz = ojito.getRedMode();
 	EV3UltrasonicSensor vision = new EV3UltrasonicSensor(SensorPort.S1);	
@@ -22,8 +22,8 @@ public class Acciones {
 	 
 	   public double detectarColor()
 	    {
-	    	  while(true)
-	    	  {
+	    	 // while(true)
+	    	 // {
 	    		  luz.fetchSample(muestras, 0);
 	    		  iluz = muestras[0];
 	    		  
@@ -38,7 +38,7 @@ public class Acciones {
 	    			  Delay.msDelay(1000);
 	    		  }
 	    		  return iluz;
-	    	  }
+	    	  //}
 	    }
 	   
 	   public void girar(int grados)
@@ -53,15 +53,17 @@ public class Acciones {
 	    }
 	    
 	   
-	   public void avanzar(int distancia)
+	   public void avanzar()
 	    {
-	    	double perimetro = gabo * Math.PI * 2;
-	    	double grados = distancia * 360 / perimetro;
+	    	/*double perimetro = gabo * Math.PI * 2;
+	    	double grados = distancia * 360 / perimetro;*/
 	    	
-	    	Motor.B.rotate((int)grados, true);
-	    	Motor.C.rotate((int)grados);
-	    	Motor.B.setSpeed(500);
-	    	Motor.C.setSpeed(500);
+	    	Motor.B.backward();
+	    	Motor.C.backward();
+	    	/*Motor.B.rotate((int)grados, true);
+	    	Motor.C.rotate((int)grados);*/
+	    	//Motor.B.setSpeed(Motor.B.getMaxSpeed());
+	    	//Motor.C.setSpeed(Motor.C.getMaxSpeed());
 	    	
 	    }
 	   
@@ -77,6 +79,18 @@ public class Acciones {
 	   {
 		   
 		   Motor.D.rotate(grados2);
+	   }
+	   
+	   public void parar()
+	   {
+		   Motor.B.stop(true);
+		   Motor.C.stop();
+	   }
+	   
+	   public void retroceder()
+	   {
+		   Motor.B.forward();
+		   Motor.C.forward();
 	   }
 	    
 }
