@@ -12,18 +12,49 @@ public class Clase2 {
 	EV3LargeRegulatedMotor motorA=new  EV3LargeRegulatedMotor(MotorPort.A);
 	EV3LargeRegulatedMotor motorD=new  EV3LargeRegulatedMotor(MotorPort.D);
 	
-	double diametroRueda = 5.5;
+ 
 	
 	public  float detectarColor() {
 		SampleProvider muestrasCapturadasColor = sensorColor.getColorIDMode();
-		float[]
-		datosDelSensor = new float[muestrasCapturadasColor.sampleSize()];
+		float[] datosDelSensor = new float[muestrasCapturadasColor.sampleSize()];
 		muestrasCapturadasColor.fetchSample(datosDelSensor, 0);
 		float color = datosDelSensor[0];
 		System.out.println("color=" + color);
+		 
 		return color;
 	}
-public double detectarObstaculo() {
+
+	public void avanzar() {
+		
+		motorA.forward();
+		motorD.forward();
+		
+		motorA.stop();
+		motorD.stop();
+		
+		/*double distanciaCM = 20;
+		int grados = 0;
+		double diametroRueda = 5.5;
+		double circunferencia = Math.PI * diametroRueda;
+		double numeroDeRotaciones = distanciaCM * circunferencia;
+		grados = (int) (numeroDeRotaciones * 360);
+
+		int velocidad = 200;
+		motorA.setSpeed(velocidad);
+		motorA.rotate(grados, true);
+		motorD.setSpeed(velocidad);
+		motorD.rotate(grados);
+		motorA.stop();
+		motorD.stop();*/
+
+	}
+	public  void Stop() {
+	
+		motorA.stop();
+		motorD.stop();
+	 
+		
+/*public double detectarObstaculo() {
 		
 		float distanciaAlObstaculo = 0;
 
@@ -47,7 +78,10 @@ public double detectarObstaculo() {
 			 
 		
 		 
-		return distanciaAlObstaculo;
+		return distanciaAlObstaculo;*/
 
+
+ 
 }
+ 
 }

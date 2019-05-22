@@ -1,0 +1,44 @@
+package cesar;
+
+import lejos.hardware.motor.EV3LargeRegulatedMotor;
+import lejos.hardware.port.MotorPort;
+import lejos.hardware.port.SensorPort;
+import lejos.hardware.sensor.EV3UltrasonicSensor;
+import lejos.robotics.SampleProvider;
+public class ModoAtaque {
+	
+	int empujar ;
+	int sorpresa ;
+	int retroceder ;
+	EV3UltrasonicSensor ojos;
+	
+	EV3LargeRegulatedMotor motorA = new EV3LargeRegulatedMotor(MotorPort.A);
+	EV3LargeRegulatedMotor motorD = new EV3LargeRegulatedMotor(MotorPort.D);
+	
+	
+public	void empujar()
+{ 
+	ojos = new EV3UltrasonicSensor(SensorPort.S4);
+	
+	
+	
+	retroceder = 10;
+	sorpresa = retroceder * 360/17;
+	motorA.rotate(-sorpresa,true);
+	motorD.rotate(-sorpresa);
+	int distancia = 110;
+	
+	
+	
+	////////////////////////////
+	empujar = ((int) distancia *360/17);
+	motorA.rotate(empujar,true);
+	motorD.rotate(empujar);
+
+
+
+
+}
+	
+
+}
