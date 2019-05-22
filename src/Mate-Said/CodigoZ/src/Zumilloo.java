@@ -21,7 +21,7 @@ public class Zumilloo {
     EV3LargeRegulatedMotor motorI;
     EV3UltrasonicSensor sonic;
     EV3UltrasonicSensor eyes;
-    
+
 	
 	   public Zumilloo()
 	   {
@@ -33,7 +33,19 @@ public class Zumilloo {
 	        motorI = new EV3LargeRegulatedMotor(MotorPort.B);
 			motor = new EV3MediumRegulatedMotor(MotorPort.D);
 	   }
+	   
+		
 	public void verCancha(){
+		
+		
+		motorI.setSpeed(motorI.getMaxSpeed());
+    	motorD.setSpeed(motorD.getMaxSpeed());
+		motor.rotate(-90);
+		motorI.rotate(-370);
+        motorD.rotate(370);
+		
+		
+		
 		SampleProvider luz = color.getRedMode();
 			float[] muestras = new float[luz.sampleSize()];	
 			while(true){
@@ -41,15 +53,33 @@ public class Zumilloo {
 				float iluz = muestras[0];
 				if (iluz < 0.2 )
 				{
-					System.out.println("estoy fuera debo entrar");
+					System.out.println("sigo en la cancha");
+					atacar(iluz);
+
 				}
 				else{
 					System.out.println("estoy fuera debo entrar");
 					Delay.msDelay(1000);
+					blancoRetro(iluz);
+					
 				}
 			}
-		}  
-	public void atacar(int iluz){
+		} 
+	
+	
+	public void blancoRetro(float iluz){
+    	if(iluz > 0.2){
+    		motorI.setSpeed(motorI.getMaxSpeed());
+        	motorD.setSpeed(motorD.getMaxSpeed());
+        	motorI.rotate(-300, true);
+            motorD.rotate(-300);
+		}
+		
+	
+	
+	}
+	
+	public void atacar(float iluz){
 		if(iluz < 0.2){
 		float[] muestras = new float[eyes.sampleSize()];
      	eyes.fetchSample(muestras, 0);
@@ -59,13 +89,25 @@ public class Zumilloo {
     	int D = 0;
         double x = distancia;
         D = (int)(((360*x))/17);
-    	motorI.setSpeed(motorI.getMaxSpeed());
+       
+        
+        motorI.setSpeed(motorI.getMaxSpeed());
     	motorD.setSpeed(motorD.getMaxSpeed());
+    
     	motorI.rotate(D, true);
         motorD.rotate(D);
+        motorI.rotate(-300, true);
+        motorD.rotate(-300);
+        
+        
+        
+        
 		}
+	  }
+
 	}
-}
+	
+
 
 
 

@@ -1,0 +1,26 @@
+import lejos.hardware.Button;
+import lejos.hardware.motor.EV3LargeRegulatedMotor;
+import lejos.hardware.port.MotorPort;
+import lejos.utility.Delay;
+
+public class Zumillo {
+	public static void main(String[] args) {
+		Zumilloo fury = new Zumilloo();
+		Button.waitForAnyPress();
+		Delay.msDelay(3000);
+		EV3LargeRegulatedMotor motorD;
+	    EV3LargeRegulatedMotor motorI;
+	    {
+	    	motorD = new EV3LargeRegulatedMotor(MotorPort.C);
+	    	motorI = new EV3LargeRegulatedMotor(MotorPort.B);
+	    	
+	    	
+	    	motorI.rotate(360, true);
+	        motorD.rotate(-360);
+	    	
+	    	
+	    }
+		
+		fury.verCancha();	
+	}
+}

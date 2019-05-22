@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Convert local variable &apos;Zumilloo.ladoderecho().sensor&apos; in &apos;Zumilloo.ladoderecho()&apos; to field&#x0A;- Original project: &apos;CodigoZ&apos;&#x0A;- Original element: &apos;Zumilloo.ladoderecho().sensor&apos;&#x0A;- Field name: &apos;sensor2&apos;&#x0A;- Initialize field in method&#x0A;- Declared visibility: &apos;private&apos;" description="Convert local variable &apos;sensor&apos; to field" final="false" flags="2" id="org.eclipse.jdt.ui.promote.temp" initialize="1" input="/src&lt;{Zumilloo.java" name="sensor2" selection="2718 43" stamp="1558561719109" static="false" version="1.0" visibility="2"/>
+</session>
