@@ -1,0 +1,8 @@
+
+public interface getRange {
+
+	public static void main(String[] args) {
+		import lejos.robotics.RangeFinder;
+	}
+
+}
