@@ -6,6 +6,9 @@ public class principal {
 		//EV3LargeRegulatedMotor motorB = new EV3LargeRegulatedMotor(MotorPort.C);
 	    
 		Robot enigma = new Robot();
+		
 		enigma.buscarEnemigo();
+		enigma.seguirencancha();
+		//enigma.retrocederatacar();
 }
 }
