@@ -1,12 +1,13 @@
 
+import java.text.DecimalFormat;
 
+import lejos.hardware.sensor.EV3UltrasonicSensor;
 import lejos.hardware.motor.EV3LargeRegulatedMotor;
 import lejos.hardware.motor.EV3MediumRegulatedMotor;
 import lejos.hardware.port.MotorPort;
 import lejos.hardware.port.SensorPort;
 import lejos.hardware.sensor.EV3ColorSensor;
 import lejos.hardware.sensor.EV3TouchSensor;
-import lejos.hardware.sensor.EV3UltrasonicSensor;
 import lejos.robotics.SampleProvider;
 import lejos.utility.Delay;
 
@@ -21,7 +22,8 @@ public class Zumilloo {
     EV3LargeRegulatedMotor motorI;
     EV3UltrasonicSensor sonic;
     EV3UltrasonicSensor eyes;
-
+    SampleProvider sp;
+	float[] sample;
 	
 	   public Zumilloo()
 	   {
@@ -33,16 +35,9 @@ public class Zumilloo {
 	        motorI = new EV3LargeRegulatedMotor(MotorPort.B);
 			motor = new EV3MediumRegulatedMotor(MotorPort.D);
 	   }
-	   
-		
+	  
 	public void verCancha(){
-		
-		
-		//motorI.setSpeed(motorI.getMaxSpeed());
-    	//motorD.setSpeed(motorD.getMaxSpeed());
-		//motor.rotate(-90);
-		//motorI.rotate(370,true);
-        //motorD.rotate(-370);
+	
 		
 		SampleProvider luz = color.getRedMode();
 			float[] muestras = new float[luz.sampleSize()];	
@@ -53,19 +48,38 @@ public class Zumilloo {
 				{
 					System.out.println("sigo en la cancha");
 					avanzarennegro(5);
-					Costados();
+					CostadoDerecho();
+					CostadoIzquierdo();
+					atacar(iluz);
 				}
 				else{
 					
 					
 					System.out.println("estoy fuera debo entrar");
-					Delay.msDelay(1000);
+					Delay.msDelay(0);
 					retro(20);
 					girar(180);
+					atacar(iluz);
+					
+					
 				}
+			palanca1();
 			}
 		} 
+	public void palanca1 (){
+		motor.setSpeed(motorI.getMaxSpeed());
+    	motor.setSpeed(motorD.getMaxSpeed());
+		motor.forward();
+		motor.forward();
+	}
 	
+	
+	public void palanca (){
+		motor.setSpeed(motorI.getMaxSpeed());
+    	motor.setSpeed(motorD.getMaxSpeed());
+		motor.rotate(80);
+		motor.rotate(-80);
+	}
 	
 public void retro(int cm){
 		
@@ -80,7 +94,8 @@ public void retro(int cm){
 		
 	}
   public void avanzarennegro (int cm){
-	  
+	  motorI.setSpeed(motorI.getMaxSpeed());
+	  motorD.setSpeed(motorD.getMaxSpeed());
 	  motorI.forward();
 	  motorD.forward();
 	  
@@ -91,13 +106,24 @@ public void retro(int cm){
 	  motorD.backward();
 	  
   }
- public void atacar (int cm){
-	 motorI.setSpeed(motorI.getMaxSpeed());
- 	 motorD.setSpeed(motorD.getMaxSpeed());
-	 motorI.forward();
-	 motorD.forward();
+ public void atacar (float iluz){
+		float[] muestras = new float[eyes.sampleSize()];
+     	eyes.fetchSample(muestras, 0);
+    	double distancia = muestras[0] * 100;
+       	DecimalFormat decimal = new DecimalFormat("0.00");
+	    System.out.println("Distance: " + decimal.format(distancia));
+	   	Delay.msDelay(0);
+            	motorI.setSpeed(motorI.getMaxSpeed());
+            	motorD.setSpeed(motorD.getMaxSpeed());
+            	motorI.forward();
+                motorD.forward();
+            	
+
  }
- public void bajarlavelocidad (int cm){
+ 
+ 
+ 
+public void bajarlavelocidad (int cm){
 	 motorI.setSpeed(400);
  	 motorD.setSpeed(400);
 	 motorI.forward();
@@ -122,7 +148,7 @@ public void retro(int cm){
 	
     public void girar(int grados){
 		
-		double radio = 7.25;
+		double radio = 7.2504;
 		double perimetro = 2 * Math.PI * radio;
 		double SM = (int)((perimetro * grados) / 360);
 		double perimetro1 =  2 * Math.PI * 2.8;
@@ -134,10 +160,10 @@ public void retro(int cm){
 		
   }
 
-    public void Costados (){
+    public void CostadoIzquierdo (){
     	
     	SampleProvider sp = sensorI.getTouchMode();
-        boolean BotonActivo;
+    	boolean BotonActivo;
         
         	float[] sample = new float [sp.sampleSize()];
         	sp.fetchSample(sample, 0);
@@ -152,17 +178,53 @@ public void retro(int cm){
         	System.out.println(BotonActivo);
     
             if(BotonActivo==true){
-            	int D = 0;
-                int x = 30;
-            	D = (360*x)/17; 
-                motorI.rotate(D, true);
-                motorD.rotate(D);
+            	
+            	motorI.setSpeed(motorI.getMaxSpeed());
+            	motorD.setSpeed(motorD.getMaxSpeed());
+        		motorI.forward();
+        		motorD.forward();
              }
             else{
             System.out.println(BotonActivo);
             }
 }
+  public void CostadoDerecho(){
+    	
+    	SampleProvider sp = sensorI.getTouchMode();
+    	boolean BotonActivo;
+        
+        	float[] sample = new float [sp.sampleSize()];
+        	sp.fetchSample(sample, 0);
+        	if(sample[0]==0)
+        	{
+        		BotonActivo = false;
+        	}
+        	else
+        	{
+        		BotonActivo = true;
+        	}
+        	System.out.println(BotonActivo);
+    
+            if(BotonActivo==true){
+            	motorI.setSpeed(motorI.getMaxSpeed());
+            	motorD.setSpeed(motorD.getMaxSpeed());
+        		motorI.forward();
+        		motorD.forward();
+            	
+
+            	
+            	
+             }
+            else{
+            System.out.println(BotonActivo);
+            }
 }
+    
+	   	
+	
+}
+
+   
 
 
 

@@ -1,0 +1,46 @@
+import lejos.hardware.port.Port;
+
+import lejos.robotics.SampleProvider;
+import lejos.hardware.sensor.EV3UltrasonicSensor;
+import lejos.robotics.RangeFinder;
+
+public class Ojos implements RangeFinder
+{
+	
+	
+	EV3UltrasonicSensor sonic;
+	SampleProvider sp;
+	float[] sample;
+	
+	public void EV3UltraSonicSensor (Port port)
+	{
+		
+		sonic = new EV3UltrasonicSensor(port);
+		sp = sonic.getDistanceMode();
+		sample = new float[sp.sampleSize()];
+		
+	}
+
+
+	public float getRange() {
+		sp.fetchSample(sample, 0);
+		return sample[0];
+	}
+
+
+	public void close(){
+		
+		sonic.close();
+		
+	}
+	public float[] getRanges() {
+    
+		return sample;
+	}   
+     
+ }
+		
+	
+	
+	
+

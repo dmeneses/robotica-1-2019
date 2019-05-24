@@ -1,15 +1,16 @@
-import lejos.hardware.Button;
+//import lejos.hardware.Button;
 
-import lejos.utility.Delay;
+//import lejos.utility.Delay;
 
 public class Zumillo {
 	public static void main(String[] args) {
 		Zumilloo fury = new Zumilloo();
 		
-		Button.waitForAnyPress();
-	    Delay.msDelay(3000);
 		
+		//Button.waitForAnyPress();
+	    //Delay.msDelay(3000);
 		fury.verCancha();	
-	    fury.Costados();
+		
 	}
+	
 }

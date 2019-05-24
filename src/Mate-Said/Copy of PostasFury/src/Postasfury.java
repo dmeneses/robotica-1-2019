@@ -29,6 +29,8 @@ public class Postasfury {
 	        	System.out.println(BotonActivo); 
 	        	
         	if(BotonActivo==true){  
+        		
+        		
         	float[] muestras = new float[eyes.sampleSize()];
 	     	eyes.fetchSample(muestras, 0);
         	double distancia = muestras[0] * 100;
