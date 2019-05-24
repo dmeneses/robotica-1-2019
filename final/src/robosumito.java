@@ -48,6 +48,7 @@ public class robosumito
 	
 		ojos.fetchSample(muestrasOjos,0);
 		return (int)(muestrasOjos[0]*100);
+	
 				//cm
 	
         }
@@ -75,15 +76,14 @@ public class robosumito
 	}
 	public void acelerar(int aceleracion)
 	{
-		Motor.D.setSpeed(200);
-		Motor.D.setAcceleration(100);
-		Motor.A.setSpeed(200);
-		Motor.A.setAcceleration(100);
+		Motor.D.setSpeed(430);
+		//Motor.D.setAcceleration(300);
+		Motor.A.setSpeed(430);
+		//Motor.A.setAcceleration(300);
 		
-		}
+	}
 	public void girarOjitos(boolean derecha)
-		
-		{ 
+	{ 
 		if(derecha)
 		{
 		Motor.B.rotate (45);
@@ -92,14 +92,24 @@ public class robosumito
 		{
 		Motor.B.rotate(-45);
 		}
-		}
-			public void girarOjitosIzquierda()
-	
-			{ 
-				Motor.B.rotate (-45);
-			}
-	
-	
+	}
+	public void girarOjitosIzquierda()
+	{ 
+		Motor.B.rotate (-45);
+	}
+	public void atacar()
+	{
+			Motor.D.backward();
+			Motor.A.backward();
+	}
+	public void megaAtaque(int aceleracion)
+	{
+		Motor.D.setSpeed(800);
+		Motor.A.setSpeed(800);
+		
+		
+		
+	}
 }
 	
 	
