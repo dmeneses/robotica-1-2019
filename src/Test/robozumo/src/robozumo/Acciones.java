@@ -1,6 +1,8 @@
 package robozumo;
 
-import lejos.hardware.motor.Motor;
+import lejos.hardware.motor.EV3MediumRegulatedMotor;
+import lejos.hardware.motor.Motor; 
+import lejos.hardware.port.MotorPort;
 import lejos.hardware.port.SensorPort;
 import lejos.hardware.sensor.EV3ColorSensor;
 import lejos.hardware.sensor.EV3UltrasonicSensor;
@@ -12,6 +14,8 @@ public class Acciones {
 	double radio = 3;
 	double gabo = 2.8;
 	double eje = 20;
+	
+	EV3MediumRegulatedMotor MotorE = new EV3MediumRegulatedMotor(MotorPort.D); 	
 	EV3ColorSensor ojito = new EV3ColorSensor(SensorPort.S4);
 	SampleProvider luz = ojito.getRedMode();
 	EV3UltrasonicSensor vision = new EV3UltrasonicSensor(SensorPort.S1);	
@@ -27,7 +31,7 @@ public class Acciones {
 	    		  luz.fetchSample(muestras, 0);
 	    		  iluz = muestras[0];
 	    		  
-	    		  if (iluz < 0.2)
+                 if (iluz < 0.1)
 	    		  {
 	    			  System.out.println("sigo en la cancha");
 	    			  System.out.println(iluz);
@@ -35,7 +39,7 @@ public class Acciones {
 	    		  else
 	    		  {
 	    			  System.out.println("estoy apunto de perder");
-	    			  Delay.msDelay(1000);
+	    			  Delay.msDelay(-1000);
 	    		  }
 	    		  return iluz;
 	    	  //}
@@ -64,8 +68,11 @@ public class Acciones {
 	    	Motor.C.rotate((int)grados);*/
 	    	//Motor.B.setSpeed(Motor.B.getMaxSpeed());
 	    	//Motor.C.setSpeed(Motor.C.getMaxSpeed());
-	    	
-	    }
+	    	  Motor.B.setSpeed(Motor.B.getMaxSpeed());
+		      Motor.C.setSpeed(Motor.C.getMaxSpeed());
+		      //Motor.B.setAcceleration(200);
+		      //Motor.C.setAcceleration(200);
+		    		    }
 	   
 	   public double detectarDistancia()
 	    {
@@ -78,6 +85,7 @@ public class Acciones {
 	   public void RompeTormentas(int grados2)
 	   {
 		   
+		   
 		   Motor.D.rotate(grados2);
 	   }
 	   
@@ -89,8 +97,35 @@ public class Acciones {
 	   
 	   public void retroceder()
 	   {
+		   
 		   Motor.B.forward();
 		   Motor.C.forward();
 	   }
-	    
+	   public void RETRO()
+	   {
+	
+	    	
+	    	Motor.B.rotate(400, true);
+	    	Motor.C.rotate(400);
+	    	 Motor.B.setSpeed(Motor.B.getMaxSpeed());
+		     Motor.C.setSpeed(Motor.C.getMaxSpeed());
+	    	
+	    }
+	   public void avanzito()
+	    {
+		  
+	    	/*double perimetro = gabo * Math.PI * 2;
+	    	double grados = distancia * 360 / perimetro;*/
+	    	
+	    	MotorE.backward();
+	    	
+	    	/*Motor.B.rotate((int)grados, true);
+	    	Motor.C.rotate((int)grados);*/
+	    	//Motor.B.setSpeed(Motor.B.getMaxSpeed());
+	    	//Motor.C.setSpeed(Motor.C.getMaxSpeed());
+	    	  MotorE.setSpeed(10000);
+		     
+		      //Motor.B.setAcceleration(200);
+		      //Motor.C.setAcceleration(200);
+		    		    }
 }

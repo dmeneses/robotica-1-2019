@@ -1,0 +1,43 @@
+package robozumo;
+
+public class Zumo {
+
+		
+	Acciones Wilson = new Acciones();
+	
+		public void Atacar()
+		{
+			
+			
+	    while(true)
+          {
+   			if (Wilson.detectarColor() <= 0.1)
+			{	
+			  Wilson.avanzar();
+			}
+			else 
+			{
+				Wilson.parar();
+				Wilson.retroceder();
+				Wilson.girar(200);
+			}	
+          }	
+		}
+		 
+		public void contrAtaque()
+		 {
+			while(true)
+			{
+			if (Wilson.detectarDistancia() <= 10)
+			 {
+				Wilson.RETRO ();
+				Wilson.girar(200);
+				Wilson.avanzar();
+				
+			 }
+		 
+			}
+		 }
+	
+
+}
