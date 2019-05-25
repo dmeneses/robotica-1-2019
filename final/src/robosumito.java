@@ -86,16 +86,17 @@ public class robosumito
 	{ 
 		if(derecha)
 		{
-		Motor.B.rotate (45);
+			Motor.B.backward();
 		}
-		else
+		else 
 		{
-		Motor.B.rotate(-45);
+			Motor.B.forward();
 		}
-	}
-	public void girarOjitosIzquierda()
-	{ 
-		Motor.B.rotate (-45);
+		}
+	
+	public void pararCabecita()
+	{
+		Motor.B.stop();
 	}
 	public void atacar()
 	{
@@ -107,9 +108,7 @@ public class robosumito
 		Motor.D.setSpeed(800);
 		Motor.A.setSpeed(800);
 		
-		
-		
-	}
+		}
 }
 	
 	
