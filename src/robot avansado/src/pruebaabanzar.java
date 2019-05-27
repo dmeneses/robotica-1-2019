@@ -9,15 +9,15 @@ public class pruebaabanzar {
 		EV3LargeRegulatedMotor motorA = new  EV3LargeRegulatedMotor(MotorPort.A);
 		EV3LargeRegulatedMotor motorC = new  EV3LargeRegulatedMotor(MotorPort.C);
 		
-		/*motorB.setSpeed(800);
-		motorB.forward();
+		motorA.setSpeed(800);
+		motorA.forward();
 		
 		motorC.setSpeed(800);
 		motorC.forward();
 		
-		Delay.msDelay(5000);
+		//Delay.msDelay(5000);
 		
-		motorB.stop();
+		/*motorB.stop();
 		motorC.stop();
 		motorC.setSpeed(500);
 		motorB.setSpeed(500);
@@ -41,64 +41,64 @@ public class pruebaabanzar {
 		
 		double distancia = 57;
 		int grados = (int)distancia*360/17;
-		motorA.rotate(grados,true);
-		motorC.rotate(grados);
+		motorA.rotate(-grados,true);
+		motorC.rotate(-grados);
 		
 		
 		Button.waitForAnyPress();
 		
 		distancia = 0;
 	    grados = 410;
-		motorA.rotate(grados);
+		motorA.rotate(-grados);
 		
 		Button.waitForAnyPress();
 		
 		distancia = 57;
 		grados = (int)distancia*360/17;
-		motorA.rotate(grados,true);
-		motorC.rotate(grados);
+		motorA.rotate(-grados,true);
+		motorC.rotate(-grados);
 		
 		
 		Button.waitForAnyPress();
 		
 		distancia = 0;
 	    grados = 410;
-		motorA.rotate(grados);
+		motorA.rotate(-grados);
 		
 		Button.waitForAnyPress();
 		
 		distancia = 57;
 		grados = (int)distancia*360/17;
-		motorA.rotate(grados,true);
-		motorC.rotate(grados);
+		motorA.rotate(-grados,true);
+		motorC.rotate(-grados);
 		
 		
 		Button.waitForAnyPress();
 		
 		distancia = 0;
 	    grados = 410;
-		motorA.rotate(grados);
+		motorA.rotate(-grados);
 		
 		Button.waitForAnyPress();
 		
 		distancia = 57;
 		grados = (int)distancia*360/17;
-		motorA.rotate(grados,true);
-		motorC.rotate(grados);
+		motorA.rotate(-grados,true);
+		motorC.rotate(-grados);
 		
 		
 		Button.waitForAnyPress();
 		
 		distancia = 0;
 	    grados = 410;
-		motorA.rotate(grados);
+		motorA.rotate(-grados);
 		
 		Button.waitForAnyPress();
 		
 	    distancia = 57;
 	    grados = (int)distancia*360/17;
-		motorA.rotate(grados,true);
-		motorC.rotate(grados);
+		motorA.rotate(-grados,true);
+		motorC.rotate(-grados);
 		
 		/*Button.waitForAnyPress();
 		
