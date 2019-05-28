@@ -17,6 +17,7 @@ public class Robot {
 	 int girar;
 	 int retroceder;
 	 ModoAtaque atk;
+	// Acciondetoque acc;
 	 
 	 
 public Robot(){
@@ -24,12 +25,9 @@ public Robot(){
 	  motorD = new EV3LargeRegulatedMotor(MotorPort.D);
 	 luz = new EV3ColorSensor(SensorPort.S2);
 	 atk = new ModoAtaque();
-     
+     //acc = new  Acciondetoque ();
 }
 	 
-
-
-
 
 public void buscarEnemigo()
 {
@@ -41,11 +39,23 @@ public void buscarEnemigo()
 	 motorD.rotate(- girar);
 	 //atk.irhaciarobot(ojos, motorA, motorD);
 	 atk.retrocederatacar(motorA,motorD);
-
+   //  acc.choquederecho();
+    // acc.choqueizquierdo();
  
 }
 	
-	 
+public void vuelta()
+{
+	
+	
+	
+	
+	int grados= (int )   485*(815/360 );
+motorA.rotate(grados,true);
+motorD.rotate(-grados);
+motorA.setSpeed(2000);
+motorD.setSpeed(2000);
+}
 	 
 	 
 	 
@@ -73,8 +83,8 @@ public void buscarEnemigo()
 			retroceder = 50 * 360/17;
 			motorA.rotate(retroceder,true);
 			motorD.rotate(retroceder);
-			 motorA.setSpeed(1200);
-			 motorD.setSpeed(1200);
+			// motorA.setSpeed(1200);
+			 //motorD.setSpeed(1200);
 			 buscarEnemigo();
 			
 			

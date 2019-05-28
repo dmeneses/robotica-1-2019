@@ -10,21 +10,21 @@ public class Acciondetoque
 {
 	EV3TouchSensor toqueladoderecho = new EV3TouchSensor(SensorPort.S1);
 	EV3TouchSensor toqueladoizquierdo = new EV3TouchSensor(SensorPort.S4);
-	private Object girarunlado1;
-	private Object girarunlado2;
+	private int girarunlado1;
+	private int girarunlado2;
 	private BaseRegulatedMotor motorA;
 	private BaseRegulatedMotor motorD;
    
 	public void choquederecho()
 	{
-		boolean toqueladoderecho ;
-		if (toqueladoderecho = true )
+		boolean toqueladoderecho = true ;
+		if (toqueladoderecho == true )
 			
 		{
 			
 			int giro = 5;
 			girarunlado1 = giro * 360/17;
-			motorA.rotate(-(int) girarunlado1);
+			motorA.rotate(-girarunlado1);
 			motorD.rotate(0);
 			
 			
@@ -48,7 +48,7 @@ public class Acciondetoque
 			int giro = 5;
 			girarunlado2 = giro * 360/17;
 			motorA.rotate(0);
-			motorD.rotate(-(int) girarunlado2);
+			motorD.rotate(- girarunlado2);
 			
 			
 		}
