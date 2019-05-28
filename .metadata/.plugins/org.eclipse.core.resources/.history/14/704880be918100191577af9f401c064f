@@ -6,7 +6,7 @@ import lejos.hardware.sensor.EV3TouchSensor;
 import lejos.hardware.sensor.EV3UltrasonicSensor;
 import lejos.internal.ev3.EV3MotorPort;
 import lejos.robotics.SampleProvider;
-import lejos.hardware.sensor.EV3TouchSensor;
+
 
 
 
@@ -22,10 +22,6 @@ public class robosumito
 	SampleProvider luz; 
 	//EV3TouchSensor boton;
 	EV3ColorSensor color;
-	EV3TouchSensor boton;
-	EV3TouchSensor boton1;
-	float[]muestrasBoton;
-	float[]muestrasBoton1;
 	//constructor
 	public robosumito(double rad, double ej)
 	{
@@ -36,13 +32,7 @@ public class robosumito
 		luz = color.getRedMode();
 		muestrasOjos = new float[ojos.sampleSize()];
 		muestrasColor = new float [luz.sampleSize()];
-		boton = new EV3TouchSensor (SensorPort.S4);
-		boton1 = new EV3TouchSensor (SensorPort.S3);
-		muestrasBoton=new float [boton.sampleSize()];
-		muestrasBoton1 = new float [boton1.sampleSize()];
-		
 		//color.setFloodlight(C);
-
 	}
 	//metodos
 	public void avanzarCentimentros (int distancia)
@@ -104,9 +94,9 @@ public class robosumito
 		}
 		}
 	
-	public void cuchillito()
+	public void pararCabecita()
 	{
-		Motor.B.backward();
+		Motor.B.stop();
 	}
 	public void atacar()
 	{
@@ -119,22 +109,7 @@ public class robosumito
 		Motor.A.setSpeed(800);
 		
 		}
-	public  int detecatarPulsadorIzquierda()
-	{		
-		boton.fetchSample(muestrasBoton,0);
-		return (int)(muestrasBoton[0]);
-	}
-	public int detectarPulsadorDerecha()
-	{
-		boton1.fetchSample(muestrasBoton1,0);
-		return (int)(muestrasBoton1[0]);
-		
-	}
-	
-
-	}
-
-
+}
 	
 	
 

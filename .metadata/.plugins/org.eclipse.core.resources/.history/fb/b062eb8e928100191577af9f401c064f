@@ -38,9 +38,6 @@ public class robosumito
 		muestrasColor = new float [luz.sampleSize()];
 		boton = new EV3TouchSensor (SensorPort.S4);
 		boton1 = new EV3TouchSensor (SensorPort.S3);
-		muestrasBoton=new float [boton.sampleSize()];
-		muestrasBoton1 = new float [boton1.sampleSize()];
-		
 		//color.setFloodlight(C);
 
 	}

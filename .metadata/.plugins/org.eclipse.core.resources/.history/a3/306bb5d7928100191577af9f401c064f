@@ -19,7 +19,7 @@ import lejos.utility.Stopwatch;
 			int cont = 0;
 			while (true)			
 			{ 
-				//robo1.cuchillito();
+				robo1.cuchillito();
 				robo1.acelerar(0);
 			robo1.atacar();
 			robo1.detectarDistancia();

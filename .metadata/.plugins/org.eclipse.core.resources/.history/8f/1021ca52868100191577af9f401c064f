@@ -19,10 +19,9 @@ import lejos.utility.Stopwatch;
 			int cont = 0;
 			while (true)			
 			{ 
-				//robo1.cuchillito();
+				cont++;
 				robo1.acelerar(0);
 			robo1.atacar();
-			robo1.detectarDistancia();
 			
 				
 				int luz = robo1.detectarLuz();
@@ -30,7 +29,7 @@ import lejos.utility.Stopwatch;
 				
 				if( luz > 20 )//detectar borde
 				{ 
-			
+					robo1.pararCabecita();
 					System.out.println("blanquito");
 			
 					 robo1.avanzarCentimentros(20);
@@ -40,26 +39,28 @@ import lejos.utility.Stopwatch;
 				
 			
 				int ojos= robo1.detectarDistancia();
-				if (ojos<27)
-				{ robo1.acelerar(0);
-					robo1.megaAtaque(0);
-					//robo1.avanzarCentimentros(10);
-					//robo1.megaAtaque(0);
-					//robo1.girarGrados(180);
-					}
-				int boton= robo1.detecatarPulsadorIzquierda();
-				if (boton==1)
-				{
-					robo1.avanzarCentimentros(8);
-					robo1.girarGrados(95);
-				}
-				int boton1= robo1.detectarPulsadorDerecha();
-				if (boton1==1)
-				{
-					robo1.avanzarCentimentros(8);
-					robo1.girarGrados(-95);
-				}
+				//int tiempo = relog.elapsed ();
+				// int cachito = tiempo;
 				
+				
+				if(cont> 100)
+				{
+					//cachito= tiempo<1000 && tiempo > 20; 
+					cambiar = !cambiar;
+					robo1.girarOjitos(cambiar);
+					//relog.reset();
+					System.out.println("cmabio ojos");
+					cont = 0;
+				}
+				System.out.println(cont);
+				if(ojos<25 )//buscar contrincante y atacar
+				{
+					
+					
+					
+					robo1.megaAtaque(0);
+					
+				}
 				
 				//if()//atacar contrincante 
 				//{}
