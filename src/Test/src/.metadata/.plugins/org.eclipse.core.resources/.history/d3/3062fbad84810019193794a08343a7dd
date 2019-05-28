@@ -17,7 +17,7 @@ public class Robot {
 	 int girar;
 	 int retroceder;
 	 ModoAtaque atk;
-	Acciondetoque acc;
+	// Acciondetoque acc;
 	 
 	 
 public Robot(){
@@ -25,7 +25,7 @@ public Robot(){
 	  motorD = new EV3LargeRegulatedMotor(MotorPort.D);
 	 luz = new EV3ColorSensor(SensorPort.S2);
 	 atk = new ModoAtaque();
-     acc = new  Acciondetoque ();
+     //acc = new  Acciondetoque ();
 }
 	 
 
@@ -39,8 +39,8 @@ public void buscarEnemigo()
 	 motorD.rotate(- girar);
 	 //atk.irhaciarobot(ojos, motorA, motorD);
 	 atk.retrocederatacar(motorA,motorD);
-    acc.choquederecho();
-     acc.choqueizquierdo();
+   //  acc.choquederecho();
+    // acc.choqueizquierdo();
  
 }
 	
