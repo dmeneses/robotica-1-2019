@@ -11,7 +11,11 @@ public class MainPelear {
 		Delay.msDelay(3000);
 		Robot bender = new Robot();
 		bender.giroCompleto();
+		bender.dibujarPunto();
 		bender.pelear();
+		
+		
+		
 
 	}
 
