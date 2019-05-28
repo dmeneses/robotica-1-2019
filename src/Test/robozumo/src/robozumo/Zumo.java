@@ -9,18 +9,18 @@ public class Zumo {
 	
 	public void contrAtaque()
 	 {
-		while(true)
-		{
-		if (Wilson.detectarDistancia() <= 10)
-		 {
-			Wilson.RETRO ();
-			Wilson.girar(300);
+		  while(true)
+		  {
+			/*Wilson.RETRO ();
+			Wilson.girar(500);
 			Wilson.avanzar();
-			Wilson.avanzito();
+			*/
+				
+		  }
 			
-		 }
+		 
 	 
-		}
+		
 	 }
 		public void Atacar()
 		{
@@ -31,12 +31,13 @@ public class Zumo {
    			if (Wilson.detectarColor() <= 0.1)
 			{	
 			  Wilson.avanzar();
+			  Wilson.avanzito();
 			}
 			else 
 			{
 				Wilson.parar();
 				Wilson.RETRO();
-				Wilson.girar(300);
+				Wilson.girar(500);
 			}	
           }	
 		}

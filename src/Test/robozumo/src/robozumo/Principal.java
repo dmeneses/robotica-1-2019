@@ -18,7 +18,7 @@ public class Principal
 		{
 			
 			kamizake.Atacar();
-			kamizake.contrAtaque();
+			// kamizake.contrAtaque();
 			//kamizake
 			
 		}

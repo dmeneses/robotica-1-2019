@@ -15,7 +15,7 @@ public class Acciones {
 	double gabo = 2.8;
 	double eje = 20;
 	
-	EV3MediumRegulatedMotor MotorE = new EV3MediumRegulatedMotor(MotorPort.D); 	
+	//EV3MediumRegulatedMotor MotorE = new EV3MediumRegulatedMotor(MotorPort.D); 	
 	EV3ColorSensor ojito = new EV3ColorSensor(SensorPort.S4);
 	SampleProvider luz = ojito.getRedMode();
 	EV3UltrasonicSensor vision = new EV3UltrasonicSensor(SensorPort.S1);	
@@ -64,6 +64,8 @@ public class Acciones {
 	    	
 	    	Motor.B.backward();
 	    	Motor.C.backward();
+	    	//Motor.D.backward();
+	    	//Motor.D.setSpeed(Motor.D.getMaxSpeed());
 	    	/*Motor.B.rotate((int)grados, true);
 	    	Motor.C.rotate((int)grados);*/
 	    	//Motor.B.setSpeed(Motor.B.getMaxSpeed());
@@ -91,7 +93,7 @@ public class Acciones {
 	   
 	   public void parar()
 	   {
-		   Motor.B.stop(true);
+		   Motor.B.stop(true); 
 		   Motor.C.stop();
 	   }
 	   
@@ -105,27 +107,30 @@ public class Acciones {
 	   {
 	
 	    	
-	    	Motor.B.rotate(400, true);
-	    	Motor.C.rotate(400);
-	    	 Motor.B.setSpeed(Motor.B.getMaxSpeed());
-		     Motor.C.setSpeed(Motor.C.getMaxSpeed());
+	    	Motor.B.rotate(700, true);
+	    	Motor.C.rotate(700);
+	    	//Motor.D.rotate(550);
+	    	Motor.B.setSpeed(Motor.B.getMaxSpeed());
+		    Motor.C.setSpeed(Motor.C.getMaxSpeed());
+		   // Motor.D.setSpeed(Motor.D.getMaxSpeed());
+		   
 	    	
 	    }
 	   public void avanzito()
 	    {
+		  Motor.D.setSpeed(Motor.D.getMaxSpeed());
+		  Motor.D.backward();
 		  
 	    	/*double perimetro = gabo * Math.PI * 2;
 	    	double grados = distancia * 360 / perimetro;*/
-	    	
-	    	MotorE.backward();
 	    	
 	    	/*Motor.B.rotate((int)grados, true);
 	    	Motor.C.rotate((int)grados);*/
 	    	//Motor.B.setSpeed(Motor.B.getMaxSpeed());
 	    	//Motor.C.setSpeed(Motor.C.getMaxSpeed());
-	    	  MotorE.setSpeed(10000);
+	    	 
 		     
 		      //Motor.B.setAcceleration(200);
 		      //Motor.C.setAcceleration(200);
-		    		    }
+	    }
 }
