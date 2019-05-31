@@ -40,7 +40,7 @@ import lejos.utility.Stopwatch;
 				
 			
 				int ojos= robo1.detectarDistancia();
-				if (ojos<48)					
+				if (ojos<50)					
 				{ 
 					System.out.println("atacando");
 					//robo1.parar();

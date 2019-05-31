@@ -131,12 +131,9 @@ public class robosumito
 		
 	}
 	
-    public void parar () 
-	
-    { 	Motor.A.stop();
-    	Motor.B.stop();
-    }
-}
+
+	}
+
 
 	
 	

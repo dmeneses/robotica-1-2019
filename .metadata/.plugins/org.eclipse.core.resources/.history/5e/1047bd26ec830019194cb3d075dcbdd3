@@ -20,7 +20,7 @@ import lejos.utility.Stopwatch;
 			while (true)			
 			{ 
 				//robo1.cuchillito();
-				
+				robo1.acelerar(0);
 			robo1.atacar();
 			robo1.detectarDistancia();
 			
@@ -40,7 +40,7 @@ import lejos.utility.Stopwatch;
 				
 			
 				int ojos= robo1.detectarDistancia();
-				if (ojos<48)					
+				if (ojos<60)					
 				{ 
 					System.out.println("atacando");
 					//robo1.parar();
@@ -48,26 +48,21 @@ import lejos.utility.Stopwatch;
 					//robo1.acelerar(0);
 					robo1.megaAtaque(0);
 					//robo1.girarGrados(180);
-				}
-				else
-				{
-					robo1.acelerar(0);
-				}
+					}
 				int boton= robo1.detecatarPulsadorIzquierda();
 				if (boton==1)
 				{
 					System.out.println("boton");
-					robo1.avanzarCentimentros(13);
+					robo1.avanzarCentimentros(8);
 					robo1.megaAtaque(0);
-					robo1.girarGrados(100);
+					robo1.girarGrados(95);
 				}
 				int boton1= robo1.detectarPulsadorDerecha();
 				if (boton1==1)
 				{
 					System.out.println("boton1");
-					robo1.avanzarCentimentros(14);
-					robo1.megaAtaque(0);
-					robo1.girarGrados(-100);
+					robo1.avanzarCentimentros(8);
+					robo1.girarGrados(-95);
 				}
 				
 				

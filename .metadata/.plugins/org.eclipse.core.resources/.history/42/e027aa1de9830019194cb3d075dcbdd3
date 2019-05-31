@@ -115,8 +115,8 @@ public class robosumito
 	}
 	public void megaAtaque(int aceleracion)
 	{
-		Motor.D.setSpeed(1000);
-		Motor.A.setSpeed(1000);
+		Motor.D.setSpeed(800);
+		Motor.A.setSpeed(800);
 		
 		}
 	public  int detecatarPulsadorIzquierda()
@@ -131,12 +131,9 @@ public class robosumito
 		
 	}
 	
-    public void parar () 
-	
-    { 	Motor.A.stop();
-    	Motor.B.stop();
-    }
-}
+
+	}
+
 
 	
 	
