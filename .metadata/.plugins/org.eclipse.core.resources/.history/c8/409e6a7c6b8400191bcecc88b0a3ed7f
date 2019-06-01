@@ -7,7 +7,7 @@ import lejos.hardware.sensor.EV3UltrasonicSensor;
 import lejos.utility.Stopwatch;
 	public class sumitos	
 	{	
-		public static void main(String args[]) throws InterruptedException	
+		public static void main(String args[])	
 		{
 			robosumito robo1;
 			robo1= new robosumito(3, 12.3);
@@ -22,10 +22,10 @@ import lejos.utility.Stopwatch;
 			int cont = 0;
 			while (true)			
 			{ 
+				//robo1.cuchillito();
 				
-				robo1.cuchillito();
-				robo1.atacar();
-				robo1.detectarDistancia();
+			robo1.atacar();
+			robo1.detectarDistancia();
 			
 				
 				int luz = robo1.detectarLuz();
